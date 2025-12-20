@@ -18,7 +18,64 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://maven.terraformersmc.com/"
+            }
+        }
+        filter {
+            includeGroup "com.terraformersmc"
+            includeGroup "dev.emi"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://maven.architectury.dev/"
+            }
+        }
+        filter {
+            includeGroup "dev.architectury"
+            includeGroup "me.shedaniel.cloth"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://maven.resourcefulbees.com/repository/terrarium/"
+            }
+        }
+        filter {
+            includeGroup "earth.terrarium"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
+            }
+        }
+        filter {
+            includeGroup "com.klikli_dev"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://maven.theillusivec4.top/"
+            }
+        }
+        filter {
+            includeGroup "top.theillusivec4.curios"
+        }
+    }
 }
 
 base {
@@ -112,12 +169,25 @@ configurations {
 }
 
 dependencies {
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+
+    // TFC Dependencies
+    implementation "curse.maven:terrafirmacraft-302973:7200482"
+    implementation "curse.maven:patchouli-306770:6842247"
+
+    // Pastel Dependencies
+    implementation "curse.maven:pastel-1264556:6847961"
+    implementation "curse.maven:databank-1181408:7007287"
+    implementation "dev.architectury:architectury-neoforge:13.0.8"
+    implementation "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
+    implementation "com.klikli_dev:modonomicon-1.21.1-neoforge:1.117.2"
+    implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
+    implementation "dev.emi:emi-neoforge:${emi_version}"
+
+    // local runtime
+    localRuntime "curse.maven:yeetusexperimentus-635427:5444189"
+    //compileOnly fg.deobf("dev.emi:emi-forge:${emi_version}:api")
+
+
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
@@ -129,6 +199,8 @@ dependencies {
 
     // Example project dependency using a sister or child project:
     // implementation project(":myproject")
+
+
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
@@ -148,7 +220,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-            mod_description        : mod_description
+            mod_description        : mod_description,
+            emi_version : emi_version
     ]
     inputs.properties replaceProperties
     expand replaceProperties
