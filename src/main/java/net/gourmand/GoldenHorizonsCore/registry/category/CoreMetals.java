@@ -20,7 +20,6 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import net.dries007.tfc.common.LevelTier;
 import net.dries007.tfc.common.TFCArmorMaterials;

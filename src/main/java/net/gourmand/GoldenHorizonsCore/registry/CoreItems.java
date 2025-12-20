@@ -3,7 +3,9 @@ package net.gourmand.GoldenHorizonsCore.registry;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
+import net.gourmand.GoldenHorizonsCore.registry.category.CoreCrops;
 import net.gourmand.GoldenHorizonsCore.registry.category.CoreMetals;
+import net.gourmand.GoldenHorizonsCore.registry.items.CoreSeedItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -20,6 +22,10 @@ public class CoreItems {
             Helpers.mapOf(Metal.ItemType.class, type -> type.has(metal.getLikeMetal()), type ->
                     register("metal/" + type.name() + "/" + metal.name(), () -> type.create(metal))
             )
+    );
+
+    public static final Map<CoreCrops, DeferredHolder<Item, Item>> CROP_SEEDS = Helpers.mapOf(CoreCrops.class, crop ->
+            register("seeds/" + crop.name(), () -> new CoreSeedItem(crop, CoreBlocks.CROPS.get(crop).get(), new Item.Properties()))
     );
 
     /* Much easier with kjs for now.

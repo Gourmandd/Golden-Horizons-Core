@@ -4,6 +4,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
+import net.gourmand.GoldenHorizonsCore.registry.category.CoreCrops;
 import net.gourmand.GoldenHorizonsCore.registry.category.CoreMetals;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,6 +25,18 @@ public class CoreBlocks {
             Helpers.mapOf(Metal.BlockType.class, type -> type.has(metal.getLikeMetal()), type ->
                     register(type.createName(metal), type.create(metal), type.createBlockItem(new Item.Properties()))
             )
+    );
+
+    public static final Map<CoreCrops, DeferredHolder<Block, Block> > CROPS = Helpers.mapOf(CoreCrops.class, crop ->
+            registerNoItem("crop/" + crop.name(),  crop::create)
+    );
+
+    public static final Map<CoreCrops, DeferredHolder<Block, Block>> DEAD_CROPS = Helpers.mapOf(CoreCrops.class, crop ->
+            registerNoItem("dead_crop/" + crop.name(), crop::createDead)
+    );
+
+    public static final Map<CoreCrops, DeferredHolder<Block, Block>> WILD_CROPS = Helpers.mapOf(CoreCrops.class, crop ->
+            register("wild_crop/" + crop.name(), crop::createWild)
     );
 
     /* Much easier with kjs for now.

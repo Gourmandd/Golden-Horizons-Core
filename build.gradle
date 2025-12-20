@@ -171,7 +171,7 @@ configurations {
 dependencies {
 
     // TFC Dependencies
-    implementation "curse.maven:terrafirmacraft-302973:7200482"
+    implementation "curse.maven:terrafirmacraft-302973:7343990"
     implementation "curse.maven:patchouli-306770:6842247"
 
     // Pastel Dependencies

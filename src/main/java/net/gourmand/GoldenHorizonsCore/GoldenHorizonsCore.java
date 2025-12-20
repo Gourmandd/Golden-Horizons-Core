@@ -1,9 +1,6 @@
 package net.gourmand.GoldenHorizonsCore;
 
-import net.gourmand.GoldenHorizonsCore.registry.CoreBlocks;
-import net.gourmand.GoldenHorizonsCore.registry.CoreItems;
-import net.gourmand.GoldenHorizonsCore.registry.CoreFluids;
-import net.gourmand.GoldenHorizonsCore.registry.CreativeTabs;
+import net.gourmand.GoldenHorizonsCore.registry.*;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -15,7 +12,6 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -35,6 +31,7 @@ public class GoldenHorizonsCore {
 
         CoreFluids.FLUIDS.register(modEventBus);
         CoreFluids.FLUID_TYPES.register(modEventBus);
+        CoreBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         //CREATIVE_MODE_TABS.register(modEventBus);
 
