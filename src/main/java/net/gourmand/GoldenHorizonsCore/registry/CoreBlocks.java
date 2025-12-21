@@ -4,8 +4,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreCrops;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreMetals;
+import net.gourmand.GoldenHorizonsCore.registry.category.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -37,6 +36,38 @@ public class CoreBlocks {
 
     public static final Map<CoreCrops, DeferredHolder<Block, Block>> WILD_CROPS = Helpers.mapOf(CoreCrops.class, crop ->
             register("wild_crop/" + crop.name(), crop::createWild)
+    );
+
+    public static final Map<CoreStationaryBushes, DeferredHolder<Block, Block>> STATIONARY_BUSHES = Helpers.mapOf(CoreStationaryBushes.class, bush ->
+            register("plant/" + bush.name() + "_bush", bush::create, bush::createItem)
+    );
+
+    public static final Map<CoreSpreadingBushes, DeferredHolder<Block, Block>> SPREADING_CANES = Helpers.mapOf(CoreSpreadingBushes.class, bush ->
+            registerNoItem("plant/" + bush.name() + "_bush_cane", bush::createCane)
+    );
+
+    public static final Map<CoreSpreadingBushes, DeferredHolder<Block, Block>> SPREADING_BUSHES = Helpers.mapOf(CoreSpreadingBushes.class, bush ->
+            register("plant/" + bush.name() + "_bush", bush::createBush, bush::createItem)
+    );
+
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_LEAVES = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            register("plant/" + tree.name() + "_leaves", tree::createLeaves)
+    );
+
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_BRANCHES = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            registerNoItem("plant/" + tree.name() + "_branch", tree::createBranch)
+    );
+
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_GROWING_BRANCHES = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            registerNoItem("plant/" + tree.name() + "_growing_branch", tree::createGrowingBranch)
+    );
+
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_SAPLINGS = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            register("plant/" + tree.name() + "_sapling", tree::createSapling, tree::createSaplingItem)
+    );
+
+    public static final Map<CoreFruitTrees, DeferredHolder<Block, Block>> FRUIT_TREE_POTTED_SAPLINGS = Helpers.mapOf(CoreFruitTrees.class, tree ->
+            registerNoItem("plant/potted/" + tree.name() + "_sapling", tree::createPottedSapling)
     );
 
     /* Much easier with kjs for now.

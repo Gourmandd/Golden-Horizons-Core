@@ -2,8 +2,7 @@ package net.gourmand.GoldenHorizonsCore.registry;
 
 import net.dries007.tfc.util.Metal;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreCrops;
-import net.gourmand.GoldenHorizonsCore.registry.category.CoreMetals;
+import net.gourmand.GoldenHorizonsCore.registry.category.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -31,10 +30,25 @@ public class CreativeTabs {
             .displayItems(CreativeTabs::fillNature).build());
 
     private static void fillNature(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out){
-        for (CoreCrops crop : CoreCrops.values())
-        {
+        for (CoreCrops crop : CoreCrops.values()) {
             accept(out, CoreBlocks.WILD_CROPS, crop);
             accept(out, CoreItems.CROP_SEEDS, crop);
+        }
+
+        for (CoreSpreadingBushes bush : CoreSpreadingBushes.values())
+        {
+            accept(out, CoreBlocks.SPREADING_BUSHES, bush);
+        }
+
+        for (CoreStationaryBushes bush : CoreStationaryBushes.values())
+        {
+            accept(out, CoreBlocks.STATIONARY_BUSHES, bush);
+        }
+
+        for (CoreFruitTrees tree : CoreFruitTrees.values())
+        {
+            accept(out, CoreBlocks.FRUIT_TREE_SAPLINGS, tree);
+            accept(out, CoreBlocks.FRUIT_TREE_LEAVES, tree);
         }
     }
 

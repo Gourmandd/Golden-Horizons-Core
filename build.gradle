@@ -187,6 +187,8 @@ dependencies {
     localRuntime "curse.maven:yeetusexperimentus-635427:5444189"
     //compileOnly fg.deobf("dev.emi:emi-forge:${emi_version}:api")
 
+    implementation "curse.maven:caupona-656147:7112048"
+
 
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
