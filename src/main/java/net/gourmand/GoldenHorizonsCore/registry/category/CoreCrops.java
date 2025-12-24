@@ -15,17 +15,16 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.Nullable;
-
 import java.util.Locale;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 public enum CoreCrops implements StringRepresentable {
 
-    GLISTERING_MELON(0.75f, -0.2f, -0.2f, 7, () -> () -> BuiltInRegistries.BLOCK.get(PastelBlocks.GLISTERING_MELON)),
-    COTTON(0.75f, -0.2f, -0.2f, 3),
-    COFFEE(0.75f, -0.2f, -0.2f, 5),
-    AMARANTH(0.75f, -0.2f, -0.2f, 2, 3, false);
+    GLISTERING_MELON(0.75f, -0.2f, -0.2f, 8, () -> () -> BuiltInRegistries.BLOCK.get(PastelBlocks.GLISTERING_MELON)),
+    COTTON(0.75f, -0.2f, -0.2f, 4),
+    COFFEE(0.75f, -0.2f, -0.2f, 6),
+    AMARANTH(0.75f, -0.2f, -0.2f, 4, 4, false);
 
     CoreCrops(float nitrogen, float phosphorus, float potassium, int singleBlockStages)
     {
