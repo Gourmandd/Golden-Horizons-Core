@@ -7,6 +7,7 @@ import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.GoldenHorizonsCore.registry.CoreBlockEntities;
 import net.gourmand.GoldenHorizonsCore.registry.CoreBlocks;
 import net.gourmand.GoldenHorizonsCore.registry.items.BushBlockItem;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -15,18 +16,22 @@ import net.minecraft.world.level.material.MapColor;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import java.util.Locale;
+
 import static net.dries007.tfc.common.blocks.plant.fruit.Lifecycle.*;
 
-public enum CoreSpreadingBushes {
+public enum CoreSpreadingBushes implements StringRepresentable {
 
     TEST(TFCItems.ALFALFA.holder(), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, 3);
 
+    private final String serializedName;
     private final DeferredHolder<Item, Item> product;
     private final Lifecycle[] stages;
     private final int maxHeight;
 
     CoreSpreadingBushes(DeferredHolder<Item, Item> product, Lifecycle[] stages, int maxHeight)
     {
+        this.serializedName = name().toLowerCase(Locale.ROOT);
         this.product = product;
         this.stages = stages;
         this.maxHeight = maxHeight;
@@ -45,6 +50,11 @@ public enum CoreSpreadingBushes {
     public BlockItem createItem(Block block)
     {
         return new BushBlockItem(block, CoreClimateRanges.SPREADING_BUSHES.get(this), stages);
+    }
+
+    @Override
+    public String getSerializedName() {
+        return serializedName;
     }
 }
 

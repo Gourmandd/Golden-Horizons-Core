@@ -6,6 +6,7 @@ import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.plant.fruit.StationaryBerryBushBlock;
 import net.gourmand.GoldenHorizonsCore.registry.CoreBlockEntities;
 import net.gourmand.GoldenHorizonsCore.registry.items.BushBlockItem;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -13,18 +14,22 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import java.util.Locale;
+
 import static net.dries007.tfc.common.blocks.plant.fruit.Lifecycle.*;
 
-public enum CoreStationaryBushes {
+public enum CoreStationaryBushes implements StringRepresentable {
 
     SAWBLADE_HOLLY(PastelItems.SAWBLADE_HOLLY_BERRY, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT),
     ALOE(PastelItems.ALOE_LEAF, DORMANT, DORMANT, DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING);
 
+    private final String serializedName;
     private final DeferredHolder<Item, Item> product;
     private final Lifecycle[] stages;
 
     CoreStationaryBushes(DeferredHolder<Item, Item> product, Lifecycle... stages)
     {
+        this.serializedName = name().toLowerCase(Locale.ROOT);
         this.product = product;
         this.stages = stages;
     }
@@ -37,5 +42,10 @@ public enum CoreStationaryBushes {
     public BlockItem createItem(Block block)
     {
         return new BushBlockItem(block, CoreClimateRanges.STATIONARY_BUSHES.get(this), stages);
+    }
+
+    @Override
+    public String getSerializedName() {
+        return serializedName;
     }
 }
