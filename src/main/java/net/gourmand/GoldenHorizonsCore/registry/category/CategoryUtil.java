@@ -53,4 +53,26 @@ public class CategoryUtil {
 
         return list;
     }
+
+    public static ArrayList<String> getOreNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreOres ore : CoreOres.values()){
+            list.add(ore.name());
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> getPastelOreNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreOres ore : CoreOres.values()){
+            if (ore.hasPastelOreType()){
+                list.add(ore.name());
+            }
+        }
+
+        return list;
+    }
 }
