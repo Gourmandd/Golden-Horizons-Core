@@ -174,7 +174,7 @@ public class CreativeTabs {
                     accept(out, CoreBlocks.ROCK_BLOCKS, rock, type);
                 }
 
-                if (type.hasVariants() && rock.hasVariants())
+                if (type.hasVariants() && rock.hasVariant(type))
                 {
                     accept(out, CoreBlocks.ROCK_DECORATIONS.get(rock).get(type));
                 }

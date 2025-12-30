@@ -136,8 +136,8 @@ public class CoreBlocks {
             )
     );
 
-    public static final Map<CoreRocks, Map<Rock.BlockType, CoreDecorationBlockHolder>> ROCK_DECORATIONS = Helpers.mapOf(CoreRocks.class, CoreRocks::hasVariants, rock ->
-            Helpers.mapOf(Rock.BlockType.class, type -> type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS, type -> registerDecorations(
+    public static final Map<CoreRocks, Map<Rock.BlockType, CoreDecorationBlockHolder>> ROCK_DECORATIONS = Helpers.mapOf(CoreRocks.class, rock ->
+            Helpers.mapOf(Rock.BlockType.class, type -> (type.hasVariants() || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_BRICKS) && rock.hasVariant(type), type -> registerDecorations(
                     "rock/" + type.name() + "/" + rock.name(),
                     () -> type.createSlab(rock),
                     () -> type.createStairs(rock),
