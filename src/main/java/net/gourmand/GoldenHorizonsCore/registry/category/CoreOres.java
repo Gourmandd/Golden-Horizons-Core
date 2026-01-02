@@ -56,7 +56,7 @@ public enum CoreOres {
 
     public boolean hasPastelOreType()
     {
-        return pastelOreType != PastelOreType.NONE;
+        return this.pastelOreType != PastelOreType.NONE;
     }
 
     public Block create(RegistryRock rock)

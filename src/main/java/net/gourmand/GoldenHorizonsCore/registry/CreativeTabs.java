@@ -106,7 +106,7 @@ public class CreativeTabs {
 
         for (CoreOres ore : CoreOres.values())
         {
-            if (!ore.isGraded() && !ore.hasPastelOreType()) accept(out, CoreItems.ORES, ore);
+            if (!(ore.isGraded() || ore.hasPastelOreType())) accept(out, CoreItems.ORES, ore);
         }
 
         for (CoreOres ore : CoreOres.values())
