@@ -6,6 +6,7 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
 import net.gourmand.GoldenHorizonsCore.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.GoldenHorizonsCore.registry.category.*;
+import net.gourmand.GoldenHorizonsCore.registry.category.CorePastelWood;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -43,6 +44,12 @@ public class CreativeTabs {
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get().asItem().getDefaultInstance())
             .displayItems(CreativeTabs::fillRocks).build());
+
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOOD = CREATIVE_TABS.register("wood", () -> CreativeModeTab.builder()
+            .title(Component.translatable("item_group.wood." + GoldenHorizonsCore.MODID)) //The language key for the title of your CreativeModeTab
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> CoreBlocks.ROCK_BLOCKS.get(CoreRocks.NEPHELINITE).get(Rock.BlockType.HARDENED).get().asItem().getDefaultInstance())
+            .displayItems(CreativeTabs::fillWood).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = CREATIVE_TABS.register("tools", () -> CreativeModeTab.builder()
             .title(Component.translatable("item_group.tools." + GoldenHorizonsCore.MODID)) //The language key for the title of your CreativeModeTab
@@ -198,6 +205,19 @@ public class CreativeTabs {
         out.accept(CoreItems.GLASS_PANE_MOLD.get());
 
         out.accept(CoreItems.WROUGHT_IRON_BUCKET.get());
+    }
+
+    private static void fillWood(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out)
+    {
+        for (CorePastelWood wood : CorePastelWood.values()){
+            CoreBlocks.DEEPER_DOWN_WOODS.get(wood).forEach((type,reg) -> {
+                if (type.needsItem() && wood.hasBlockType(type)) {
+                    out.accept(reg.get());
+                }
+            });
+
+            out.accept(CoreItems.LUMBER.get(wood).get());
+        }
     }
 
 

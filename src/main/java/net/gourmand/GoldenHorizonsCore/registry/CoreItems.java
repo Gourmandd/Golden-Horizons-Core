@@ -1,6 +1,7 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
 import net.dries007.tfc.common.TFCTiers;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.items.MoldItem;
 import net.dries007.tfc.common.items.ToolItem;
 import net.dries007.tfc.config.TFCConfig;
@@ -8,9 +9,12 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
 import net.gourmand.GoldenHorizonsCore.registry.category.*;
+import net.gourmand.GoldenHorizonsCore.registry.category.CorePastelWood;
 import net.gourmand.GoldenHorizonsCore.registry.items.BucketItem;
 import net.gourmand.GoldenHorizonsCore.registry.items.CoreSeedItem;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -47,6 +51,13 @@ public class CoreItems {
 
     public static final Map<CoreRocks,  DeferredHolder<Item, Item>> BRICKS = Helpers.mapOf(CoreRocks.class,type ->
             register("brick/" + type.name(), type.createItemProperties())
+    );
+
+
+    public static final Map<CorePastelWood, DeferredHolder<Item, Item>> LUMBER = Helpers.mapOf(CorePastelWood.class, wood -> register("wood/lumber/" + wood.name()));
+
+    public static final Map<CorePastelWood, DeferredHolder<Item, Item>> SUPPORTS = Helpers.mapOf(CorePastelWood.class, wood ->
+            register("wood/support/" + wood.name(), () -> new StandingAndWallBlockItem(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.VERTICAL_SUPPORT).get(), CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(Wood.BlockType.HORIZONTAL_SUPPORT).get(), new Item.Properties(), Direction.DOWN))
     );
 
     /* Much easier with kjs for now.

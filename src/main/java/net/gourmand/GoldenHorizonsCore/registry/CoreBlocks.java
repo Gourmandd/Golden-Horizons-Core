@@ -4,12 +4,14 @@ import net.dries007.tfc.common.blocks.*;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
 import net.gourmand.GoldenHorizonsCore.registry.blocks.CoreDecorationBlockHolder;
 import net.gourmand.GoldenHorizonsCore.registry.category.*;
+import net.gourmand.GoldenHorizonsCore.registry.category.CorePastelWood;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -148,6 +150,12 @@ public class CoreBlocks {
 
     public static final Map<CoreRocks, DeferredHolder<Block, Block>> MAGMA_BLOCKS = Helpers.mapOf(CoreRocks.class, rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE, rock ->
             register("rock/magma/" + rock.name(), () -> new TFCMagmaBlock(ExtendedProperties.of().pathType(PathType.LAVA).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().lightLevel(s -> 6).randomTicks().strength(0.5F).isValidSpawn((state, level, pos, type) -> type.fireImmune()).hasPostProcess(CoreBlocks::always)), b -> new BlockItem(b, rock.createItemProperties()))
+    );
+
+    public static final Map<CorePastelWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(CorePastelWood.class, wood ->
+            Helpers.mapOf(Wood.BlockType.class, type -> wood.hasBlockType(type), type ->
+                    register(type.nameFor(wood), type.create(wood), type.createBlockItem(wood, new Item.Properties()))
+            )
     );
 
     /* Much easier with kjs for now.
