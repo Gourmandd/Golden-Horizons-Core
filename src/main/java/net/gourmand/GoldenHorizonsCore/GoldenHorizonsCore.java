@@ -2,6 +2,7 @@ package net.gourmand.GoldenHorizonsCore;
 
 import net.gourmand.GoldenHorizonsCore.client.ClientEventHandler;
 import net.gourmand.GoldenHorizonsCore.registry.*;
+import net.gourmand.GoldenHorizonsCore.registry.items.CoreItemCapabilities;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
@@ -27,6 +28,7 @@ public class GoldenHorizonsCore {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public GoldenHorizonsCore(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(CoreItemCapabilities::register);
 
         CoreBlocks.BLOCKS.register(modEventBus);
         CoreItems.ITEMS.register(modEventBus);
@@ -35,6 +37,7 @@ public class GoldenHorizonsCore {
         CoreFluids.FLUIDS.register(modEventBus);
         CoreFluids.FLUID_TYPES.register(modEventBus);
         CoreBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+
         // Register the Deferred Register to the mod event bus so tabs get registered
         //CREATIVE_MODE_TABS.register(modEventBus);
 

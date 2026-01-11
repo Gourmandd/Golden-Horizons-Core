@@ -58,8 +58,8 @@ public class CoreItems {
     public static final DeferredHolder<Item, ToolItem> SNOW_SHOVEL = ITEMS.register("tool/snow_shovel", () -> new ToolItem(TFCTiers.STEEL, CoreTags.SNOW_SHOVEL_MINEABLE, new Item.Properties().durability(3200).stacksTo(0).setNoRepair()));
     public static final DeferredHolder<Item, Item> SNOW_SHOVEL_HEAD = ITEMS.register("tool/snow_shovel_head", CoreItems::basicItem);
 
-    public static final DeferredHolder<Item, MoldItem> GLASS_MOLD = ITEMS.register("glass_mold", ()-> new MoldItem(() -> 800, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties()));
-    public static final DeferredHolder<Item, MoldItem> GLASS_PANE_MOLD = ITEMS.register("glass_pane_mold", ()-> new MoldItem(() -> 50, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties()));
+    public static final DeferredHolder<Item, MoldItem> GLASS_MOLD = ITEMS.register("glass_mold", ()-> new MoldItem(() -> 800, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(1)));
+    public static final DeferredHolder<Item, MoldItem> GLASS_PANE_MOLD = ITEMS.register("glass_pane_mold", ()-> new MoldItem(() -> 50, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties().stacksTo(1)));
 
     public static final DeferredHolder<Item, Item> WROUGHT_IRON_BUCKET = register("metal/bucket/wrought_iron", () -> new BucketItem(new Item.Properties(), CoreTags.WROUGHT_IRON_BUCKET_ACCEPTABLE, true, TFCConfig.SERVER.metalBucketCanPlaceSources));
 
