@@ -1,6 +1,7 @@
 package net.gourmand.GoldenHorizonsCore.registry;
 
 import net.dries007.tfc.common.TFCTiers;
+import net.dries007.tfc.common.items.MoldItem;
 import net.dries007.tfc.common.items.ToolItem;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
@@ -54,6 +55,9 @@ public class CoreItems {
 
     public static final DeferredHolder<Item, ToolItem> SNOW_SHOVEL = ITEMS.register("tool/snow_shovel", () -> new ToolItem(TFCTiers.STEEL, CoreTags.SNOW_SHOVEL_MINEABLE, new Item.Properties().durability(3200).stacksTo(0).setNoRepair()));
     public static final DeferredHolder<Item, Item> SNOW_SHOVEL_HEAD = ITEMS.register("tool/snow_shovel_head", CoreItems::basicItem);
+
+    public static final DeferredHolder<Item, MoldItem> GLASS_MOLD = ITEMS.register("glass_mold", ()-> new MoldItem(() -> 800, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties()));
+    public static final DeferredHolder<Item, MoldItem> GLASS_PANE_MOLD = ITEMS.register("glass_pane_mold", ()-> new MoldItem(() -> 50, CoreTags.GLASS_MOLD_ACCEPTABLE, new Item.Properties()));
 
     private static Item basicItem(){
         return new Item(new Item.Properties());

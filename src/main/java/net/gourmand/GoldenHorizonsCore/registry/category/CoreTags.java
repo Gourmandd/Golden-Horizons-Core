@@ -5,6 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.Fluid;
 
 public class CoreTags {
 
@@ -15,5 +16,13 @@ public class CoreTags {
         );
     };
 
+    private static TagKey<Fluid> createFluidTag(String name){
+        return TagKey.create(
+                Registries.FLUID,
+                ResourceLocation.fromNamespaceAndPath(GoldenHorizonsCore.MODID, name)
+        );
+    };
+
     public static final TagKey<Block> SNOW_SHOVEL_MINEABLE = createBlockTag( "snow_shovel_mineable");
+    public static final TagKey<Fluid> GLASS_MOLD_ACCEPTABLE = createFluidTag( "molten_glass");
 }

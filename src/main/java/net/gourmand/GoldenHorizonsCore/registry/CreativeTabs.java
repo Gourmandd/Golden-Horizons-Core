@@ -193,6 +193,9 @@ public class CreativeTabs {
     {
         out.accept(CoreItems.SNOW_SHOVEL.get());
         out.accept(CoreItems.SNOW_SHOVEL_HEAD.get());
+
+        out.accept(CoreItems.GLASS_MOLD.get());
+        out.accept(CoreItems.GLASS_PANE_MOLD.get());
     }
 
 

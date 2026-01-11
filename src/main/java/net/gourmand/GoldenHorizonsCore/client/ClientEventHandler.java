@@ -2,7 +2,9 @@ package net.gourmand.GoldenHorizonsCore.client;
 
 import net.dries007.tfc.client.IGhostBlockHandler;
 import net.dries007.tfc.client.TFCColors;
+import net.dries007.tfc.client.model.ContainedFluidModel;
 import net.gourmand.GoldenHorizonsCore.registry.CoreBlocks;
+import net.gourmand.GoldenHorizonsCore.registry.CoreItems;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -20,6 +22,7 @@ public class ClientEventHandler {
     {
         modEventBus.addListener(ClientEventHandler::registerColorHandlerBlocks);
         modEventBus.addListener(ClientEventHandler::clientSetup);
+        modEventBus.addListener(ClientEventHandler::registerColorHandlerItems);
     }
 
     @SuppressWarnings("deprecation")
@@ -69,5 +72,9 @@ public class ClientEventHandler {
         final BlockColor grassColor = (state, level, pos, tintIndex) -> TFCColors.getGrassColor(pos, tintIndex);
 
         CoreBlocks.WILD_CROPS.forEach((crop, reg) -> event.register(grassColor, reg.get()));
+    }
+
+    private static void registerColorHandlerItems(RegisterColorHandlersEvent.Item event) {
+        event.register(ContainedFluidModel.COLOR, CoreItems.GLASS_MOLD.get(), CoreItems.GLASS_PANE_MOLD.get());
     }
 }
