@@ -75,6 +75,10 @@ public class ClientEventHandler {
     }
 
     private static void registerColorHandlerItems(RegisterColorHandlersEvent.Item event) {
-        event.register(ContainedFluidModel.COLOR, CoreItems.GLASS_MOLD.get(), CoreItems.GLASS_PANE_MOLD.get());
+        event.register(ContainedFluidModel.COLOR,
+                CoreItems.GLASS_MOLD.get(),
+                CoreItems.GLASS_PANE_MOLD.get(),
+                CoreItems.WROUGHT_IRON_BUCKET.get()
+        );
     }
 }

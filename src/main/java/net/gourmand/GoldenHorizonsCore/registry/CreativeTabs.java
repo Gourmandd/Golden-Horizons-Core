@@ -196,6 +196,8 @@ public class CreativeTabs {
 
         out.accept(CoreItems.GLASS_MOLD.get());
         out.accept(CoreItems.GLASS_PANE_MOLD.get());
+
+        out.accept(CoreItems.WROUGHT_IRON_BUCKET.get());
     }
 
 
