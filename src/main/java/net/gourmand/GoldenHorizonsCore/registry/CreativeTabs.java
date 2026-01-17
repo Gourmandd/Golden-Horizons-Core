@@ -219,7 +219,9 @@ public class CreativeTabs {
         {
             for (CoreClay.ItemType type : CoreClay.ItemType.values())
             {
-                out.accept(CoreItems.CERAMICS.get(clay).get(type).get());
+                if (type.hasType(clay)){
+                    out.accept(CoreItems.CERAMICS.get(clay).get(type).get());
+                }
             }
         }
     }

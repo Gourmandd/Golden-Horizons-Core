@@ -18,7 +18,7 @@ public enum CoreClay implements RegistryClay {
     YIXING(MapColor.COLOR_PURPLE),
     YELLOWWARE(MapColor.TERRACOTTA_YELLOW),
     PORCELAIN(MapColor.SNOW),
-    KAOLINITE(MapColor.TERRACOTTA_MAGENTA),
+    KAOLINITE(MapColor.TERRACOTTA_MAGENTA, true),
     EARTHENWARE(MapColor.TERRACOTTA_ORANGE);
 
     private final MapColor mapColor;
@@ -58,6 +58,7 @@ public enum CoreClay implements RegistryClay {
         return serializedName;
     }
 
+    @Override
     public boolean hasReducedSet() {
         return reducedSet;
     }
@@ -81,6 +82,7 @@ public enum CoreClay implements RegistryClay {
 
         CLAY_BALL(ItemPartType.REDUCED_ITEM),
 
+        UNFIRED_POT(),
         UNFIRED_VESSEL(),
         UNFIRED_JUG(),
         UNFIRED_SPINDLE_HEAD(),
@@ -127,6 +129,11 @@ public enum CoreClay implements RegistryClay {
             } else {
                 return clay.getSerializedName() + "/" + getSerializedName();
             }
+        }
+
+        public boolean hasType(RegistryClay clay)
+        {
+            return !(clay.hasReducedSet() && getType() == ItemPartType.REDUCED_ITEM);
         }
 
         public Supplier<Item> create(RegistryClay clay)

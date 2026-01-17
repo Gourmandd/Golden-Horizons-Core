@@ -16,6 +16,9 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
 import java.util.function.Predicate;
+import java.util.stream.Stream;
+
+import static net.dries007.tfc.common.blocks.wood.Wood.BlockType.*;
 
 public class ClientEventHandler {
 
@@ -48,6 +51,8 @@ public class ClientEventHandler {
             }
         });
         CoreBlocks.DEAD_CROPS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
+
+        CoreBlocks.DEAD_CROPS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
         CoreBlocks.WILD_CROPS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout));
 
         CoreBlocks.SPREADING_BUSHES.values().forEach(bush -> ItemBlockRenderTypes.setRenderLayer(bush.get(), cutoutMipped));
@@ -66,6 +71,9 @@ public class ClientEventHandler {
         CoreBlocks.CUSTOM_ROCK_TFC_ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
         CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.values().forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
 
+        CoreBlocks.DEEPER_DOWN_WOODS.values().forEach(map -> {
+            Stream.of(SCRIBING_TABLE, SEWING_TABLE).forEach(type -> ItemBlockRenderTypes.setRenderLayer(map.get(type).get(), cutout));
+        });
     }
 
     public static void registerColorHandlerBlocks(RegisterColorHandlersEvent.Block event){

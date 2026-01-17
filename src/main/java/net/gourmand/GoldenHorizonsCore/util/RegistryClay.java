@@ -9,4 +9,6 @@ public interface RegistryClay extends StringRepresentable {
     public MapColor mapColor();
 
     public Rarity getRarity();
+
+    public boolean hasReducedSet();
 }

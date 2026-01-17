@@ -124,4 +124,46 @@ public class CategoryUtil {
 
         return list;
     }
+
+    public static ArrayList<String> getPastelWoodNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CorePastelWood wood : CorePastelWood.values()){
+            list.add(wood.getSerializedName());
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> getClayNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreClay clay : CoreClay.values()){
+            list.add(clay.getSerializedName());
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> getClayItemTypeNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreClay.ItemType type : CoreClay.ItemType.values()){
+            list.add(type.getSerializedName());
+        }
+
+        return list;
+    }
+
+    public static ArrayList<String> getClayMoldNames(){
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (CoreClay.ItemType type : CoreClay.ItemType.values()){
+            if (type.getType() == CoreClay.ItemPartType.UNFIRED_MOLD){
+                list.add(type.getSerializedName());
+            }
+        }
+
+        return list;
+    }
 }
