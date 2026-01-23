@@ -235,6 +235,11 @@ public class CreativeTabs {
                 }
             });
 
+            out.accept(CoreBlocks.SHELVES.get(wood).get());
+            out.accept(CoreBlocks.SLUICES.get(wood).get());
+            out.accept(CoreBlocks.TOOL_RACKS.get(wood).get());
+            out.accept(CoreBlocks.LOOMS.get(wood).get());
+
             out.accept(CoreItems.LUMBER.get(wood).get());
         }
     }

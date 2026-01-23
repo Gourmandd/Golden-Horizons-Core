@@ -37,7 +37,6 @@ public class GoldenHorizonsCore {
         CoreFluids.FLUIDS.register(modEventBus);
         CoreFluids.FLUID_TYPES.register(modEventBus);
         CoreBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-
         // Register the Deferred Register to the mod event bus so tabs get registered
         //CREATIVE_MODE_TABS.register(modEventBus);
 

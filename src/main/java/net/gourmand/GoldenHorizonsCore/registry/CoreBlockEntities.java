@@ -4,9 +4,7 @@ import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.GoldenHorizonsCore.GoldenHorizonsCore;
-import net.gourmand.GoldenHorizonsCore.registry.blockentities.CoreBerryBushBlockEntity;
-import net.gourmand.GoldenHorizonsCore.registry.blockentities.CoreCropBlockEntity;
-import net.gourmand.GoldenHorizonsCore.registry.blockentities.CoreTickingPlantBlockEntity;
+import net.gourmand.GoldenHorizonsCore.registry.blockentities.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -35,6 +33,11 @@ public class CoreBlockEntities {
                     CoreBlocks.FRUIT_TREE_GROWING_BRANCHES.values().stream()
             ).flatMap(e -> e)
     );
+
+    public static final TFCBlockEntities.Id<CoreToolRackBlockEntity> TOOL_RACK = register("tool_rack", CoreToolRackBlockEntity::new, CoreBlocks.TOOL_RACKS.values().stream());
+    public static final TFCBlockEntities.Id<CoreLoomBlockEntity> LOOM = register("loom", CoreLoomBlockEntity::new, CoreBlocks.LOOMS.values().stream());
+    public static final TFCBlockEntities.Id<CoreSluiceBlockEntity> SLUICE = register("sluice", CoreSluiceBlockEntity::new, CoreBlocks.SLUICES.values().stream());
+    public static final TFCBlockEntities.Id<CoreShelfBlockEntity> SHELF = register("shelf", CoreShelfBlockEntity::new, CoreBlocks.SHELVES.values().stream());
 
     private static <T extends BlockEntity> TFCBlockEntities.Id<T> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Supplier<? extends Block> block)
     {

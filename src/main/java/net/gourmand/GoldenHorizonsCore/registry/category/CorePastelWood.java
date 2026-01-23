@@ -1,8 +1,10 @@
 package net.gourmand.GoldenHorizonsCore.registry.category;
 
+import earth.terrarium.pastel.PastelCommon;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistryWood;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -41,6 +43,7 @@ public enum CorePastelWood implements RegistryWood {
     private final MapColor barkColor;
     private final BlockSetType blockSet;
     private final WoodType woodType;
+    private final ResourceLocation planksTextures;
 
     CorePastelWood(boolean isNoxfungi, MapColor woodColor, MapColor barkColor){
         this.isNoxfungi = isNoxfungi;
@@ -49,6 +52,7 @@ public enum CorePastelWood implements RegistryWood {
         this.barkColor = barkColor;
         this.blockSet = new BlockSetType(serializedName);
         this.woodType = new WoodType(Helpers.identifier(serializedName).toString(), blockSet);
+        this.planksTextures = ResourceLocation.parse(PastelCommon.MOD_ID + ":block/" + serializedName + "_planks");
     }
     @Override
     public MapColor woodColor() {
@@ -102,5 +106,9 @@ public enum CorePastelWood implements RegistryWood {
     @Override
     public String getSerializedName() {
         return serializedName;
+    }
+
+    public ResourceLocation getPlanksTexture() {
+        return planksTextures;
     }
 }

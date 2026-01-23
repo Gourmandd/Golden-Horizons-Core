@@ -3,6 +3,11 @@ package net.gourmand.GoldenHorizonsCore.client;
 import net.dries007.tfc.client.IGhostBlockHandler;
 import net.dries007.tfc.client.TFCColors;
 import net.dries007.tfc.client.model.ContainedFluidModel;
+import net.dries007.tfc.client.render.blockentity.LoomBlockEntityRenderer;
+import net.dries007.tfc.client.render.blockentity.PlacedItemBlockEntityRenderer;
+import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
+import net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer;
+import net.gourmand.GoldenHorizonsCore.registry.CoreBlockEntities;
 import net.gourmand.GoldenHorizonsCore.registry.CoreBlocks;
 import net.gourmand.GoldenHorizonsCore.registry.CoreItems;
 import net.gourmand.GoldenHorizonsCore.registry.category.CoreClay;
@@ -13,6 +18,7 @@ import net.minecraft.client.renderer.Sheets;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
 import java.util.function.Predicate;
@@ -27,6 +33,14 @@ public class ClientEventHandler {
         modEventBus.addListener(ClientEventHandler::registerColorHandlerBlocks);
         modEventBus.addListener(ClientEventHandler::clientSetup);
         modEventBus.addListener(ClientEventHandler::registerColorHandlerItems);
+        modEventBus.addListener(ClientEventHandler::registerEntityRenderers);
+    }
+
+    private static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(CoreBlockEntities.LOOM.get(), ctx -> new LoomBlockEntityRenderer());
+        event.registerBlockEntityRenderer(CoreBlockEntities.SLUICE.get(), ctx -> new SluiceBlockEntityRenderer());
+        event.registerBlockEntityRenderer(CoreBlockEntities.TOOL_RACK.get(), ctx -> new ToolRackBlockEntityRenderer());
+        event.registerBlockEntityRenderer(CoreBlockEntities.SHELF.get(), ctx -> new PlacedItemBlockEntityRenderer<>());
     }
 
     @SuppressWarnings("deprecation")
