@@ -17,7 +17,9 @@ public enum CoreOres {
     STRATINE(Type.NORMAL, PastelOreType.STRATINE),
     PALTAERIA(Type.NORMAL, PastelOreType.PALTAERIA),
     MALACHITE(Type.NORMAL, PastelOreType.MALACHITE),
-    KAOLINITE(Type.NORMAL_WITH_POWDER);
+    GALENA(Type.NORMAL_WITH_POWDER),
+    ANTHRACITE(Type.NORMAL_WITH_POWDER),
+    BAUXITE(Type.NORMAL_WITH_POWDER);
 
     private final Type type;
     private final PastelOreType pastelOreType;

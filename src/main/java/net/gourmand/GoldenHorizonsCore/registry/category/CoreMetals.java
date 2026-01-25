@@ -31,12 +31,13 @@ public class CoreMetals {
 
     public enum MetalType implements StringRepresentable, RegistryMetal {
 
-        ALUMINIUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1),
-        ALUMINIUM_BRONZE(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1),
+        ALUMINIUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1),
+        ALUMINIUM_BRONZE(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1),
         CAST_IRON_ALLOY(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1),
-        HARDENED_STEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1),
-        NETHERSTEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1),
-        ELECTRUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1);
+        HARDENED_STEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1),
+        NETHERSTEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.EPIC, -1),
+        LEAD(0xFF312347, MapColor.COLOR_PURPLE, Rarity.COMMON, -1),
+        ELECTRUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.COMMON, -1);
 
         // NETHERSTEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1, TFCTiers.RED_STEEL, TFCArmorMaterials.RED_STEEL, PartType.EQUIPMENT),
         private final String serializedName;
