@@ -59,9 +59,7 @@ public class CategoryUtil {
         ArrayList<String> list = new ArrayList<String>();
 
         for (CoreOres ore : CoreOres.values()){
-            if (!ore.isGraded()){
-                list.add(ore.name().toLowerCase(Locale.ROOT));
-            }
+            list.add(ore.name().toLowerCase(Locale.ROOT));
         }
 
         return list;
