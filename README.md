@@ -1,3 +1,3 @@
 
 
-Core mod for the On Ancient Ground available on both Modrinth and Curseforge.
+Core mod for the On Ancient Ground modpack available on both Modrinth and Curseforge.
