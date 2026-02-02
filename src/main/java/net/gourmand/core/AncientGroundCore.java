@@ -1,6 +1,7 @@
 package net.gourmand.core;
 
 import net.gourmand.core.client.ClientEventHandler;
+import net.gourmand.core.datagen.DataEntryPoint;
 import net.gourmand.core.registry.*;
 import net.gourmand.core.registry.items.CoreItemCapabilities;
 import net.neoforged.api.distmarker.Dist;
@@ -28,6 +29,7 @@ public class AncientGroundCore {
     public AncientGroundCore(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(CoreItemCapabilities::register);
+        modEventBus.addListener( DataEntryPoint::gatherData);
 
         CoreBlocks.BLOCKS.register(modEventBus);
         CoreItems.ITEMS.register(modEventBus);
