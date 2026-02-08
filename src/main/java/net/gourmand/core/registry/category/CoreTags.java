@@ -60,11 +60,11 @@ public class CoreTags {
         );
 
         public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_5 = Helpers.mapOf(CoreClay.class, clay ->
-                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "_recycling_5")
+                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "/recycling_5")
         );
 
         public static final Map<CoreClay, TagKey<Item>> CLAY_RECYCLING_1 = Helpers.mapOf(CoreClay.class, clay ->
-                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "_recycling_1")
+                tag(AncientGroundCore.MODID ,"clay/" + clay.getSerializedName() + "/recycling_1")
         );
 
         public static final Map<Metal.ItemType, TagKey<Item>> TOOL_HEADS = Helpers.mapOf(Metal.ItemType.class, tool -> (tool.hasMold() && tool != Metal.ItemType.INGOT), tool ->

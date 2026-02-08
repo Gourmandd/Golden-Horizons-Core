@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-08T12:33:43.623322186	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-02-08T13:03:17.624061687	Tags for minecraft:item mod id modpack
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
 1f10c6244542fd21d417aef571afef4a96f33256 data/c/tags/item/double_ingots.json
 7ea41d753dc315ba2a6fb560f47d64abd9f3b9cb data/c/tags/item/double_ingots/aluminium.json
@@ -37,16 +37,16 @@ e3c861d4707426d39418ffbe4153d48024936306 data/c/tags/item/sheets/hardened_steel.
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/create/tags/item/upright_on_belt.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/item/leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/minecraft/tags/item/saplings.json
-e878683411443f42fcf70bcbfc599547d733fc3b data/modpack/tags/item/clay/earthenware_recycling_1.json
-8d65cc3f225e7b263aa9ebabdc4a75ece126493e data/modpack/tags/item/clay/earthenware_recycling_5.json
-7d50c83a31f4a55cfc8c348608bbf1a986908467 data/modpack/tags/item/clay/kaolinite_recycling_1.json
-695a9e1a40468a5cb71b746f5a7b43090a0e609a data/modpack/tags/item/clay/kaolinite_recycling_5.json
-891ca60902dd42c13ccdffd414648a3843066e4d data/modpack/tags/item/clay/porcelain_recycling_1.json
-6eecbc53cf3b4dc7513fcbbfd5d9be34169426dd data/modpack/tags/item/clay/porcelain_recycling_5.json
-b2312ebde29079c6e591aa4b4104fc9a7124529e data/modpack/tags/item/clay/yellowware_recycling_1.json
-2e461972e31c372a9588a8d7033e15ebe16d2f27 data/modpack/tags/item/clay/yellowware_recycling_5.json
-9ad88fb52c4069029918f419178f4b063761f751 data/modpack/tags/item/clay/yixing_recycling_1.json
-604789ce7039198303486f848d2644a77cee7416 data/modpack/tags/item/clay/yixing_recycling_5.json
+e878683411443f42fcf70bcbfc599547d733fc3b data/modpack/tags/item/clay/earthenware/recycling_1.json
+8d65cc3f225e7b263aa9ebabdc4a75ece126493e data/modpack/tags/item/clay/earthenware/recycling_5.json
+7d50c83a31f4a55cfc8c348608bbf1a986908467 data/modpack/tags/item/clay/kaolinite/recycling_1.json
+695a9e1a40468a5cb71b746f5a7b43090a0e609a data/modpack/tags/item/clay/kaolinite/recycling_5.json
+891ca60902dd42c13ccdffd414648a3843066e4d data/modpack/tags/item/clay/porcelain/recycling_1.json
+6eecbc53cf3b4dc7513fcbbfd5d9be34169426dd data/modpack/tags/item/clay/porcelain/recycling_5.json
+b2312ebde29079c6e591aa4b4104fc9a7124529e data/modpack/tags/item/clay/yellowware/recycling_1.json
+2e461972e31c372a9588a8d7033e15ebe16d2f27 data/modpack/tags/item/clay/yellowware/recycling_5.json
+9ad88fb52c4069029918f419178f4b063761f751 data/modpack/tags/item/clay/yixing/recycling_1.json
+604789ce7039198303486f848d2644a77cee7416 data/modpack/tags/item/clay/yixing/recycling_5.json
 a94698ca2035dc79092afc0e139ec90c8c705066 data/modpack/tags/item/tool_heads/axe_head.json
 91f4d6daea9b146ef7352378faee99c59a88fc3f data/modpack/tags/item/tool_heads/chisel_head.json
 2a9b9e401d5debebd10ce08a03fa659057e4f964 data/modpack/tags/item/tool_heads/hammer_head.json
