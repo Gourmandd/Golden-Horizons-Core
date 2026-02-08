@@ -1,5 +1,15 @@
 {
   "values": [
+    "modpack:ore/shimmerstone/argillite",
+    "modpack:ore/shimmerstone/nephelinite",
+    "modpack:ore/shimmerstone/blackslag",
+    "modpack:ore/shimmerstone/picrite_basalt",
+    "modpack:ore/shimmerstone/travertine",
+    "modpack:ore/shimmerstone/breccia",
+    "modpack:ore/shimmerstone/komatiite",
+    "modpack:ore/shimmerstone/blueschist",
+    "modpack:ore/shimmerstone/peridotite",
+    "modpack:ore/shimmerstone/serpentine",
     "modpack:ore/shimmerstone/granite",
     "modpack:ore/shimmerstone/diorite",
     "modpack:ore/shimmerstone/gabbro",
@@ -20,16 +30,6 @@
     "modpack:ore/shimmerstone/phyllite",
     "modpack:ore/shimmerstone/schist",
     "modpack:ore/shimmerstone/gneiss",
-    "modpack:ore/shimmerstone/marble",
-    "modpack:ore/shimmerstone/argillite",
-    "modpack:ore/shimmerstone/nephelinite",
-    "modpack:ore/shimmerstone/blackslag",
-    "modpack:ore/shimmerstone/picrite_basalt",
-    "modpack:ore/shimmerstone/travertine",
-    "modpack:ore/shimmerstone/breccia",
-    "modpack:ore/shimmerstone/komatiite",
-    "modpack:ore/shimmerstone/blueschist",
-    "modpack:ore/shimmerstone/peridotite",
-    "modpack:ore/shimmerstone/serpentine"
+    "modpack:ore/shimmerstone/marble"
   ]
 }

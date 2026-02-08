@@ -1,16 +1,16 @@
-// 1.21.1	2026-02-06T12:11:25.851477763	Tags for minecraft:block mod id modpack
+// 1.21.1	2026-02-08T10:46:39.05877732	Tags for minecraft:block mod id modpack
 08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/c/tags/block/ores.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/block/leaves.json
 25a1a97177a06510355cad081a3ec15029c150f9 data/minecraft/tags/block/mineable/axe.json
 e0c6895860239ca52d65f80c2e644f1bd9278c3e data/minecraft/tags/block/mineable/hoe.json
 08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/minecraft/tags/block/mineable/pickaxe.json
-be4e2e491323135b85609f49113de10b12fed939 data/pastel/tags/block/azurite_ores.json
-f46906462675cd1b0f65f2314df5f65ceaff83ae data/pastel/tags/block/shimmerstone_ores.json
+60868d9bf31028a94cdfc8b852a1f80dbbb86fc2 data/pastel/tags/block/azurite_ores.json
+a614adfd48a3bbf45eb3dba5a9c386936d93a199 data/pastel/tags/block/shimmerstone_ores.json
 517625696f89da7636e3126a405201cc977453f0 data/tfc/tags/block/breaks_when_isolated.json
 25a1a97177a06510355cad081a3ec15029c150f9 data/tfc/tags/block/fruit_tree_branches.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/tfc/tags/block/fruit_tree_leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/fruit_tree_saplings.json
-37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/mineable/hoe.json
-37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/mineable/knife.json
-37cc37286289f5dca2ff1991b34661b9279728f9 data/tfc/tags/block/mineable/scythe.json
+e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/hoe.json
+e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/knife.json
+e0c6895860239ca52d65f80c2e644f1bd9278c3e data/tfc/tags/block/mineable/scythe.json
 08c7d27d7a0f806d83d3139ae6924296b45d9e2b data/tfc/tags/block/prospectable.json

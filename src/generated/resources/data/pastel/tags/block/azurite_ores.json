@@ -1,5 +1,15 @@
 {
   "values": [
+    "modpack:ore/azurite/argillite",
+    "modpack:ore/azurite/nephelinite",
+    "modpack:ore/azurite/blackslag",
+    "modpack:ore/azurite/picrite_basalt",
+    "modpack:ore/azurite/travertine",
+    "modpack:ore/azurite/breccia",
+    "modpack:ore/azurite/komatiite",
+    "modpack:ore/azurite/blueschist",
+    "modpack:ore/azurite/peridotite",
+    "modpack:ore/azurite/serpentine",
     "modpack:ore/azurite/granite",
     "modpack:ore/azurite/diorite",
     "modpack:ore/azurite/gabbro",
@@ -20,16 +30,6 @@
     "modpack:ore/azurite/phyllite",
     "modpack:ore/azurite/schist",
     "modpack:ore/azurite/gneiss",
-    "modpack:ore/azurite/marble",
-    "modpack:ore/azurite/argillite",
-    "modpack:ore/azurite/nephelinite",
-    "modpack:ore/azurite/blackslag",
-    "modpack:ore/azurite/picrite_basalt",
-    "modpack:ore/azurite/travertine",
-    "modpack:ore/azurite/breccia",
-    "modpack:ore/azurite/komatiite",
-    "modpack:ore/azurite/blueschist",
-    "modpack:ore/azurite/peridotite",
-    "modpack:ore/azurite/serpentine"
+    "modpack:ore/azurite/marble"
   ]
 }

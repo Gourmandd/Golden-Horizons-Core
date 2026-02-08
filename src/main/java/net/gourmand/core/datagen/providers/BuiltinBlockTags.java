@@ -28,6 +28,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
 
 public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
 {
@@ -49,6 +50,9 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
         add(CoreBlocks.FRUIT_TREE_LEAVES, List.of(
             BlockTags.LEAVES,
             BlockTags.MINEABLE_WITH_HOE,
+            TFCTags.Blocks.MINEABLE_WITH_HOE,
+            TFCTags.Blocks.MINEABLE_WITH_SCYTHE,
+            TFCTags.Blocks.MINEABLE_WITH_KNIFE,
             TFCTags.Blocks.FRUIT_TREE_LEAVES)
         );
 
@@ -65,10 +69,8 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
                 TFCTags.Blocks.FRUIT_TREE_BRANCH)
         );
 
-        for (CoreRocks rock : CoreRocks.values())
-        {
-            for (Ore ore : Ore.values())
-            {
+        Stream.of(CoreRocks.values()).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
                 if (ore.hasBlock())
                 {
                     if (ore.isGraded())
@@ -80,12 +82,10 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
                         addOreTags(CoreBlocks.CUSTOM_ROCK_TFC_ORES, ore, rock);
                     }
                 }
-            }
-        }
+            });
+        });
 
-        for (CoreOres ore : CoreOres.values())
-        {
-            // if it's an ore such as bituminous coal
+        Stream.of(CoreOres.values()).forEach(ore -> {
             if (!ore.hasBlock())
             {
                 ResourceKey<Block> key = CoreBlocks.BASIC_ORES.get(ore).getKey();
@@ -95,48 +95,38 @@ public class BuiltinBlockTags extends TagsProvider<Block> implements Accessors
             }
             else
             {
-                for (CoreRocks rock : CoreRocks.values())
-                {
-                    if (ore.hasBlock())
+                Stream.of(CoreRocks.values()).forEach(rock -> {
+                    if (ore.isGraded())
                     {
-                        if (ore.isGraded())
-                        {
-                            addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
-                        }
-                        else
-                        {
-                            addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
-                        }
+                        addGradedOreTags(CoreBlocks.CUSTOM_ROCK_GRADED_ORES, ore, rock);
                     }
-                }
-                for (Rock rock : Rock.values())
-                {
-                    if (ore.hasBlock())
+                    else
                     {
-                        if (ore.isGraded())
-                        {
-                            addGradedOreTags(CoreBlocks.GRADED_ORES, ore, rock);
-                        }
-                        else
-                        {
-                            addOreTags(CoreBlocks.ORES, ore, rock);
-                        }
+                        addOreTags(CoreBlocks.CUSTOM_ROCK_ORES, ore, rock);
                     }
-                }
+                });
+                Stream.of(Rock.values()).forEach(rock -> {
+                    if (ore.isGraded())
+                    {
+                        addGradedOreTags(CoreBlocks.GRADED_ORES, ore, rock);
+                    }
+                    else
+                    {
+                        addOreTags(CoreBlocks.ORES, ore, rock);
+                    }
+                });
             }
-        }
+        });
 
-        for (Rock rock : Rock.values())
-        {
-            this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE).getKey());
-            this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
-        }
-
-        for (CoreRocks rock : CoreRocks.values())
-        {
+        Stream.of(CoreRocks.values()).forEach(rock -> {
             this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.AZURITE).getKey());
             this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
-        }
+        });
+
+        Stream.of(Rock.values()).forEach(rock -> {
+            this.tag(PastelBlockTags.AZURITE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.AZURITE).getKey());
+            this.tag(SHIMMERSTONE_ORES).add(CoreBlocks.ORES.get(rock).get(CoreOres.SHIMMERSTONE).getKey());
+        });
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Block>> tags ){
