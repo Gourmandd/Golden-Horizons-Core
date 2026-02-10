@@ -1,5 +1,8 @@
-// 1.21.1	2026-02-08T13:03:17.624061687	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-02-10T14:20:04.968338714	Tags for minecraft:item mod id modpack
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
+e4aedff054b4b75c19dce5bb07196820ea097136 data/c/tags/item/cobblestones.json
+abbd20b0fa4fd242129da8231562b9dd45a2c7e2 data/c/tags/item/cobblestones/mossy.json
+e371ab2fa981d3e72cdc7407c120f27176fde4bd data/c/tags/item/cobblestones/normal.json
 1f10c6244542fd21d417aef571afef4a96f33256 data/c/tags/item/double_ingots.json
 7ea41d753dc315ba2a6fb560f47d64abd9f3b9cb data/c/tags/item/double_ingots/aluminium.json
 70e878bcf32ff25aaae018602c5c2df0fa4682b5 data/c/tags/item/double_ingots/aluminium_bronze.json
@@ -16,6 +19,7 @@ dcfa44d889af260c44676334c3a76ae43dc2778c data/c/tags/item/double_sheets/aluminiu
 e3cae0c618687cd9e1ff4a92492b72da8dd9a6eb data/c/tags/item/double_sheets/hardened_steel.json
 1b186ce34245c72025091bf30f4ab239e6cc08bc data/c/tags/item/double_sheets/lead.json
 e8145a0399ad79bb661620a8335b4ef33cd36faf data/c/tags/item/double_sheets/nethersteel.json
+4cdb6b9ee503bce7add60293fd12362e73640525 data/c/tags/item/gravels.json
 f8c6d36a11390bd3b8446ed9ecb10056f38b08e3 data/c/tags/item/ingots.json
 49115a3cf939bc82a600f53e194c743c6342d7e5 data/c/tags/item/ingots/aluminium.json
 49aee8810184ec56c5bad3546dd79ec5c399a5ac data/c/tags/item/ingots/aluminium_bronze.json
@@ -34,9 +38,20 @@ c732d4b2fe1e630818305424d45be162f56f1bae data/c/tags/item/sheets/cast_iron_alloy
 e3c861d4707426d39418ffbe4153d48024936306 data/c/tags/item/sheets/hardened_steel.json
 123cec497c262c76ca268e7f9ccb4f1884563a61 data/c/tags/item/sheets/lead.json
 2ab0bc683061b95c7b10382290919ba9d7ea1618 data/c/tags/item/sheets/nethersteel.json
+5cb6d859ba72e45371ee834d36026d6f8a4efa55 data/c/tags/item/stones.json
+80801b6ffce6b9ac8bb01eec848a3065d976483e data/c/tags/item/stones/hardened.json
+ef367df334ec4a7ae2b4bc9a1b0a480b48db50bf data/c/tags/item/stones/loose.json
+d4318b7c1669f905ef550da9c7648625f0433977 data/c/tags/item/stones/pressure_plate.json
+9a111aade36aace43690446211992be9f6c0962d data/c/tags/item/stones/smooth.json
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/create/tags/item/upright_on_belt.json
+52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/item/buttons.json
 2c0bffeb3adcd01c6502d13834905252e7876bba data/minecraft/tags/item/leaves.json
 37cc37286289f5dca2ff1991b34661b9279728f9 data/minecraft/tags/item/saplings.json
+15c8f1489e5a4ad3b2e9804ac57051f40fc3e17a data/minecraft/tags/item/slabs.json
+652a7b62d648065227e8770c9ce6b1f7514ba263 data/minecraft/tags/item/stairs.json
+5cbaf21121491cdfbaad22ad67e998b307091f2f data/minecraft/tags/item/stone_bricks.json
+52aa3866506fbffc126a3b9ee3913d35d997c1fc data/minecraft/tags/item/stone_buttons.json
+4beeb7c76949bd7c1fa08b4da80c4efec791d0b6 data/minecraft/tags/item/walls.json
 e878683411443f42fcf70bcbfc599547d733fc3b data/modpack/tags/item/clay/earthenware/recycling_1.json
 8d65cc3f225e7b263aa9ebabdc4a75ece126493e data/modpack/tags/item/clay/earthenware/recycling_5.json
 7d50c83a31f4a55cfc8c348608bbf1a986908467 data/modpack/tags/item/clay/kaolinite/recycling_1.json
@@ -63,6 +78,7 @@ f64dbebaf0f360a39de6bc8ccee6d98df1898296 data/modpack/tags/item/tool_heads/sword
 f33be10308ac957535de398b32edc53435d050df data/modpack/tags/item/unfired_vessels.json
 be4e2e491323135b85609f49113de10b12fed939 data/pastel/tags/item/azurite_ores.json
 f46906462675cd1b0f65f2314df5f65ceaff83ae data/pastel/tags/item/shimmerstone_ores.json
+84e51bedae726b8d9f616778e7c943abfc9b3cb0 data/tfc/tags/item/aqueducts.json
 3c20d0ebc0594a3600e7a3476ebff4b790f1c012 data/tfc/tags/item/fluid_item_ingredient_empty_containers.json
 a95eece88a4a48fd1080df8ab87d752b419d1dd1 data/tfc/tags/item/unfired_molds.json
 2eda10c3af5b83fac8185cbc3734f18b0e9749d9 data/tfc/tags/item/unfired_pottery.json

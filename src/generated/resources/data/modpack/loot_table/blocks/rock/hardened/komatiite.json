@@ -19,7 +19,7 @@
                   "condition": "tfc:is_isolated"
                 }
               ],
-              "name": "minecraft:air"
+              "name": "create:scoria"
             },
             {
               "type": "minecraft:item",

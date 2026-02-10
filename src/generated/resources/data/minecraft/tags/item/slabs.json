@@ -1,12 +1,5 @@
 {
   "values": [
-    "modpack:metal/block/aluminium_slab",
-    "modpack:metal/block/aluminium_bronze_slab",
-    "modpack:metal/block/cast_iron_alloy_slab",
-    "modpack:metal/block/hardened_steel_slab",
-    "modpack:metal/block/nethersteel_slab",
-    "modpack:metal/block/lead_slab",
-    "modpack:metal/block/electrum_slab",
     "modpack:rock/cobble/argillite_slab",
     "modpack:rock/mossy_cobble/argillite_slab",
     "modpack:rock/mossy_bricks/argillite_slab",

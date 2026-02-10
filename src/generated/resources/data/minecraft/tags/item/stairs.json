@@ -1,12 +1,5 @@
 {
   "values": [
-    "modpack:metal/block/aluminium_stairs",
-    "modpack:metal/block/aluminium_bronze_stairs",
-    "modpack:metal/block/cast_iron_alloy_stairs",
-    "modpack:metal/block/hardened_steel_stairs",
-    "modpack:metal/block/nethersteel_stairs",
-    "modpack:metal/block/lead_stairs",
-    "modpack:metal/block/electrum_stairs",
     "modpack:rock/cobble/argillite_stairs",
     "modpack:rock/mossy_cobble/argillite_stairs",
     "modpack:rock/mossy_bricks/argillite_stairs",

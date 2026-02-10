@@ -184,18 +184,89 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 );
             });
         });
+
+        Stream.of(CoreRocks.values()).forEach(rock ->{
+
+            this.tag(Tags.Items.COBBLESTONES_NORMAL).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE)));
+            this.tag(Tags.Items.COBBLESTONES_MOSSY).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE)));
+
+            this.tag(TFCTags.Items.STONES_HARDENED).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED)));
+
+            this.tag(Tags.Items.STONES).add(getKey(CoreRocks.getRawRock(rock)));
+
+            this.tag(Tags.Items.COBBLESTONES)
+                    .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE)))
+                    .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE)));
+
+            this.tag(ItemTags.STAIRS)
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.COBBLE).stair()))
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).stair()))
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.MOSSY_BRICKS).stair()));
+
+            this.tag(ItemTags.SLABS)
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.COBBLE).slab()))
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).slab()))
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.MOSSY_BRICKS).slab()));
+
+            this.tag(ItemTags.WALLS)
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.COBBLE).wall()))
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).wall()))
+                    .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.MOSSY_BRICKS).wall()));
+
+            this.tag(ItemTags.STONE_BRICKS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_BRICKS)));
+            this.tag(TFCTags.Items.AQUEDUCTS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.AQUEDUCT)));
+            this.tag(Tags.Items.GRAVELS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.GRAVEL)));
+
+            this.tag(TFCTags.Items.STONES_LOOSE)
+                    .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE)))
+                    .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE)));
+
+            if (rock.hasVariants()){
+
+                this.tag(ItemTags.STONE_BRICKS)
+                        .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BRICKS)))
+                        .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CRACKED_BRICKS)))
+                        .add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED)));
+
+                this.tag(TFCTags.Items.STONES_SMOOTH).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SMOOTH)));
+
+                this.tag(ItemTags.STAIRS)
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.BRICKS).stair()))
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.CRACKED_BRICKS).stair()))
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.SMOOTH).stair()));
+
+                this.tag(ItemTags.SLABS)
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.BRICKS).slab()))
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.CRACKED_BRICKS).slab()))
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.SMOOTH).slab()));
+
+                this.tag(ItemTags.WALLS)
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.BRICKS).wall()))
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.CRACKED_BRICKS).wall()))
+                        .add(getKey(CoreBlocks.ROCK_DECORATIONS.get(rock).get(Rock.BlockType.SMOOTH).wall()));
+
+                this.tag(TFCTags.Items.STONES_PRESSURE_PLATES).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.PRESSURE_PLATE)));
+
+                this.tag(ItemTags.STONE_BUTTONS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON)));
+                this.tag(ItemTags.BUTTONS).add(getKey(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON)));
+            }
+        });
     }
 
     protected void add(Map<?, DeferredHolder<Block, Block>> map, List<TagKey<Item>> tags ){
-        for (DeferredHolder<Block, Block> block : map.values()){
+        for (DeferredHolder<Block, ?> block : map.values()){
             for (TagKey<Item> tag : tags){
                 this.tag(tag).add(getKey(block));
             };
         }
     };
 
-    protected ResourceKey<Item> getKey(DeferredHolder<Block, Block> block ){
+    protected ResourceKey<Item> getKey(DeferredHolder<Block, ? extends Block> block ){
         return block.get().asItem().builtInRegistryHolder().key();
+    };
+
+    protected ResourceKey<Item> getKey(Block block){
+        return block.asItem().builtInRegistryHolder().key();
     };
 
     private <T1 extends RegistryRock, T2> void addOreTags(Map<T1, Map<T2, DeferredHolder<Block, Block>>> map, T2 ore, T1 rock){

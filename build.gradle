@@ -187,7 +187,9 @@ dependencies {
     localRuntime "curse.maven:yeetusexperimentus-635427:5444189"
     //compileOnly fg.deobf("dev.emi:emi-forge:${emi_version}:api")
 
+    //misc
     implementation "curse.maven:caupona-656147:7112048"
+    implementation "curse.maven:create-328085:7178775"
 
 
 

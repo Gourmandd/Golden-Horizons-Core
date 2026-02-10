@@ -1,0 +1,24 @@
+{
+  "values": [
+    "modpack:rock/loose/argillite",
+    "modpack:rock/mossy_loose/argillite",
+    "modpack:rock/loose/nephelinite",
+    "modpack:rock/mossy_loose/nephelinite",
+    "modpack:rock/loose/blackslag",
+    "modpack:rock/mossy_loose/blackslag",
+    "modpack:rock/loose/picrite_basalt",
+    "modpack:rock/mossy_loose/picrite_basalt",
+    "modpack:rock/loose/travertine",
+    "modpack:rock/mossy_loose/travertine",
+    "modpack:rock/loose/breccia",
+    "modpack:rock/mossy_loose/breccia",
+    "modpack:rock/loose/komatiite",
+    "modpack:rock/mossy_loose/komatiite",
+    "modpack:rock/loose/blueschist",
+    "modpack:rock/mossy_loose/blueschist",
+    "modpack:rock/loose/peridotite",
+    "modpack:rock/mossy_loose/peridotite",
+    "modpack:rock/loose/serpentine",
+    "modpack:rock/mossy_loose/serpentine"
+  ]
+}

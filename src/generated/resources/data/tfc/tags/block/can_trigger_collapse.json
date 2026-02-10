@@ -1,0 +1,24 @@
+{
+  "values": [
+    "minecraft:stone",
+    "modpack:rock/hardened/argillite",
+    "minecraft:deepslate",
+    "modpack:rock/hardened/nephelinite",
+    "pastel:blackslag",
+    "modpack:rock/hardened/blackslag",
+    "pastel:basal_marble",
+    "modpack:rock/hardened/picrite_basalt",
+    "minecraft:dripstone_block",
+    "modpack:rock/hardened/travertine",
+    "caupona:felsic_tuff",
+    "modpack:rock/hardened/breccia",
+    "create:scoria",
+    "modpack:rock/hardened/komatiite",
+    "modpack:rock/raw/blueschist",
+    "modpack:rock/hardened/blueschist",
+    "modpack:rock/raw/peridotite",
+    "modpack:rock/hardened/peridotite",
+    "modpack:rock/raw/serpentine",
+    "modpack:rock/hardened/serpentine"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "values": [
+    "modpack:rock/mossy_bricks/argillite",
+    "modpack:rock/mossy_bricks/nephelinite",
+    "modpack:rock/mossy_bricks/blackslag",
+    "modpack:rock/mossy_bricks/picrite_basalt",
+    "modpack:rock/mossy_bricks/travertine",
+    "modpack:rock/mossy_bricks/breccia",
+    "modpack:rock/mossy_bricks/komatiite",
+    "modpack:rock/mossy_bricks/blueschist",
+    "modpack:rock/bricks/blueschist",
+    "modpack:rock/cracked_bricks/blueschist",
+    "modpack:rock/chiseled/blueschist",
+    "modpack:rock/mossy_bricks/peridotite",
+    "modpack:rock/bricks/peridotite",
+    "modpack:rock/cracked_bricks/peridotite",
+    "modpack:rock/chiseled/peridotite",
+    "modpack:rock/mossy_bricks/serpentine",
+    "modpack:rock/bricks/serpentine",
+    "modpack:rock/cracked_bricks/serpentine",
+    "modpack:rock/chiseled/serpentine"
+  ]
+}

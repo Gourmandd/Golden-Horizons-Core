@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-08T10:19:48.623366809	Loot Tables
+// 1.21.1	2026-02-09T20:58:15.111852691	Loot Tables
 a8d263b027e085bc53593f1fe5877a0089c9d368 data/modpack/loot_table/blocks/crop/amaranth.json
 31047b9922b12c6d981fc07f6022da30f382aacb data/modpack/loot_table/blocks/crop/coffee.json
 fae2013bf934f04ea037a03788c27766ed190fec data/modpack/loot_table/blocks/crop/cotton.json
@@ -922,7 +922,7 @@ a3c8d67ddd0b529d7ae9d130ca2a83023b187a6c data/modpack/loot_table/blocks/rock/gra
 02be1c494f065a6a695347622fdfe3cc8b4b33ee data/modpack/loot_table/blocks/rock/hardened/blackslag.json
 da20dde1b0538e2eef3d6cef5d4826a7c601f8e1 data/modpack/loot_table/blocks/rock/hardened/blueschist.json
 f334d3e82b63d15e98c7151856c85ca9e0371a48 data/modpack/loot_table/blocks/rock/hardened/breccia.json
-d9d1e5bd14054258b467c74c4c002dd69b104702 data/modpack/loot_table/blocks/rock/hardened/komatiite.json
+65a7d2a9374229c6f3abfdbb83fb7492865c5bea data/modpack/loot_table/blocks/rock/hardened/komatiite.json
 298095826ccfbf0a1410bd3d42a9aff1b49b8c6c data/modpack/loot_table/blocks/rock/hardened/nephelinite.json
 73486e137118a404d69cf6d876ef94440af589f3 data/modpack/loot_table/blocks/rock/hardened/peridotite.json
 7dc9690bfcbfd534e448f2a1daaca9c2fe8d809a data/modpack/loot_table/blocks/rock/hardened/picrite_basalt.json
