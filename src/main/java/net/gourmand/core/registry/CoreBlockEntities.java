@@ -2,6 +2,7 @@ package net.gourmand.core.registry;
 
 import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.blockentities.*;
@@ -34,14 +35,19 @@ public class CoreBlockEntities {
             ).flatMap(e -> e)
     );
 
-    public static final TFCBlockEntities.Id<CoreToolRackBlockEntity> TOOL_RACK = register("tool_rack", CoreToolRackBlockEntity::new, CoreBlocks.TOOL_RACKS.values().stream());
-    public static final TFCBlockEntities.Id<CoreLoomBlockEntity> LOOM = register("loom", CoreLoomBlockEntity::new, CoreBlocks.LOOMS.values().stream());
-    public static final TFCBlockEntities.Id<CoreSluiceBlockEntity> SLUICE = register("sluice", CoreSluiceBlockEntity::new, CoreBlocks.SLUICES.values().stream());
-    public static final TFCBlockEntities.Id<CoreShelfBlockEntity> SHELF = register("shelf", CoreShelfBlockEntity::new, CoreBlocks.SHELVES.values().stream());
+    public static final TFCBlockEntities.Id<CoreToolRackBlockEntity> TOOL_RACK = register("tool_rack", CoreToolRackBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.TOOL_RACK));
+    public static final TFCBlockEntities.Id<CoreLoomBlockEntity> LOOM = register("loom", CoreLoomBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.LOOM));
+    public static final TFCBlockEntities.Id<CoreSluiceBlockEntity> SLUICE = register("sluice", CoreSluiceBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.SLUICE));
+    public static final TFCBlockEntities.Id<CoreShelfBlockEntity> SHELF = register("shelf", CoreShelfBlockEntity::new, deeperDownWoodBlocks(Wood.BlockType.SHELF));
 
     private static <T extends BlockEntity> TFCBlockEntities.Id<T> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Supplier<? extends Block> block)
     {
         return new TFCBlockEntities.Id<>(RegistrationHelpers.register(BLOCK_ENTITIES, name, factory, block));
+    }
+
+    private static Stream<? extends Supplier<? extends Block>> deeperDownWoodBlocks(Wood.BlockType type)
+    {
+        return CoreBlocks.DEEPER_DOWN_WOODS.values().stream().map(map -> map.get(type));
     }
 
     private static <T extends BlockEntity> TFCBlockEntities.Id<T> register(String name, BlockEntityType.BlockEntitySupplier<T> factory, Stream<? extends Supplier<? extends Block>> blocks)

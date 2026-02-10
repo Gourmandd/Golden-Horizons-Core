@@ -1,11 +1,20 @@
 package net.gourmand.core.registry.category;
 
 import earth.terrarium.pastel.PastelCommon;
+import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistryWood;
+import net.gourmand.core.registry.CoreBlockEntities;
+import net.gourmand.core.registry.blockentities.CoreLoomBlockEntity;
+import net.gourmand.core.registry.blockentities.CoreSluiceBlockEntity;
+import net.gourmand.core.registry.blocks.CoreLoomBlock;
+import net.gourmand.core.registry.blocks.CoreShelfBlock;
+import net.gourmand.core.registry.blocks.CoreToolRackBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -68,7 +77,7 @@ public enum CorePastelWood implements RegistryWood {
 
     public boolean hasBlockType(Wood.BlockType type){
         return switch (type) {
-            case TWIG, SEWING_TABLE, SCRIBING_TABLE, VERTICAL_SUPPORT, HORIZONTAL_SUPPORT -> true;
+            case TWIG, SEWING_TABLE, SCRIBING_TABLE, VERTICAL_SUPPORT, HORIZONTAL_SUPPORT, LOOM, TOOL_RACK, SLUICE, SHELF -> true;
             default -> false;
         };
     }
@@ -110,5 +119,27 @@ public enum CorePastelWood implements RegistryWood {
 
     public ResourceLocation getPlanksTexture() {
         return planksTextures;
+    }
+
+    public static Supplier<Block> create(Wood.BlockType type, CorePastelWood wood) {
+
+        switch (type){
+            case TOOL_RACK -> {
+                return () -> new CoreToolRackBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(2.0F).noOcclusion().blockEntity(CoreBlockEntities.TOOL_RACK));
+            }
+            case LOOM -> {
+                return () -> new CoreLoomBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(CoreBlockEntities.LOOM).ticks(CoreLoomBlockEntity::tick), wood.getPlanksTexture());
+            }
+            case SLUICE -> {
+                return () -> new SluiceBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(CoreBlockEntities.SLUICE).serverTicks(CoreSluiceBlockEntity::serverTick));
+            }
+            case SHELF -> {
+                return () -> new CoreShelfBlock(ExtendedProperties.of().sound(SoundType.WOOD).noOcclusion().strength(2.5f).flammableLikePlanks().blockEntity(CoreBlockEntities.SHELF), false);
+            }
+            default -> {
+                return type.create(wood);
+            }
+
+        }
     }
 }

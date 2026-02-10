@@ -163,26 +163,9 @@ public class CoreBlocks {
 
     public static final Map<CorePastelWood, Map<Wood.BlockType, DeferredHolder<Block, Block>>> DEEPER_DOWN_WOODS = Helpers.mapOf(CorePastelWood.class, wood ->
             Helpers.mapOf(Wood.BlockType.class, type -> wood.hasBlockType(type), type ->
-                    register(type.nameFor(wood), type.create(wood), type.createBlockItem(wood, new Item.Properties()))
+                    register(type.nameFor(wood), CorePastelWood.create(type, wood), type.createBlockItem(wood, new Item.Properties()))
             )
     );
-
-    public static final Map<CorePastelWood, DeferredHolder<Block, Block>> TOOL_RACKS = Helpers.mapOf(CorePastelWood.class, wood ->
-            register(Wood.BlockType.TOOL_RACK.nameFor(wood), () -> new CoreToolRackBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(2.0F).noOcclusion().blockEntity(CoreBlockEntities.TOOL_RACK)), Wood.BlockType.TOOL_RACK.createBlockItem(wood, new Item.Properties().stacksTo(1)))
-    );
-
-    public static final Map<CorePastelWood, DeferredHolder<Block, Block>> LOOMS = Helpers.mapOf(CorePastelWood.class, wood ->
-            register(Wood.BlockType.LOOM.nameFor(wood), () -> new CoreLoomBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(2.5F).noOcclusion().flammableLikePlanks().blockEntity(CoreBlockEntities.LOOM).ticks(CoreLoomBlockEntity::tick), wood.getPlanksTexture()), Wood.BlockType.LOOM.createBlockItem(wood, new Item.Properties().stacksTo(1)))
-    );
-
-    public static final Map<CorePastelWood, DeferredHolder<Block, Block>> SLUICES = Helpers.mapOf(CorePastelWood.class, wood ->
-            register(Wood.BlockType.SLUICE.nameFor(wood), () -> new SluiceBlock(ExtendedProperties.of().sound(SoundType.WOOD).strength(3F).noOcclusion().flammableLikeLogs().blockEntity(CoreBlockEntities.SLUICE).serverTicks(CoreSluiceBlockEntity::serverTick)), Wood.BlockType.SLUICE.createBlockItem(wood, new Item.Properties().stacksTo(1)))
-    );
-
-    public static final Map<CorePastelWood, DeferredHolder<Block, Block>> SHELVES = Helpers.mapOf(CorePastelWood.class, wood ->
-            register(Wood.BlockType.SHELF.nameFor(wood), () -> new CoreShelfBlock(ExtendedProperties.of().sound(SoundType.WOOD).noOcclusion().strength(2.5f).flammableLikePlanks().blockEntity(CoreBlockEntities.SHELF), false), Wood.BlockType.SHELF.createBlockItem(wood, new Item.Properties().stacksTo(32)))
-    );
-
 
     /* Much easier with kjs for now.
     public static final Map<Metals.Metal, DeferredHolder<Block, LiquidBlock>> METAL_FLUIDS = Helpers.mapOf(Metals.Metal.class, metal ->

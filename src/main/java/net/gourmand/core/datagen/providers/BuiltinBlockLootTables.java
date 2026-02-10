@@ -260,25 +260,13 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
         Stream.of(CorePastelWood.values()).forEach(wood -> {
             Stream.of(Wood.BlockType.values()).forEach( type -> {
                 if (wood.hasBlockType(type)){
-                    this.dropSelf(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get());
+                    if (type == Wood.BlockType.SLUICE){
+                        this.add(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get() ,LootTableBuilders.createSluiceTable(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get()));
+                    } else {
+                        this.dropSelf(CoreBlocks.DEEPER_DOWN_WOODS.get(wood).get(type).get());
+                    }
                 }
             });
-        });
-
-        CoreBlocks.TOOL_RACKS.values().forEach( holder -> {
-            this.dropSelf(holder.get());
-        });
-
-        CoreBlocks.LOOMS.values().forEach( holder -> {
-            this.dropSelf(holder.get());
-        });
-
-        CoreBlocks.SLUICES.values().forEach( holder -> {
-            this.add(holder.get() ,LootTableBuilders.createSluiceTable(holder.get()));
-        });
-
-        CoreBlocks.SHELVES.values().forEach( holder -> {
-            this.dropSelf(holder.get());
         });
     }
 
