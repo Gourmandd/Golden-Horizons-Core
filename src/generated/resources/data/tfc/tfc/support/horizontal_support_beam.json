@@ -1,0 +1,28 @@
+{
+  "ingredient": [
+    "modpack:wood/horizontal_support/chestnut_noxwood",
+    "modpack:wood/horizontal_support/slate_noxwood",
+    "modpack:wood/horizontal_support/ebony_noxwood",
+    "modpack:wood/horizontal_support/ivory_noxwood",
+    "modpack:wood/horizontal_support/weeping_gala",
+    "modpack:wood/horizontal_support/white",
+    "modpack:wood/horizontal_support/orange",
+    "modpack:wood/horizontal_support/magenta",
+    "modpack:wood/horizontal_support/light_blue",
+    "modpack:wood/horizontal_support/yellow",
+    "modpack:wood/horizontal_support/lime",
+    "modpack:wood/horizontal_support/pink",
+    "modpack:wood/horizontal_support/gray",
+    "modpack:wood/horizontal_support/light_gray",
+    "modpack:wood/horizontal_support/cyan",
+    "modpack:wood/horizontal_support/purple",
+    "modpack:wood/horizontal_support/blue",
+    "modpack:wood/horizontal_support/brown",
+    "modpack:wood/horizontal_support/green",
+    "modpack:wood/horizontal_support/red",
+    "modpack:wood/horizontal_support/black"
+  ],
+  "support_down": 2,
+  "support_horizontal": 4,
+  "support_up": 2
+}

@@ -9,10 +9,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.datagen.providers.BuiltinBlockLootTables;
-import net.gourmand.core.datagen.providers.BuiltinBlockTags;
-import net.gourmand.core.datagen.providers.BuiltinClimateRanges;
-import net.gourmand.core.datagen.providers.BuiltinItemTags;
+import net.gourmand.core.datagen.providers.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.DataProvider;
@@ -42,6 +39,7 @@ public final class DataEntryPoint
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinBlockTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));
+        add(event, new BuiltinSupports(output, lookup));
 
         addLoot(lookup, output, event, BuiltinBlockLootTables::new, LootContextParamSets.BLOCK);
     }
