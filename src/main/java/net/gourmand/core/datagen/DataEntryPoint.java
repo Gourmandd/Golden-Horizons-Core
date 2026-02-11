@@ -40,6 +40,7 @@ public final class DataEntryPoint
         add(event, new BuiltinBlockTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));
         add(event, new BuiltinSupports(output, lookup));
+        add(event, new BuiltinItemHeats(output, lookup));
 
         addLoot(lookup, output, event, BuiltinBlockLootTables::new, LootContextParamSets.BLOCK);
     }

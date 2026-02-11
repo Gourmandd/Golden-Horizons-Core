@@ -220,4 +220,13 @@ public class CategoryUtil {
 
         return list;
     }
+
+    public static class HeatCapacities {
+        public final static float DOUBLE_SHEET = 11.428572f;
+        public final static float SHEET = 5.714286f;
+        public final static float DOUBLE_INGOT = 5.714286f;
+        public final static float INGOT = 2.857143f;
+        public final static float ROD = 1.4285715f;
+        public final static float ANVIL = 40.0f;
+    }
 }
