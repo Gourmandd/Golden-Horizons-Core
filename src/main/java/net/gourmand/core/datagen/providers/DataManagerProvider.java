@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import com.google.common.collect.ImmutableMap;
+import net.gourmand.core.AncientGroundCore;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
@@ -11,7 +12,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 
 import net.dries007.tfc.TerraFirmaCraft;
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.data.DataManager;
 
 public abstract class DataManagerProvider<T> implements DataProvider
@@ -65,7 +65,7 @@ public abstract class DataManagerProvider<T> implements DataProvider
 
     protected final void add(String name, T value)
     {
-        add(Helpers.identifier(name.toLowerCase(Locale.ROOT)), value);
+        add(ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, name.toLowerCase(Locale.ROOT)), value);
     }
 
     protected final void add(ResourceLocation name, T value)

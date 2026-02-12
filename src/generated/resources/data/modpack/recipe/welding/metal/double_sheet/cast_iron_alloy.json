@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/sheet/cast_iron_alloy"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_sheet/cast_iron_alloy"
+  },
+  "second_input": {
+    "item": "modpack:metal/sheet/cast_iron_alloy"
+  },
+  "tier": 2
+}

@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/sheet/aluminium_bronze"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_sheet/aluminium_bronze"
+  },
+  "second_input": {
+    "item": "modpack:metal/sheet/aluminium_bronze"
+  },
+  "tier": 1
+}

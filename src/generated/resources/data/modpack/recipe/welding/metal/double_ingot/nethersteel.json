@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/ingot/nethersteel"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_ingot/nethersteel"
+  },
+  "second_input": {
+    "item": "modpack:metal/ingot/nethersteel"
+  },
+  "tier": 5
+}

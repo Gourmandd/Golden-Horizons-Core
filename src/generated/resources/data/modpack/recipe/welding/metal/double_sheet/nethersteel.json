@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/sheet/nethersteel"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_sheet/nethersteel"
+  },
+  "second_input": {
+    "item": "modpack:metal/sheet/nethersteel"
+  },
+  "tier": 5
+}

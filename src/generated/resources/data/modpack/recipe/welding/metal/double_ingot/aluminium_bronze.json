@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/ingot/aluminium_bronze"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_ingot/aluminium_bronze"
+  },
+  "second_input": {
+    "item": "modpack:metal/ingot/aluminium_bronze"
+  },
+  "tier": 1
+}

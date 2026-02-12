@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/ingot/aluminium"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_ingot/aluminium"
+  },
+  "second_input": {
+    "item": "modpack:metal/ingot/aluminium"
+  },
+  "tier": 1
+}

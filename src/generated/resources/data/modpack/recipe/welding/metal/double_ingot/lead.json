@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/ingot/lead"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_ingot/lead"
+  },
+  "second_input": {
+    "item": "modpack:metal/ingot/lead"
+  }
+}

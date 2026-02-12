@@ -1,9 +1,3 @@
-/*
- * Licensed under the EUPL, Version 1.2.
- * You may obtain a copy of the Licence at:
- * https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
- */
-
 package net.gourmand.core.registry.category;
 
 import java.util.Locale;
@@ -31,13 +25,13 @@ public class CoreMetals {
 
     public enum MetalType implements StringRepresentable, RegistryMetal {
 
-        ALUMINIUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1),
-        ALUMINIUM_BRONZE(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1),
-        CAST_IRON_ALLOY(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1),
-        HARDENED_STEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1),
-        NETHERSTEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.EPIC, -1),
-        LEAD(0xFF312347, MapColor.COLOR_PURPLE, Rarity.COMMON, -1),
-        ELECTRUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.COMMON, -1);
+        ALUMINIUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1, TFCTiers.BISMUTH_BRONZE),
+        ALUMINIUM_BRONZE(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1, TFCTiers.BLACK_BRONZE),
+        CAST_IRON_ALLOY(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1, TFCTiers.WROUGHT_IRON),
+        HARDENED_STEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.RARE, -1, TFCTiers.STEEL),
+        NETHERSTEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.EPIC, -1, TFCTiers.RED_STEEL),
+        LEAD(0xFF312347, MapColor.COLOR_PURPLE, Rarity.COMMON, -1, TFCTiers.COPPER),
+        ELECTRUM(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.COMMON, -1, TFCTiers.COPPER);
 
         // NETHERSTEEL(0xFF486B72, MapColor.COLOR_LIGHT_BLUE, Rarity.UNCOMMON, -1, TFCTiers.RED_STEEL, TFCArmorMaterials.RED_STEEL, PartType.EQUIPMENT),
         private final String serializedName;
@@ -49,9 +43,9 @@ public class CoreMetals {
         private final float weathering;
         private final PartType partType;
 
-        MetalType(int color, MapColor mapColor, Rarity rarity, float weathering)
+        MetalType(int color, MapColor mapColor, Rarity rarity, float weathering, LevelTier tier)
         {
-            this(color, mapColor, rarity, weathering, TFCTiers.COPPER, TFCArmorMaterials.COPPER, PartType.BASE);
+            this(color, mapColor, rarity, weathering, tier, TFCArmorMaterials.COPPER, PartType.BASE);
         }
 
         MetalType(int color, MapColor mapColor, Rarity rarity, float weathering, LevelTier toolTier, TFCArmorMaterials.Id armorTier, PartType partType)
@@ -136,12 +130,16 @@ public class CoreMetals {
                 default -> Metal.BISMUTH;
             };
         }
+
+        public int tier() {
+            return this.toolTier != null ? this.toolTier.level() : 0;
+        }
     }
 
     public enum PartType {
         BASE, // ingot, sheet, doubles, rod, plated blocks.
         EQUIPMENT, // BASE + tools, armour, anvil, grate, bars, chain, trapdoor, lantern.
         BASE_OXIDIZED,
-        EQUIPMENT_OXIDIZED;
+        EQUIPMENT_OXIDIZED
     }
 }

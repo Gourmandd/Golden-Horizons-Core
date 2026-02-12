@@ -36,6 +36,8 @@ public final class DataEntryPoint
                 new RegistrySetBuilder()
                 , Set.of(AncientGroundCore.MODID, "minecraft"))).getRegistryProvider();
 
+        add(event, new BuiltinRecipes(output, lookup));
+
         add(event, new BuiltinClimateRanges(output, lookup));
         add(event, new BuiltinBlockTags(event, lookup));
         add(event, new BuiltinItemTags(event, lookup));

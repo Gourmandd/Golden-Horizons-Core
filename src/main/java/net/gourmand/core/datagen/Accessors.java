@@ -1,5 +1,8 @@
 package net.gourmand.core.datagen;
 
+import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.CoreItems;
+import net.gourmand.core.registry.category.CoreMetals;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -15,6 +18,15 @@ import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
 public interface Accessors
 {
+    default Ingredient ingredientOf(CoreMetals.MetalType metal, Metal.ItemType type)
+    {
+        return Ingredient.of(CoreItems.METAL_ITEMS.get(metal).get(type).get());
+    }
+
+    default Ingredient ingredientOf(CoreMetals.MetalType metal, Metal.BlockType type)
+    {
+        return Ingredient.of(CoreBlocks.METALS.get(metal).get(type).get());
+    }
 
     default Item itemOf(ResourceLocation name)
     {

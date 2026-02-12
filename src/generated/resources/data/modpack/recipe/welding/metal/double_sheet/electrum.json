@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/sheet/electrum"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_sheet/electrum"
+  },
+  "second_input": {
+    "item": "modpack:metal/sheet/electrum"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/sheet/lead"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_sheet/lead"
+  },
+  "second_input": {
+    "item": "modpack:metal/sheet/lead"
+  }
+}

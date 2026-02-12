@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/sheet/hardened_steel"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_sheet/hardened_steel"
+  },
+  "second_input": {
+    "item": "modpack:metal/sheet/hardened_steel"
+  },
+  "tier": 3
+}

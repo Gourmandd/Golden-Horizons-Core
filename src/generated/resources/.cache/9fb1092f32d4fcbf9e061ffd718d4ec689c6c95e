@@ -1,0 +1,16 @@
+// 1.21.1	2026-02-12T09:14:15.236028811	Recipes
+d248c5232893b08a0d5830d0f2f575fd11fe9f3a data/minecraft/advancement/recipes/root.json
+8b1642f585b36b397ce7cc64bb11ae36b3f96de9 data/modpack/recipe/welding/metal/double_ingot/aluminium.json
+91f7d79b0d4c9b7e661d59b3cae8fb0671b77c39 data/modpack/recipe/welding/metal/double_ingot/aluminium_bronze.json
+20b68861f8a2a54a34c0d8b1812738ff5d8b072c data/modpack/recipe/welding/metal/double_ingot/cast_iron_alloy.json
+b5aa2bde3f309475f5dfda7a9df8288cdf1f5f42 data/modpack/recipe/welding/metal/double_ingot/electrum.json
+3cb0004299c8d083303404926f9cf130e8c02533 data/modpack/recipe/welding/metal/double_ingot/hardened_steel.json
+f1370377623f660f9a8067c3acccfce110b6bccd data/modpack/recipe/welding/metal/double_ingot/lead.json
+de696f9cc40ee81e6d8e07430430f2c749ef6972 data/modpack/recipe/welding/metal/double_ingot/nethersteel.json
+af5e689a80f58471c918d01c6ced054d239a4c85 data/modpack/recipe/welding/metal/double_sheet/aluminium.json
+62f943fb741993f71d8fce9b479e092b39d75757 data/modpack/recipe/welding/metal/double_sheet/aluminium_bronze.json
+00726f64702febe08b5ff984386e5903524f44d2 data/modpack/recipe/welding/metal/double_sheet/cast_iron_alloy.json
+4806353c0b8a3ee66dee72fda607775edff51390 data/modpack/recipe/welding/metal/double_sheet/electrum.json
+31269833d6921888f04dee01096efef726e28867 data/modpack/recipe/welding/metal/double_sheet/hardened_steel.json
+2d310b53295b8eb785ce377445cec582ee10aef3 data/modpack/recipe/welding/metal/double_sheet/lead.json
+b1d816176e14c858475e30c72105a0dc0197b068 data/modpack/recipe/welding/metal/double_sheet/nethersteel.json

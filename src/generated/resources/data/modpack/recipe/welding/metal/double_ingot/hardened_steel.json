@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/ingot/hardened_steel"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_ingot/hardened_steel"
+  },
+  "second_input": {
+    "item": "modpack:metal/ingot/hardened_steel"
+  },
+  "tier": 3
+}

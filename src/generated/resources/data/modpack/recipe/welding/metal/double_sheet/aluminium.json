@@ -1,0 +1,14 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "modpack:metal/sheet/aluminium"
+  },
+  "result": {
+    "count": 1,
+    "id": "modpack:metal/double_sheet/aluminium"
+  },
+  "second_input": {
+    "item": "modpack:metal/sheet/aluminium"
+  },
+  "tier": 1
+}
