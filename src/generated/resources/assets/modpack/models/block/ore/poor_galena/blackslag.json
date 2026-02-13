@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "pastel:block/blackslag",
+    "overlay": "modpack:block/ore/poor/galena"
+  }
+}

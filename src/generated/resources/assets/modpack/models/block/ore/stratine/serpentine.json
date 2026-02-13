@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "modpack:block/rock/raw/serpentine",
+    "overlay": "modpack:block/ore/stratine"
+  }
+}

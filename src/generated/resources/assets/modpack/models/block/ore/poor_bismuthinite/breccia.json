@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "caupona:block/felsic_tuff",
+    "overlay": "tfc:block/ore/poor/bismuthinite"
+  }
+}

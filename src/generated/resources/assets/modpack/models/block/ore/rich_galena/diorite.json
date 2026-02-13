@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfc:block/rock/raw/diorite",
+    "overlay": "modpack:block/ore/rich/galena"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/stone",
+    "overlay": "modpack:block/ore/rich/galena"
+  }
+}

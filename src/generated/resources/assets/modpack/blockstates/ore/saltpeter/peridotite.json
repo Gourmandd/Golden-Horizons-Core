@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "modpack:block/ore/saltpeter/peridotite"
+    }
+  }
+}

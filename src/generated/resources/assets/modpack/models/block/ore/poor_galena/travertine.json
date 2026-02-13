@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/dripstone_block",
+    "overlay": "modpack:block/ore/poor/galena"
+  }
+}

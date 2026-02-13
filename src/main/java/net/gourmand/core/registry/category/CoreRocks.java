@@ -158,4 +158,36 @@ public enum CoreRocks implements RegistryRock
             }
         }
     }
+
+    public static ResourceLocation getRawRockId(CoreRocks rock)
+    {
+        if (rock.hasVariants()){
+            return CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).getId();
+        } else {
+            switch (rock){
+                case BRECCIA -> {
+                    return ResourceLocation.fromNamespaceAndPath("caupona", "felsic_tuff");
+                }
+                case KOMATIITE -> {
+                    return ResourceLocation.fromNamespaceAndPath("create", "scoria");
+                }
+                case ARGILLITE -> {
+                    return ResourceLocation.fromNamespaceAndPath("minecraft", "stone");
+                }
+                case NEPHELINITE -> {
+                    return ResourceLocation.fromNamespaceAndPath("minecraft", "deepslate");
+                }
+                case TRAVERTINE-> {
+                    return ResourceLocation.fromNamespaceAndPath("minecraft", "dripstone_block");
+                }
+                case BLACKSLAG -> {
+                    return PastelBlocks.BLACKSLAG.getId();
+                }
+                case PICRITE_BASALT -> {
+                    return PastelBlocks.BASAL_MARBLE.getId();
+                }
+                case null, default -> throw new AssertionError("no raw rock for this rock type");
+            }
+        }
+    }
 }

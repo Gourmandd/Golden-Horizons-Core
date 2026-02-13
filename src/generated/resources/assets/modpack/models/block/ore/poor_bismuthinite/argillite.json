@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/stone",
+    "overlay": "tfc:block/ore/poor/bismuthinite"
+  }
+}

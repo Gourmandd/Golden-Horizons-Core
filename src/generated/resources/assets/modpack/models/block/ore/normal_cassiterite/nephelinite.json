@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/deepslate",
+    "overlay": "tfc:block/ore/normal_cassiterite"
+  }
+}

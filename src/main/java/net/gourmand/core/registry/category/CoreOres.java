@@ -76,33 +76,13 @@ public enum CoreOres implements RegistryOre {
         final Block block;
 
         switch (pastelOreType){
-            case PastelOreType.SHIMMERSTONE ->
-            {
-                block = new ShimmerstoneOreBlock( UniformInt.of(2, 4), properties);
-            }
-            case PastelOreType.AZURITE ->
-            {
-                block = new AzuriteOreBlock(UniformInt.of(4, 7), properties);
-            }
-            case PastelOreType.STRATINE ->
-            {
-                block = new CloakedOreBlock(UniformInt.of(3, 5), properties);
-            }
-            case PastelOreType.PALTAERIA ->
-            {
-                block = new CloakedOreBlock(UniformInt.of(2, 4), properties);
-            }
-            case PastelOreType.MALACHITE ->
-            {
-                block = new CloakedOreBlock(UniformInt.of(7, 11), properties);
-            }
-            case PastelOreType.NONE ->
-            {
-                block = new Block(properties);
-            }
-            default -> {
-                throw new AssertionError("pastelOreType of CoreOre did not match any PastelOreType enum entry");
-            }
+            case PastelOreType.SHIMMERSTONE -> block = new ShimmerstoneOreBlock( UniformInt.of(2, 4), properties);
+            case PastelOreType.AZURITE -> block = new AzuriteOreBlock(UniformInt.of(4, 7), properties);
+            case PastelOreType.STRATINE -> block = new CloakedOreBlock(UniformInt.of(3, 5), properties);
+            case PastelOreType.PALTAERIA -> block = new CloakedOreBlock(UniformInt.of(2, 4), properties);
+            case PastelOreType.MALACHITE -> block = new CloakedOreBlock(UniformInt.of(7, 11), properties);
+            case PastelOreType.NONE -> block = new Block(properties);
+            default -> throw new AssertionError("pastelOreType of CoreOre did not match any PastelOreType enum entry");
         }
         return block;
     }
@@ -112,36 +92,16 @@ public enum CoreOres implements RegistryOre {
         final Item item;
 
         switch (pastelOreType){
-            case PastelOreType.SHIMMERSTONE ->
-            {
-                item = PastelItems.SHIMMERSTONE_GEM.asItem();
-            }
-            case PastelOreType.AZURITE ->
-            {
-                item = PastelItems.RAW_AZURITE.asItem();
-            }
-            case PastelOreType.STRATINE ->
-            {
-                item = PastelItems.STRATINE_FRAGMENTS.asItem();
-            }
-            case PastelOreType.PALTAERIA ->
-            {
-                item = PastelItems.PALTAERIA_FRAGMENTS.asItem();
-            }
-            case PastelOreType.MALACHITE ->
-            {
-                item = PastelItems.RAW_MALACHITE.asItem();
-            }
-            case PastelOreType.NONE ->
-            {
-                throw new AssertionError("pastelOre of CoreOre is NONE, only use the method if you are sure pastelOreType isnt NONE");
-            }
-            default -> {
-                throw new AssertionError("pastelOre of CoreOre did not match any PastelOreType enum entry");
-            }
+            case PastelOreType.SHIMMERSTONE -> item = PastelItems.SHIMMERSTONE_GEM.asItem();
+            case PastelOreType.AZURITE -> item = PastelItems.RAW_AZURITE.asItem();
+            case PastelOreType.STRATINE -> item = PastelItems.STRATINE_FRAGMENTS.asItem();
+            case PastelOreType.PALTAERIA -> item = PastelItems.PALTAERIA_FRAGMENTS.asItem();
+            case PastelOreType.MALACHITE -> item = PastelItems.RAW_MALACHITE.asItem();
+            case PastelOreType.NONE -> throw new AssertionError("pastelOre of CoreOre is NONE, only use the method if you are sure pastelOreType isnt NONE");
+            default -> throw new AssertionError("pastelOre of CoreOre did not match any PastelOreType enum entry");
         }
         return item;
-    };
+    }
 
     public static Ore.Grade getTFCgrade(Grade grade){
         switch (grade){
@@ -158,11 +118,11 @@ public enum CoreOres implements RegistryOre {
                 return Ore.Grade.NORMAL;
             }
         }
-    };
+    }
 
     @Override
     public String getSerializedName() {
-        return "";
+        return serializedName;
     }
 
     public enum Grade

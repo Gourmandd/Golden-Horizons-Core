@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "create:block/palettes/stone_types/scoria",
+    "overlay": "tfc:block/ore/rich/bismuthinite"
+  }
+}

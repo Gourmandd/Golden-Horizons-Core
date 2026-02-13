@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "pastel:block/basal_marble",
+    "overlay": "tfc:block/ore/poor/limonite"
+  }
+}
