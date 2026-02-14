@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/travertine/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/travertine/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/travertine/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/travertine/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/rock/aqueduct/travertine/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

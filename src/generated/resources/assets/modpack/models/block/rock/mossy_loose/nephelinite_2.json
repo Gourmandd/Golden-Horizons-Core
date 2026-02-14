@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_igneous_extrusive_2",
+  "textures": {
+    "particle": "minecraft:block/cobbled_deepslate",
+    "texture": "minecraft:block/cobbled_deepslate"
+  }
+}

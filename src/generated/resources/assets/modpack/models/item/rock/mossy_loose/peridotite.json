@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modpack:item/rock/loose/peridotite",
+    "layer1": "tfc:item/loose_rock/moss_igneous_intrusive"
+  }
+}

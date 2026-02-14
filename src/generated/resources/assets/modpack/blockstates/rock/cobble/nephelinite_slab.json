@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cobble/nephelinite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cobble/nephelinite"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cobble/nephelinite_slab_top"
+    }
+  }
+}

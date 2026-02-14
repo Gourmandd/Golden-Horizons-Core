@@ -7,6 +7,8 @@ import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
+import net.minecraft.resources.ResourceLocation;
+
 import java.util.Locale;
 
 public class TextureUtil {
@@ -60,6 +62,170 @@ public class TextureUtil {
         }
     }
 
+    private static String getCobbleTexture(CoreRocks rock){
+        if (rock.hasVariants()){
+            return (AncientGroundCore.MODID + ":block/rock/cobble/" + rock.getSerializedName());
+        } else {
+            switch (rock){
+                case ARGILLITE -> {
+                    return "minecraft:block/cobblestone";
+                }
+                case NEPHELINITE -> {
+                    return "minecraft:block/cobbled_deepslate";
+                }
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT -> {
+                    return (AncientGroundCore.MODID + ":block/rock/cobble/" + rock.getSerializedName());
+                }
+                case BLACKSLAG -> {
+                    return "pastel:block/cobbled_blackslag";
+                }
+                case null, default -> throw new AssertionError("Invalid Rock to get texture for");
+            }
+        }
+    }
+
+    private static String getMossyCobbleTexture(CoreRocks rock){
+        if (rock.hasVariants()){
+            return (AncientGroundCore.MODID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
+        } else {
+            switch (rock){
+                case ARGILLITE -> {
+                    return "minecraft:block/mossy_cobblestone";
+                }
+                case NEPHELINITE -> {
+                    return "minecraft:block/cobbled_deepslate";
+                }
+                case TRAVERTINE, BRECCIA, KOMATIITE, PICRITE_BASALT -> {
+                    return (AncientGroundCore.MODID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
+                }
+                case BLACKSLAG -> {
+                    return "pastel:block/cobbled_blackslag";
+                }
+                case null, default -> throw new AssertionError("Invalid Rock to get texture for");
+            }
+        }
+    }
+
+    private static String getBricksTexture(CoreRocks rock){
+        if (rock.hasVariants()){
+            return (AncientGroundCore.MODID + ":block/rock/bricks/" + rock.getSerializedName());
+        } else {
+            switch (rock){
+                case ARGILLITE -> {
+                    return "minecraft:block/stone_bricks";
+                }
+                case NEPHELINITE -> {
+                    return "minecraft:block/deepslate_bricks";
+                }
+                case TRAVERTINE -> {
+                    return "architects_palette:block/dripstone_bricks";
+                }
+                case BRECCIA -> {
+                    return "caupona:block/felsic_tuff_bricks";
+                }
+                case KOMATIITE -> {
+                    return "create:block/palettes/stone_types/brick/scoria_cut_brick";
+                }
+                case BLACKSLAG -> {
+                    return "pastel:block/blackslag_bricks";
+                }
+                case PICRITE_BASALT -> {
+                    return "pastel:block/basal_marble_bricks";
+                }
+                case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
+            }
+        }
+    }
+
+    private static String getMossyBricksTexture(CoreRocks rock){
+        if (rock.hasVariants()){
+            return (AncientGroundCore.MODID + ":block/rock/mossy_bricks/" + rock.getSerializedName());
+        } else {
+            switch (rock){
+                case ARGILLITE -> {
+                    return "minecraft:block/mossy_stone_bricks";
+                }
+                case NEPHELINITE -> {
+                    return "minecraft:block/deepslate_bricks";
+                }
+                case TRAVERTINE -> {
+                    return "architects_palette:block/dripstone_bricks";
+                }
+                case BRECCIA -> {
+                    return "caupona:block/felsic_tuff_bricks";
+                }
+                case KOMATIITE -> {
+                    return "create:block/palettes/stone_types/brick/scoria_cut_brick";
+                }
+                case BLACKSLAG -> {
+                    return "pastel:block/blackslag_bricks";
+                }
+                case PICRITE_BASALT -> {
+                    return "pastel:block/basal_marble_bricks";
+                }
+                case null, default -> throw new AssertionError("Invalid Rock to get texture for");
+            }
+        }
+    }
+
+    private static String getCrackedBricksTexture(CoreRocks rock){
+        if (rock.hasVariants()){
+            return (AncientGroundCore.MODID + ":block/rock/cracked_bricks/" + rock.getSerializedName());
+        } else {
+            switch (rock){
+                case ARGILLITE -> {
+                    return "minecraft:block/stone_bricks";
+                }
+                case NEPHELINITE -> {
+                    return "minecraft:block/deepslate_bricks";
+                }
+                case TRAVERTINE -> {
+                    return "architects_palette:block/dripstone_bricks";
+                }
+                case BRECCIA -> {
+                    return "caupona:block/felsic_tuff_bricks";
+                }
+                case KOMATIITE -> {
+                    return "create:block/palettes/stone_types/brick/scoria_cut_brick";
+                }
+                case BLACKSLAG -> {
+                    return "pastel:block/blackslag_bricks";
+                }
+                case PICRITE_BASALT -> {
+                    return "pastel:block/basal_marble_bricks";
+                }
+                case null, default -> throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
+            }
+        }
+    }
+
+    private static String getGravelTexture(CoreRocks rock){
+        switch (rock){
+            case ARGILLITE -> {
+                return "minecraft:block/gravel";
+            }
+            default -> {
+                return (AncientGroundCore.MODID + ":block/rock/gravel/" + rock.getSerializedName());
+            }
+        }
+    }
+
+    private static String getSmoothTexture(CoreRocks rock){
+        if (rock.hasVariants()){
+            return (AncientGroundCore.MODID + ":block/rock/smooth/" + rock.getSerializedName());
+        } else {
+            throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
+        }
+    }
+
+    private static String getChiseledTexture(CoreRocks rock){
+        if (rock.hasVariants()){
+            return (AncientGroundCore.MODID + ":block/rock/chiseled/" + rock.getSerializedName());
+        } else {
+            throw new AssertionError("Invalid Rock to get texture for " + rock.getSerializedName());
+        }
+    }
+
     private static String getRawRockTexture(Rock rock){
         return (TerraFirmaCraft.MOD_ID + ":block/rock/raw/" + rock.getSerializedName());
     }
@@ -100,5 +266,39 @@ public class TextureUtil {
             }
             case null -> throw new AssertionError("Invalid grade");
         }
+    }
+
+    public static ResourceLocation getRockTexture(CoreRocks rock, Rock.BlockType type){
+
+        switch(type){
+            case RAW, HARDENED, SPIKE -> {
+                return ResourceLocation.parse(getRawRockTexture(rock));
+            }
+            case LOOSE, COBBLE -> {
+                return ResourceLocation.parse(getCobbleTexture(rock));
+            }
+            case MOSSY_LOOSE, MOSSY_COBBLE -> {
+                return ResourceLocation.parse(getMossyCobbleTexture(rock));
+            }
+            case GRAVEL -> {
+                return ResourceLocation.parse(getGravelTexture(rock));
+            }
+            case SMOOTH, BUTTON, PRESSURE_PLATE -> {
+                return ResourceLocation.parse(getSmoothTexture(rock));
+            }
+            case CHISELED -> {
+                return ResourceLocation.parse(getChiseledTexture(rock));
+            }
+            case BRICKS, AQUEDUCT -> {
+                return ResourceLocation.parse(getBricksTexture(rock));
+            }
+            case MOSSY_BRICKS -> {
+                return ResourceLocation.parse(getMossyBricksTexture(rock));
+            }
+            case CRACKED_BRICKS -> {
+                return ResourceLocation.parse(getCrackedBricksTexture(rock));
+            }
+        }
+        return null;
     }
 }

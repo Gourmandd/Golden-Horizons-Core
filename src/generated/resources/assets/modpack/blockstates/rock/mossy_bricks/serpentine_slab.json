@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_bricks/serpentine_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_bricks/serpentine"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_bricks/serpentine_slab_top"
+    }
+  }
+}

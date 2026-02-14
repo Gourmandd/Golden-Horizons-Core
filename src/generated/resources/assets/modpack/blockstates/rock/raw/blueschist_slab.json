@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/raw/blueschist_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/raw/blueschist"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/raw/blueschist_slab_top"
+    }
+  }
+}

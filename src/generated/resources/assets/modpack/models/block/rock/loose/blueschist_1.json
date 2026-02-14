@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_metamorphic_1",
+  "textures": {
+    "particle": "modpack:block/rock/cobble/blueschist",
+    "texture": "modpack:block/rock/cobble/blueschist"
+  }
+}

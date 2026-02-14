@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "modpack:block/rock/spike/blackslag_base"
+    },
+    "part=middle": {
+      "model": "modpack:block/rock/spike/blackslag_middle"
+    },
+    "part=tip": {
+      "model": "modpack:block/rock/spike/blackslag_tip"
+    }
+  }
+}

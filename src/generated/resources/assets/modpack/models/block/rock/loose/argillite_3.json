@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_sedimentary_3",
+  "textures": {
+    "particle": "minecraft:block/cobblestone",
+    "texture": "minecraft:block/cobblestone"
+  }
+}

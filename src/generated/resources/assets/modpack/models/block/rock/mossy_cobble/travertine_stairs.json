@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "modpack:block/rock/mossy_cobble/travertine",
+    "side": "modpack:block/rock/mossy_cobble/travertine",
+    "top": "modpack:block/rock/mossy_cobble/travertine"
+  }
+}

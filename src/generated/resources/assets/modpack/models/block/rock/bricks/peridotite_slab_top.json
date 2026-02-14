@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "modpack:block/rock/bricks/peridotite",
+    "side": "modpack:block/rock/bricks/peridotite",
+    "top": "modpack:block/rock/bricks/peridotite"
+  }
+}

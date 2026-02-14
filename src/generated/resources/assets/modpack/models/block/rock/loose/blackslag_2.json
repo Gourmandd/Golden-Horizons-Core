@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_igneous_extrusive_2",
+  "textures": {
+    "particle": "pastel:block/cobbled_blackslag",
+    "texture": "pastel:block/cobbled_blackslag"
+  }
+}

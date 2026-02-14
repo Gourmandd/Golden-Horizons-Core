@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cracked_bricks/peridotite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cracked_bricks/peridotite"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cracked_bricks/peridotite_slab_top"
+    }
+  }
+}

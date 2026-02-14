@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/east",
+  "textures": {
+    "particle": "modpack:block/rock/bricks/peridotite",
+    "texture": "modpack:block/rock/bricks/peridotite"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "modpack:block/rock/spike/argillite_base"
+    },
+    "part=middle": {
+      "model": "modpack:block/rock/spike/argillite_middle"
+    },
+    "part=tip": {
+      "model": "modpack:block/rock/spike/argillite_tip"
+    }
+  }
+}

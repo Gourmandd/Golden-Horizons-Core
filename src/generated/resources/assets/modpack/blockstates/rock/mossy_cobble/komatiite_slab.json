@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_cobble/komatiite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_cobble/komatiite"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_cobble/komatiite_slab_top"
+    }
+  }
+}

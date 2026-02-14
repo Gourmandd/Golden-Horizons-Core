@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/base",
+  "textures": {
+    "particle": "minecraft:block/deepslate_bricks",
+    "texture": "minecraft:block/deepslate_bricks"
+  }
+}

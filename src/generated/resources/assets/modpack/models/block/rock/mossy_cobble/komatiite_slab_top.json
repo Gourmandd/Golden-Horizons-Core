@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "modpack:block/rock/mossy_cobble/komatiite",
+    "side": "modpack:block/rock/mossy_cobble/komatiite",
+    "top": "modpack:block/rock/mossy_cobble/komatiite"
+  }
+}

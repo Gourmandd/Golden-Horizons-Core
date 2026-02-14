@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_middle",
+  "textures": {
+    "particle": "pastel:block/blackslag",
+    "texture": "pastel:block/blackslag"
+  }
+}

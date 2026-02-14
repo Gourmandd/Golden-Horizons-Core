@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_sedimentary_1",
+  "textures": {
+    "particle": "modpack:block/rock/mossy_cobble/travertine",
+    "texture": "modpack:block/rock/mossy_cobble/travertine"
+  }
+}

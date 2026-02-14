@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cobble/breccia_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cobble/breccia"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cobble/breccia_slab_top"
+    }
+  }
+}

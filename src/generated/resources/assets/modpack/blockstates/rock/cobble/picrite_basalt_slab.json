@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cobble/picrite_basalt_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cobble/picrite_basalt"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cobble/picrite_basalt_slab_top"
+    }
+  }
+}

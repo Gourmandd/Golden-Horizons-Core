@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/raw/peridotite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/raw/peridotite"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/raw/peridotite_slab_top"
+    }
+  }
+}

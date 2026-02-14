@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_cobble/argillite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_cobble/argillite"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_cobble/argillite_slab_top"
+    }
+  }
+}

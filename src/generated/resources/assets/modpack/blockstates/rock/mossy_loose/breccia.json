@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "count=1": [
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_1"
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_1",
+        "y": 90
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_1",
+        "y": 180
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_1",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_2"
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_2",
+        "y": 90
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_2",
+        "y": 180
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_2",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_3"
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_3",
+        "y": 90
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_3",
+        "y": 180
+      },
+      {
+        "model": "modpack:block/rock/mossy_loose/breccia_3",
+        "y": 270
+      }
+    ]
+  }
+}

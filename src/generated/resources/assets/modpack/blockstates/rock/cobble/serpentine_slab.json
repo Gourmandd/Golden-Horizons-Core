@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cobble/serpentine_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cobble/serpentine"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cobble/serpentine_slab_top"
+    }
+  }
+}

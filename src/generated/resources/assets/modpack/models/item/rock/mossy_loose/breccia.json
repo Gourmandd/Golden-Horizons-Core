@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modpack:item/rock/loose/breccia",
+    "layer1": "tfc:item/loose_rock/moss_sedementary"
+  }
+}

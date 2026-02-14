@@ -128,7 +128,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'pastel', '--existing-mod', 'caupona', '--existing-mod', 'create'
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'pastel', '--existing-mod', 'caupona', '--existing-mod', 'create', '--existing-mod', 'architects_palette'
         }
 
         // applies to all the run configs above
@@ -190,6 +190,7 @@ dependencies {
     //misc
     implementation "curse.maven:caupona-656147:7112048"
     implementation "curse.maven:create-328085:7178775"
+    implementation "curse.maven:architects-palette-433862:6861008"
 
 
 

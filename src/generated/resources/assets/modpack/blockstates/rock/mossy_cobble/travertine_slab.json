@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_cobble/travertine_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_cobble/travertine"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_cobble/travertine_slab_top"
+    }
+  }
+}

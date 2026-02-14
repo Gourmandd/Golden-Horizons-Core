@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "modpack:block/rock/cracked_bricks/blueschist",
+    "side": "modpack:block/rock/cracked_bricks/blueschist",
+    "top": "modpack:block/rock/cracked_bricks/blueschist"
+  }
+}

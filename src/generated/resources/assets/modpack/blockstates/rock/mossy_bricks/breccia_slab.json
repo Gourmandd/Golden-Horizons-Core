@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_bricks/breccia_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_bricks/breccia"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_bricks/breccia_slab_top"
+    }
+  }
+}

@@ -1,7 +1,6 @@
 package net.gourmand.core.registry;
 
 import net.dries007.tfc.common.blocks.*;
-import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
@@ -10,12 +9,7 @@ import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.gourmand.core.AncientGroundCore;
-import net.gourmand.core.registry.blockentities.CoreLoomBlockEntity;
-import net.gourmand.core.registry.blockentities.CoreSluiceBlockEntity;
 import net.gourmand.core.registry.blocks.CoreDecorationBlockHolder;
-import net.gourmand.core.registry.blocks.CoreLoomBlock;
-import net.gourmand.core.registry.blocks.CoreShelfBlock;
-import net.gourmand.core.registry.blocks.CoreToolRackBlock;
 import net.gourmand.core.registry.category.*;
 import net.gourmand.core.registry.category.CorePastelWood;
 import net.minecraft.core.BlockPos;

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_bricks/picrite_basalt_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_bricks/picrite_basalt"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_bricks/picrite_basalt_slab_top"
+    }
+  }
+}

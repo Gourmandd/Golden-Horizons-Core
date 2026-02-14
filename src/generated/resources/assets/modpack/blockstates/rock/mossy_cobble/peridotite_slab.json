@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_cobble/peridotite_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_cobble/peridotite"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_cobble/peridotite_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_middle",
+  "textures": {
+    "particle": "minecraft:block/deepslate",
+    "texture": "minecraft:block/deepslate"
+  }
+}

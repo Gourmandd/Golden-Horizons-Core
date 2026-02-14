@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_tip",
+  "textures": {
+    "particle": "caupona:block/felsic_tuff",
+    "texture": "caupona:block/felsic_tuff"
+  }
+}

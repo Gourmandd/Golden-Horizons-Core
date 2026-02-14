@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/north",
+  "textures": {
+    "particle": "modpack:block/rock/bricks/blueschist",
+    "texture": "modpack:block/rock/bricks/blueschist"
+  }
+}

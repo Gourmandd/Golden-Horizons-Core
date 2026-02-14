@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "modpack:block/rock/raw/serpentine",
+    "side": "modpack:block/rock/raw/serpentine",
+    "top": "modpack:block/rock/raw/serpentine"
+  }
+}

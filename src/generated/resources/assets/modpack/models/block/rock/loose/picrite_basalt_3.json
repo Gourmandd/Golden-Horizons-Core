@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_igneous_extrusive_3",
+  "textures": {
+    "particle": "modpack:block/rock/cobble/picrite_basalt",
+    "texture": "modpack:block/rock/cobble/picrite_basalt"
+  }
+}

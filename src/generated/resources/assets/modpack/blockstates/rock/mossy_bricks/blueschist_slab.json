@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/mossy_bricks/blueschist_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/mossy_bricks/blueschist"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/mossy_bricks/blueschist_slab_top"
+    }
+  }
+}

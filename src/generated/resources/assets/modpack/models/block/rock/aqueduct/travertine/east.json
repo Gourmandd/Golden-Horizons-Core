@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/east",
+  "textures": {
+    "particle": "architects_palette:block/dripstone_bricks",
+    "texture": "architects_palette:block/dripstone_bricks"
+  }
+}

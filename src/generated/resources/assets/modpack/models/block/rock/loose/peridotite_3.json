@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_igneous_intrusive_3",
+  "textures": {
+    "particle": "modpack:block/rock/cobble/peridotite",
+    "texture": "modpack:block/rock/cobble/peridotite"
+  }
+}

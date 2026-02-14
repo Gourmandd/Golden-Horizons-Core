@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "modpack:block/rock/cracked_bricks/peridotite"
+  }
+}

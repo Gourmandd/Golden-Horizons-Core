@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "modpack:block/rock/smooth/blueschist"
+  }
+}

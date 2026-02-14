@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/rock/cobble/blackslag_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/rock/cobble/blackslag"
+    },
+    "type=top": {
+      "model": "modpack:block/rock/cobble/blackslag_slab_top"
+    }
+  }
+}

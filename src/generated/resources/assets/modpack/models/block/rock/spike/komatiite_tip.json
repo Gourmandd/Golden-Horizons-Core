@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_tip",
+  "textures": {
+    "particle": "create:block/palettes/stone_types/scoria",
+    "texture": "create:block/palettes/stone_types/scoria"
+  }
+}

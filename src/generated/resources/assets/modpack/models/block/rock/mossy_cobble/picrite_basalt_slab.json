@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "modpack:block/rock/mossy_cobble/picrite_basalt",
+    "side": "modpack:block/rock/mossy_cobble/picrite_basalt",
+    "top": "modpack:block/rock/mossy_cobble/picrite_basalt"
+  }
+}

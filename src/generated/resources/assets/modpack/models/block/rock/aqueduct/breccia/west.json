@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/west",
+  "textures": {
+    "particle": "caupona:block/felsic_tuff_bricks",
+    "texture": "caupona:block/felsic_tuff_bricks"
+  }
+}
