@@ -1,0 +1,8 @@
+{
+  "loader": "tfc:fluid_container",
+  "parent": "neoforge:item/default",
+  "textures": {
+    "base": "minecraft:item/bucket",
+    "fluid": "tfc:item/metal/bucket/overlay"
+  }
+}

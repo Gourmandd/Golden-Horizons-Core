@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "age=0,part=bottom": {
+      "model": "pastel:block/amaranth_stage0_lower"
+    },
+    "age=0,part=top": {
+      "model": "pastel:block/amaranth_stage2_upper"
+    },
+    "age=1,part=bottom": {
+      "model": "pastel:block/amaranth_stage1_lower"
+    },
+    "age=1,part=top": {
+      "model": "pastel:block/amaranth_stage2_upper"
+    },
+    "age=2,part=bottom": {
+      "model": "pastel:block/amaranth_stage1_lower"
+    },
+    "age=2,part=top": {
+      "model": "pastel:block/amaranth_stage2_upper"
+    },
+    "age=3,part=bottom": {
+      "model": "pastel:block/amaranth_stage2_lower"
+    },
+    "age=3,part=top": {
+      "model": "pastel:block/amaranth_stage2_upper"
+    },
+    "age=4,part=bottom": {
+      "model": "pastel:block/amaranth_stage2_lower"
+    },
+    "age=4,part=top": {
+      "model": "pastel:block/amaranth_stage2_upper"
+    },
+    "age=5,part=bottom": {
+      "model": "pastel:block/amaranth_stage3_lower"
+    },
+    "age=5,part=top": {
+      "model": "pastel:block/amaranth_stage3_upper"
+    },
+    "age=6,part=bottom": {
+      "model": "pastel:block/amaranth_stage3_lower"
+    },
+    "age=6,part=top": {
+      "model": "pastel:block/amaranth_stage3_upper"
+    },
+    "age=7,part=bottom": {
+      "model": "pastel:block/amaranth_stage4_lower"
+    },
+    "age=7,part=top": {
+      "model": "pastel:block/amaranth_stage4_upper"
+    }
+  }
+}

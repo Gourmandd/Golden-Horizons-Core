@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "mature=true": {
+      "model": "modpack:block/wild_crop/coffee"
+    },
+    "mature=false": {
+      "model": "tfc:block/dead_crop/alfalfa"
+    }
+  }
+}

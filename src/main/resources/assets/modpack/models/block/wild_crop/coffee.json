@@ -1,0 +1,6 @@
+{
+    "parent": "tfc:block/wild_crop/crop",
+    "textures": {
+        "crop": "rusticdelight:block/wild_coffee"
+    }
+}

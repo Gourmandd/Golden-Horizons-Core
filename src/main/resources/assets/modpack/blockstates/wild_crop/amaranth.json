@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=top,mature=true": {
+      "model": "pastel:block/amaranth_stage4_upper"
+    },
+    "part=top,mature=false": {
+      "model": "pastel:block/amaranth_stage4_upper"
+    },
+    "part=bottom,mature=true": {
+      "model": "pastel:block/amaranth_stage4_lower"
+    },
+    "part=bottom,mature=false": {
+      "model": "pastel:block/amaranth_stage4_lower"
+    }
+  }
+}

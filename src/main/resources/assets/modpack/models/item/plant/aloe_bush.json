@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/stationary_bush_2",
+  "textures": {
+    "bush": "pastel:block/aloe4"
+  }
+}

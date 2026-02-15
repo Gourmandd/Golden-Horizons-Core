@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "mature=true": {
+      "model": "modpack:block/wild_crop/cotton"
+    },
+    "mature=false": {
+      "model": "tfc:block/dead_crop/peanut"
+    }
+  }
+}

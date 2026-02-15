@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/groundcover/galena",
+        "y": 90
+      },
+      {
+        "model": "modpack:block/groundcover/galena"
+      },
+      {
+        "model": "modpack:block/groundcover/galena",
+        "y": 180
+      },
+      {
+        "model": "modpack:block/groundcover/galena",
+        "y": 270
+      }
+    ]
+  }
+}

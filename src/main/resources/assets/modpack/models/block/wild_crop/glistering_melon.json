@@ -1,0 +1,6 @@
+{
+    "parent": "tfc:block/wild_crop/crop",
+    "textures": {
+        "crop": "pastel:block/glistering_melon_stem"
+    }
+}

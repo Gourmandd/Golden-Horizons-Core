@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/cross_3",
+  "textures": {
+    "cross": "caupona:block/wolfberry_sapling"
+  }
+}

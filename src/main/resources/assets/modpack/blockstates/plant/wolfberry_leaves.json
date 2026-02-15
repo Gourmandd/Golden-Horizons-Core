@@ -1,0 +1,60 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "lifecycle": "fruiting"
+            },
+            "apply": [
+                {
+                    "model": "modpack:block/plant/wolfberry_leaves"
+                }
+            ]
+        },
+        {
+            "when": {
+                "lifecycle": "fruiting"
+            },
+            "apply": [
+                {
+                    "model": "caupona:block/wolfberry_fruits_stage_3"
+                }
+            ]
+        },
+        {
+            "when": {
+                "lifecycle": "flowering"
+            },
+            "apply": [
+                {
+                    "model": "modpack:block/plant/wolfberry_flowering_leaves"
+                }
+            ]
+        },
+        {
+            "when": {
+                "lifecycle": "flowering"
+            },
+            "apply": [
+                {
+                    "model": "caupona:block/wolfberry_fruits_stage_1"
+                }
+            ]
+        },
+        {
+            "when": {
+                "lifecycle": "dormant"
+            },
+            "apply": {
+                "model": "modpack:block/plant/wolfberry_dry_leaves"
+            }
+        },
+        {
+            "when": {
+                "lifecycle": "healthy"
+            },
+            "apply": {
+                "model": "modpack:block/plant/wolfberry_leaves"
+            }
+        }
+    ]
+}

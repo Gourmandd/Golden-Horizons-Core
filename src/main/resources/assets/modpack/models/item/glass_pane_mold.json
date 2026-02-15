@@ -1,0 +1,8 @@
+{
+  "loader": "tfc:fluid_container",
+  "parent": "neoforge:item/default",
+  "textures": {
+    "base": "modpack:item/glass_pane_mold",
+    "fluid": "modpack:item/glass_pane_mold_overlay"
+  }
+}

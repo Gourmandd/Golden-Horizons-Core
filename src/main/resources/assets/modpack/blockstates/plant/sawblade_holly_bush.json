@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "lifecycle=healthy,stage=0": {
+      "model": "modpack:block/plant/sawblade_holly_bush_0"
+    },
+    "lifecycle=healthy,stage=1": {
+      "model": "modpack:block/plant/sawblade_holly_bush_1"
+    },
+    "lifecycle=healthy,stage=2": {
+      "model": "modpack:block/plant/sawblade_holly_bush_2"
+    },
+    "lifecycle=dormant,stage=0": {
+      "model": "modpack:block/plant/dry_sawblade_holly_bush_0"
+    },
+    "lifecycle=dormant,stage=1": {
+      "model": "modpack:block/plant/dry_sawblade_holly_bush_1"
+    },
+    "lifecycle=dormant,stage=2": {
+      "model": "modpack:block/plant/dry_sawblade_holly_bush_2"
+    },
+    "lifecycle=fruiting,stage=0": {
+      "model": "modpack:block/plant/fruiting_sawblade_holly_bush_0"
+    },
+    "lifecycle=fruiting,stage=1": {
+      "model": "modpack:block/plant/fruiting_sawblade_holly_bush_1"
+    },
+    "lifecycle=fruiting,stage=2": {
+      "model": "modpack:block/plant/fruiting_sawblade_holly_bush_2"
+    },
+    "lifecycle=flowering,stage=0": {
+      "model": "modpack:block/plant/flowering_sawblade_holly_bush_0"
+    },
+    "lifecycle=flowering,stage=1": {
+      "model": "modpack:block/plant/flowering_sawblade_holly_bush_1"
+    },
+    "lifecycle=flowering,stage=2": {
+      "model": "modpack:block/plant/flowering_sawblade_holly_bush_2"
+    }
+  }
+}

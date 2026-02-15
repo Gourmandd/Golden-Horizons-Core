@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/branch_side",
+  "textures": {
+    "bark": "caupona:block/walnut_log"
+  }
+}

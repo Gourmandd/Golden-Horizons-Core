@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/branch_up",
+  "textures": {
+    "bark": "modpack:block/plant/wolfberry_log"
+  }
+}
