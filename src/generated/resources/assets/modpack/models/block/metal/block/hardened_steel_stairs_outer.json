@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "modpack:block/metal/full/hardened_steel",
+    "side": "modpack:block/metal/full/hardened_steel",
+    "top": "modpack:block/metal/full/hardened_steel"
+  }
+}

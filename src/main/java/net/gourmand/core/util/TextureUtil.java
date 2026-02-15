@@ -5,6 +5,7 @@ import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.resources.ResourceLocation;
@@ -300,5 +301,21 @@ public class TextureUtil {
             }
         }
         return null;
+    }
+
+    public static ResourceLocation getMetalBlockTexture(CoreMetals.MetalType metal){
+
+        switch(metal){
+            case ELECTRUM -> {
+                return ResourceLocation.parse("createaddition:block/electrum_block/block");
+            }
+            /* I don't think I can sanely make conditional cases to check if the mod/assets are loaded.
+            case NETHERSTEEL -> {
+                return ResourceLocation.parse("createbigcannons:block/nethersteel_block");
+            }*/
+            default -> {
+                return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID,"block/metal/full/" + metal.getSerializedName());
+            }
+        }
     }
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/block/hardened_steel_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/block/hardened_steel"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/block/hardened_steel_slab_top"
+    }
+  }
+}

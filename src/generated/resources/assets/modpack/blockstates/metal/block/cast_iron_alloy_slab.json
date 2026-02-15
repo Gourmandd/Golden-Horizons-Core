@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/block/cast_iron_alloy_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/block/cast_iron_alloy"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/block/cast_iron_alloy_slab_top"
+    }
+  }
+}

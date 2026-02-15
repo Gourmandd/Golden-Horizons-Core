@@ -3,9 +3,11 @@ package net.gourmand.core.datagen.providers;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
+import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.gourmand.core.util.TextureUtil;
@@ -18,7 +20,6 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-import java.util.Locale;
 import java.util.stream.Stream;
 
 public class BuiltinItemModels extends ItemModelProvider {
@@ -96,6 +97,21 @@ public class BuiltinItemModels extends ItemModelProvider {
             }
 
             simpleItem(CoreItems.BRICKS.get(rock).get(), getItemModelLocation(CoreItems.BRICKS.get(rock).getId()));
+        });
+
+        // metal items and blocks
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+            Stream.of(Metal.ItemType.values()).forEach(type -> {
+                if (type.has(metal.getLikeMetal())){
+                    simpleItem(CoreItems.METAL_ITEMS.get(metal).get(type).get(), getItemModelLocation(CoreItems.METAL_ITEMS.get(metal).get(type).getId()));
+                }
+            });
+        });
+
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+            simpleBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK));
+            simpleBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS));
+            simpleBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB));
         });
     }
 

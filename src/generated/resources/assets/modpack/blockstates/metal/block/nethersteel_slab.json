@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/block/nethersteel_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/block/nethersteel"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/block/nethersteel_slab_top"
+    }
+  }
+}

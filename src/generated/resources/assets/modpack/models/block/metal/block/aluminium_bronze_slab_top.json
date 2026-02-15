@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "modpack:block/metal/full/aluminium_bronze",
+    "side": "modpack:block/metal/full/aluminium_bronze",
+    "top": "modpack:block/metal/full/aluminium_bronze"
+  }
+}

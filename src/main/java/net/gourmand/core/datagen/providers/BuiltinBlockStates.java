@@ -1,9 +1,11 @@
 package net.gourmand.core.datagen.providers;
 
 import net.dries007.tfc.common.blocks.rock.*;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
+import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.gourmand.core.util.TextureUtil;
@@ -11,7 +13,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.AttachFace;
+import net.minecraft.world.level.block.state.properties.*;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -104,6 +106,14 @@ public class BuiltinBlockStates extends BlockStateProvider {
                 buttonBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON), TextureUtil.getRockTexture(rock, Rock.BlockType.BUTTON));
             }
         });
+
+        // metal blocks
+        Stream.of(CoreMetals.MetalType.values()).forEach(metal -> {
+            ResourceLocation texture = TextureUtil.getMetalBlockTexture(metal);
+            cubeAll(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK), texture);
+            stairsBlock( CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS), texture);
+            slabBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB), texture, getBlockModelLocation(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).getId()));
+        });
     }
 
 
@@ -140,18 +150,39 @@ public class BuiltinBlockStates extends BlockStateProvider {
         simpleBlock(block.get(), this.models().cubeAll(block.getId().getNamespace() + ":block/" + block.getId().getPath(), texture));
     }
 
-    private void stairsBlock(DeferredHolder<Block, ? extends StairBlock> block, ResourceLocation texture){
+    private void stairsBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture){
         ModelFile stairs = this.models().stairs(getBlockModelString(block.getId()), texture, texture, texture);
         ModelFile stairsInner = this.models().stairsInner(getBlockModelString(block.getId()) + "_inner", texture, texture, texture);
         ModelFile stairsOuter = this.models().stairsOuter(getBlockModelString(block.getId()) + "_outer", texture, texture, texture);
-        stairsBlock(block.get(), stairs, stairsInner, stairsOuter);
+
+        this.getVariantBuilder(block.get()).forAllStatesExcept((state) -> {
+            Direction facing = state.getValue(StairBlock.FACING);
+            Half half = state.getValue(StairBlock.HALF);
+            StairsShape shape = state.getValue(StairBlock.SHAPE);
+            int yRot = (int)facing.getClockWise().toYRot();
+            if (shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT) {
+                yRot += 270;
+            }
+
+            if (shape != StairsShape.STRAIGHT && half == Half.TOP) {
+                yRot += 90;
+            }
+
+            yRot %= 360;
+            boolean uvlock = yRot != 0 || half == Half.TOP;
+            return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? stairs : (shape != StairsShape.INNER_LEFT && shape != StairsShape.INNER_RIGHT ? stairsOuter : stairsInner)).rotationX(half == Half.BOTTOM ? 0 : 180).rotationY(yRot).uvLock(uvlock).build();
+        }, StairBlock.WATERLOGGED);
     }
 
-    private void slabBlock(DeferredHolder<Block, ? extends SlabBlock> block, ResourceLocation texture, ResourceLocation doubleSlab){
+    private void slabBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab){
         ModelFile slabBottom = this.models().slab(getBlockModelString(block.getId()), texture, texture, texture);
         ModelFile slabTop = this.models().slabTop(getBlockModelString(block.getId()) + "_top", texture, texture, texture);
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
-        this.slabBlock(block.get(), slabBottom, slabTop, slabDouble);
+
+        this.getVariantBuilder(block.get())
+                .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(slabBottom))
+                .partialState().with(SlabBlock.TYPE, SlabType.TOP).addModels(new ConfiguredModel(slabTop))
+                .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(slabDouble));
     }
 
     private void aqueductBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){

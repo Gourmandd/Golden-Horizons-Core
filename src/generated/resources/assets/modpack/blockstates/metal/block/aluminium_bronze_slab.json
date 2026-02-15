@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/block/aluminium_bronze_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/block/aluminium_bronze"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/block/aluminium_bronze_slab_top"
+    }
+  }
+}

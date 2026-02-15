@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/block/lead_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/block/lead"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/block/lead_slab_top"
+    }
+  }
+}

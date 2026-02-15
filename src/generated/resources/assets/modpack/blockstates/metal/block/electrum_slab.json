@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "modpack:block/metal/block/electrum_slab"
+    },
+    "type=double": {
+      "model": "modpack:block/metal/block/electrum"
+    },
+    "type=top": {
+      "model": "modpack:block/metal/block/electrum_slab_top"
+    }
+  }
+}
