@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modpack:item/ceramic/yellowware/unfired_propick_head_mold"
+  }
+}

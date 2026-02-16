@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modpack:item/ceramic/earthenware/unfired_flower_pot"
+  }
+}

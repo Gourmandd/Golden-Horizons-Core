@@ -1,0 +1,8 @@
+{
+  "loader": "tfc:fluid_container",
+  "parent": "neoforge:item/default",
+  "textures": {
+    "base": "modpack:item/ceramic/yellowware/jug",
+    "fluid": "tfc:item/ceramic/jug_overlay"
+  }
+}

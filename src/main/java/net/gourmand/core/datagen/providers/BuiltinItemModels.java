@@ -7,9 +7,7 @@ import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
-import net.gourmand.core.registry.category.CoreMetals;
-import net.gourmand.core.registry.category.CoreOres;
-import net.gourmand.core.registry.category.CoreRocks;
+import net.gourmand.core.registry.category.*;
 import net.gourmand.core.util.TextureUtil;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -112,6 +110,18 @@ public class BuiltinItemModels extends ItemModelProvider {
             simpleBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK));
             simpleBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS));
             simpleBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB));
+        });
+
+        // ceramics
+        Stream.of(CoreClay.values()).forEach(clay -> {
+            Stream.of(CoreClay.ItemType.values()).forEach(type -> {
+                if (!clay.hasReducedSet() && type == CoreClay.ItemType.CLAY_BALL){
+                    simpleItem(CoreItems.CERAMICS.get(clay).get(type).get(), getItemModelLocation(CoreItems.CERAMICS.get(clay).get(type).getId()));
+                }
+                if (!(type == CoreClay.ItemType.UNFIRED_PAN || type == CoreClay.ItemType.JUG || type == CoreClay.ItemType.CLAY_BALL)) {
+                    simpleItem(CoreItems.CERAMICS.get(clay).get(type).get(), getItemModelLocation(CoreItems.CERAMICS.get(clay).get(type).getId()));
+                }
+            });
         });
     }
 

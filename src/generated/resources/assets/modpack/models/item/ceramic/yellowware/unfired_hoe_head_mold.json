@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modpack:item/ceramic/yellowware/unfired_hoe_head_mold"
+  }
+}
