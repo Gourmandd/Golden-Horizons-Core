@@ -1,0 +1,10 @@
+{
+    "replace": true,
+    "values": [
+        "#tfc:usable_in_jug",
+        "minecraft:lava",
+        "pastel:humus",
+        "pastel:liquid_crystal",
+        "pastel:midnight_solution"
+    ]
+}
