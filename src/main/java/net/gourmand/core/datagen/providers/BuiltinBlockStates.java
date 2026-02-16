@@ -82,7 +82,7 @@ public class BuiltinBlockStates extends BlockStateProvider {
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
 
-                if (type.hasVariants() && rock.hasVariant(type)){
+                if (type.hasVariants() && rock.hasVariant(type) && generateMossyVariant(type, rock)){
                     ResourceLocation texture = TextureUtil.getRockTexture(rock, type);
                     cubeAll(CoreBlocks.ROCK_BLOCKS.get(rock).get(type), texture);
                     stairsBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair(), texture);
@@ -295,5 +295,22 @@ public class BuiltinBlockStates extends BlockStateProvider {
 
     private ResourceLocation getBlockModelLocation(ResourceLocation block){
         return ResourceLocation.fromNamespaceAndPath(block.getNamespace(), "block/" + block.getPath());
+    }
+
+
+    private boolean generateMossyVariant(Rock.BlockType type, CoreRocks rock){
+        if (type == Rock.BlockType.MOSSY_BRICKS){
+            switch (rock){
+                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE -> {return false;}
+                default -> {return true;}
+            }
+        }
+        if (type == Rock.BlockType.MOSSY_COBBLE){
+            switch (rock){
+                case BLACKSLAG, NEPHELINITE -> {return false;}
+                default -> {return true;}
+            }
+        }
+        return true;
     }
 }

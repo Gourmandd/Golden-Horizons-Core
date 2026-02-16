@@ -75,7 +75,7 @@ public class BuiltinItemModels extends ItemModelProvider {
         // rock blocks.
         Stream.of(CoreRocks.values()).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
-                if (type.hasVariants() && rock.hasVariant(type)){
+                if (type.hasVariants() && rock.hasVariant(type) && generateMossyVariant(type, rock)){
                     simpleBlock(CoreBlocks.ROCK_BLOCKS.get(rock).get(type));
                     simpleBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).stair());
                     simpleBlock(CoreBlocks.ROCK_DECORATIONS.get(rock).get(type).slab());
@@ -151,5 +151,21 @@ public class BuiltinItemModels extends ItemModelProvider {
 
     private String getBlockModelString(ResourceLocation block){
         return block.getNamespace() + ":block/" + block.getPath();
+    }
+
+    private boolean generateMossyVariant(Rock.BlockType type, CoreRocks rock){
+        if (type == Rock.BlockType.MOSSY_BRICKS){
+            switch (rock){
+                case BLACKSLAG, BRECCIA, KOMATIITE, TRAVERTINE, PICRITE_BASALT, NEPHELINITE -> {return false;}
+                default -> {return true;}
+            }
+        }
+        if (type == Rock.BlockType.MOSSY_COBBLE){
+            switch (rock){
+                case BLACKSLAG, NEPHELINITE -> {return false;}
+                default -> {return true;}
+            }
+        }
+        return true;
     }
 }

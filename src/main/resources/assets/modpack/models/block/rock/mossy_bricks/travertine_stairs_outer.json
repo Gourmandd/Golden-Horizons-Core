@@ -1,0 +1,10 @@
+{
+    "render_type": "cutout",
+    "parent": "modpack:block/overlay_outer_stairs",
+    "textures": {
+        "bottom": "architects_palette:block/dripstone_bricks",
+        "side": "architects_palette:block/dripstone_bricks",
+        "top": "architects_palette:block/dripstone_bricks",
+        "overlay": "modpack:block/moss_brick_overlay"
+    }
+}

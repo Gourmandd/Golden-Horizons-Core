@@ -1,0 +1,10 @@
+{
+    "render_type": "cutout",
+    "parent": "modpack:block/overlay_inner_stairs",
+    "textures": {
+        "bottom": "pastel:block/cobbled_blackslag",
+        "side": "pastel:block/cobbled_blackslag",
+        "top": "pastel:block/cobbled_blackslag",
+        "overlay": "modpack:block/moss_overlay"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "render_type": "cutout",
+    "parent": "tfc:block/ore",
+    "textures": {
+        "all": "pastel:block/basal_marble_bricks",
+        "overlay": "modpack:block/moss_brick_overlay"
+    }
+}

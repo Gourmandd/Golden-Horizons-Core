@@ -1,0 +1,8 @@
+{
+    "render_type": "cutout",
+    "parent": "tfc:block/ore",
+    "textures": {
+        "all": "minecraft:block/deepslate_bricks",
+        "overlay": "modpack:block/moss_brick_overlay"
+    }
+}

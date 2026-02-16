@@ -1,0 +1,8 @@
+{
+    "render_type": "cutout",
+    "parent": "modpack:block/overlay_template_wall_side_tall",
+    "textures": {
+        "wall": "pastel:block/cobbled_blackslag",
+        "overlay": "modpack:block/moss_overlay"
+    }
+}
