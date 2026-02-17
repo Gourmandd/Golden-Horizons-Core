@@ -74,5 +74,7 @@ public class CoreTags {
         public static final TagKey<Item> UNFIRED_VESSELS = tag(AncientGroundCore.MODID ,"unfired_vessels");
 
         public static final TagKey<Item> CLAY_BALLS = tag("clay_balls");
+
+        public static final TagKey<Item> CLAY_BRICKS = tag("clay_bricks");
     }
 }

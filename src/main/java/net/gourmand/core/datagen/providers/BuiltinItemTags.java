@@ -136,6 +136,9 @@ public class BuiltinItemTags extends TagsProvider<Item> implements Accessors
                 }
             });
 
+            this.tag(CoreTags.Items.CLAY_BRICKS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_BRICK).getKey());
+            this.tag(Tags.Items.BRICKS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.BRICK).getKey());
+
             this.tag(TFCTags.Items.VESSELS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.VESSEL).getKey());
             this.tag(CoreTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());
             this.tag(TFCTags.Items.UNFIRED_VESSELS).add(CoreItems.CERAMICS.get(clay).get(CoreClay.ItemType.UNFIRED_VESSEL).getKey());

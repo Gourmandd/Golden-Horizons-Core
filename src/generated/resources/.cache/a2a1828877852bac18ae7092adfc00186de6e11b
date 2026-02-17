@@ -1,5 +1,7 @@
-// 1.21.1	2026-02-10T15:15:54.73497774	Tags for minecraft:item mod id modpack
+// 1.21.1	2026-02-17T10:04:05.146523461	Tags for minecraft:item mod id modpack
+9e83f0786e8e077c097cee5f969229af0d08d900 data/c/tags/item/bricks.json
 5bafb83f2e2347a809467c49b5a6417b2cf6b6fd data/c/tags/item/clay_balls.json
+b640843692bdc4754fb81667ad999ebcee6fc128 data/c/tags/item/clay_bricks.json
 e4aedff054b4b75c19dce5bb07196820ea097136 data/c/tags/item/cobblestones.json
 abbd20b0fa4fd242129da8231562b9dd45a2c7e2 data/c/tags/item/cobblestones/mossy.json
 e371ab2fa981d3e72cdc7407c120f27176fde4bd data/c/tags/item/cobblestones/normal.json
