@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/wood/shelf",
+  "textures": {
+    "0": "pastel:block/green_planks",
+    "particle": "pastel:block/green_planks"
+  }
+}

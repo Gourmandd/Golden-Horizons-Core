@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/sluice_upper",
+  "textures": {
+    "particle": "pastel:block/stripped_ivory_noxcap_stem",
+    "texture": "pastel:block/stripped_ivory_noxcap_stem"
+  }
+}

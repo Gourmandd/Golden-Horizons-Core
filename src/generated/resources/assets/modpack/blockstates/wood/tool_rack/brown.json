@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/wood/tool_rack/brown",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "modpack:block/wood/tool_rack/brown",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "modpack:block/wood/tool_rack/brown"
+    },
+    "facing=west": {
+      "model": "modpack:block/wood/tool_rack/brown",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/sewing_table",
+  "textures": {
+    "0": "pastel:block/stripped_magenta_log",
+    "1": "pastel:block/magenta_planks",
+    "particle": "pastel:block/magenta_planks"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "modpack:block/wood/twig/light_gray"
+      },
+      {
+        "model": "modpack:block/wood/twig/light_gray",
+        "y": 90
+      },
+      {
+        "model": "modpack:block/wood/twig/light_gray",
+        "y": 180
+      },
+      {
+        "model": "modpack:block/wood/twig/light_gray",
+        "y": 270
+      },
+      {
+        "model": "modpack:block/wood/twig/light_gray_45"
+      },
+      {
+        "model": "modpack:block/wood/twig/light_gray_45",
+        "y": 90
+      },
+      {
+        "model": "modpack:block/wood/twig/light_gray_45",
+        "y": 180
+      },
+      {
+        "model": "modpack:block/wood/twig/light_gray_45",
+        "y": 270
+      }
+    ]
+  }
+}

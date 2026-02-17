@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "particle": "pastel:block/purple_planks",
+    "texture": "pastel:block/purple_planks"
+  }
+}

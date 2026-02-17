@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/wood/loom/yellow",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "modpack:block/wood/loom/yellow",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "modpack:block/wood/loom/yellow"
+    },
+    "facing=west": {
+      "model": "modpack:block/wood/loom/yellow",
+      "y": 90
+    }
+  }
+}

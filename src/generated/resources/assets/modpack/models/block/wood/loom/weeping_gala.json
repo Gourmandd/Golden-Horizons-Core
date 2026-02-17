@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "particle": "pastel:block/weeping_gala_planks",
+    "texture": "pastel:block/weeping_gala_planks"
+  }
+}

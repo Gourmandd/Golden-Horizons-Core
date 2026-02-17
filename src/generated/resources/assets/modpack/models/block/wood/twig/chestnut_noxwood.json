@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "particle": "pastel:block/chestnut_noxcap_stem",
+    "side": "pastel:block/chestnut_noxcap_stem",
+    "top": "pastel:block/chestnut_noxcap_stem_top"
+  }
+}

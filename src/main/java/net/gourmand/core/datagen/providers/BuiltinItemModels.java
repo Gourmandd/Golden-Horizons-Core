@@ -3,6 +3,7 @@ package net.gourmand.core.datagen.providers;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
@@ -123,6 +124,22 @@ public class BuiltinItemModels extends ItemModelProvider {
                 }
             });
         });
+
+        // pastel wood types.
+        Stream.of(CorePastelWood.values()).forEach(woodType -> {
+
+            supportBlockItem(CoreItems.SUPPORTS.get(woodType).get(), woodType);
+            // do support
+
+            simpleItem(CoreItems.LUMBER.get(woodType).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/wood/lumber/" + woodType.getSerializedName()));
+            simpleItem(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TWIG).get().asItem(), ResourceLocation.parse(AncientGroundCore.MODID + ":item/wood/twig/" + woodType.getSerializedName()));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SCRIBING_TABLE));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SEWING_TABLE));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.LOOM));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SHELF));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.TOOL_RACK));
+            simpleBlock(CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE), getBlockModelLocation(AncientGroundCore.MODID,CoreBlocks.DEEPER_DOWN_WOODS.get(woodType).get(Wood.BlockType.SLUICE).getId().getPath() + "_lower"));
+        });
     }
 
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block){
@@ -135,6 +152,13 @@ public class BuiltinItemModels extends ItemModelProvider {
 
     private void simpleItem(Item item, ResourceLocation texture){
         this.getBuilder(getItemModelString(item)).parent(new ModelFile.UncheckedModelFile("item/generated")).texture("layer0", texture);
+    }
+
+    private void supportBlockItem(Item item, CorePastelWood wood){
+        ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
+        ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
+
+        this.getBuilder(getItemModelString(item)).parent(new ModelFile.UncheckedModelFile("tfc:block/wood/support/inventory_vex")).texture("vertical", texture).texture("vertical", texture).texture("top", textureTop).texture("partical", texture);
     }
 
     private void mossyLooseItem(DeferredHolder<Block, ? extends Block> block, CoreRocks rock){
@@ -157,6 +181,10 @@ public class BuiltinItemModels extends ItemModelProvider {
 
     private ResourceLocation getBlockModelLocation(ResourceLocation block){
         return ResourceLocation.fromNamespaceAndPath(block.getNamespace(), "block/" + block.getPath());
+    }
+
+    private ResourceLocation getBlockModelLocation(String namespace, String path){
+        return ResourceLocation.fromNamespaceAndPath(namespace, "block/" + path);
     }
 
     private String getBlockModelString(ResourceLocation block){

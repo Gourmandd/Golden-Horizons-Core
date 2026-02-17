@@ -1,12 +1,16 @@
 package net.gourmand.core.datagen.providers;
 
+import net.dries007.tfc.common.blocks.ShelfBlock;
+import net.dries007.tfc.common.blocks.devices.SluiceBlock;
 import net.dries007.tfc.common.blocks.rock.*;
+import net.dries007.tfc.common.blocks.wood.*;
 import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
+import net.gourmand.core.registry.category.CorePastelWood;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.gourmand.core.util.TextureUtil;
 import net.minecraft.core.Direction;
@@ -18,6 +22,7 @@ import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class BuiltinBlockStates extends BlockStateProvider {
@@ -114,6 +119,19 @@ public class BuiltinBlockStates extends BlockStateProvider {
             stairsBlock( CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_STAIRS), texture);
             slabBlock(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK_SLAB), texture, getBlockModelLocation(CoreBlocks.METALS.get(metal).get(Metal.BlockType.BLOCK).getId()));
         });
+
+        // pastel wood types.
+        Stream.of(CorePastelWood.values()).forEach(woodType -> {
+            Map<Wood.BlockType, DeferredHolder<Block, Block>> map = CoreBlocks.DEEPER_DOWN_WOODS.get(woodType);
+            supportBlock(map.get(Wood.BlockType.HORIZONTAL_SUPPORT), map.get(Wood.BlockType.VERTICAL_SUPPORT), woodType);
+            twigBlock(map.get(Wood.BlockType.TWIG), woodType);
+            scribingTableBlock(map.get(Wood.BlockType.SCRIBING_TABLE), woodType);
+            sewingTableBlock(map.get(Wood.BlockType.SEWING_TABLE), woodType);
+            loomBlock(map.get(Wood.BlockType.LOOM), woodType);
+            shelfBlock(map.get(Wood.BlockType.SHELF), woodType);
+            toolRackBlock(map.get(Wood.BlockType.TOOL_RACK), woodType);
+            sluiceBlock(map.get(Wood.BlockType.SLUICE), woodType);
+        });
     }
 
 
@@ -186,11 +204,11 @@ public class BuiltinBlockStates extends BlockStateProvider {
     }
 
     private void aqueductBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
-        ModelFile modelBase = this.models().withExistingParent(getBlockModelString(block.getId()) + "/base", aqueductBaseParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelNorth = this.models().withExistingParent(getBlockModelString(block.getId()) + "/north", aqueductNorthParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelSouth = this.models().withExistingParent(getBlockModelString(block.getId()) + "/south", aqueductSouthParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelEast = this.models().withExistingParent(getBlockModelString(block.getId()) + "/east", aqueductEastParent).texture("texture", texture).texture("particle", texture);
-        ModelFile modelWest = this.models().withExistingParent(getBlockModelString(block.getId()) + "/west", aqueductWestParent).texture("texture", texture).texture("particle", texture);
+        ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "/base", aqueductBaseParent).texture("texture", texture).texture("particle", texture);
+        ModelFile modelNorth = createModel(getBlockModelString(block.getId()) + "/north", aqueductNorthParent).texture("texture", texture).texture("particle", texture);
+        ModelFile modelSouth = createModel(getBlockModelString(block.getId()) + "/south", aqueductSouthParent).texture("texture", texture).texture("particle", texture);
+        ModelFile modelEast = createModel(getBlockModelString(block.getId()) + "/east", aqueductEastParent).texture("texture", texture).texture("particle", texture);
+        ModelFile modelWest = createModel(getBlockModelString(block.getId()) + "/west", aqueductWestParent).texture("texture", texture).texture("particle", texture);
 
         MultiPartBlockStateBuilder builder = getMultipartBuilder(block.get());
 
@@ -202,9 +220,9 @@ public class BuiltinBlockStates extends BlockStateProvider {
     }
 
     private void rockSpikeBlock(DeferredHolder<Block, Block> block, ResourceLocation texture){
-        ModelFile modelBase = this.models().withExistingParent(getBlockModelString(block.getId()) + "_base", "tfc:block/rock/spike_base").texture("texture", texture).texture("particle", texture);
-        ModelFile modelMiddle = this.models().withExistingParent(getBlockModelString(block.getId()) + "_middle", "tfc:block/rock/spike_middle").texture("texture", texture).texture("particle", texture);
-        ModelFile modelTip = this.models().withExistingParent(getBlockModelString(block.getId()) + "_tip", "tfc:block/rock/spike_tip").texture("texture", texture).texture("particle", texture);
+        ModelFile modelBase = createModel(getBlockModelString(block.getId()) + "_base", "tfc:block/rock/spike_base").texture("texture", texture).texture("particle", texture);
+        ModelFile modelMiddle = createModel(getBlockModelString(block.getId()) + "_middle", "tfc:block/rock/spike_middle").texture("texture", texture).texture("particle", texture);
+        ModelFile modelTip = createModel(getBlockModelString(block.getId()) + "_tip", "tfc:block/rock/spike_tip").texture("texture", texture).texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
@@ -215,9 +233,9 @@ public class BuiltinBlockStates extends BlockStateProvider {
     }
 
     private void looseRockBlock(DeferredHolder<Block, Block> block, ResourceLocation texture, CoreRocks rock){
-        ModelFile model1 = this.models().withExistingParent(getBlockModelString(block.getId()) + "_1", getLooseRockModelParent(rock, 1)).texture("texture", texture).texture("particle", texture);
-        ModelFile model2 = this.models().withExistingParent(getBlockModelString(block.getId()) + "_2", getLooseRockModelParent(rock, 2)).texture("texture", texture).texture("particle", texture);
-        ModelFile model3 = this.models().withExistingParent(getBlockModelString(block.getId()) + "_3", getLooseRockModelParent(rock, 3)).texture("texture", texture).texture("particle", texture);
+        ModelFile model1 = createModel(getBlockModelString(block.getId()) + "_1", getLooseRockModelParent(rock, 1)).texture("texture", texture).texture("particle", texture);
+        ModelFile model2 = createModel(getBlockModelString(block.getId()) + "_2", getLooseRockModelParent(rock, 2)).texture("texture", texture).texture("particle", texture);
+        ModelFile model3 = createModel(getBlockModelString(block.getId()) + "_3", getLooseRockModelParent(rock, 3)).texture("texture", texture).texture("particle", texture);
 
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
 
@@ -268,6 +286,155 @@ public class BuiltinBlockStates extends BlockStateProvider {
         this.wallBlock(block.get(), baseName, texture);
     }
 
+    private void supportBlock(DeferredHolder<Block, Block> Hblock, DeferredHolder<Block, Block> Vblock, CorePastelWood wood){
+
+        ResourceLocation textureTop = TextureUtil.getStrippedLogTopTexture(wood);
+        ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
+
+        ModelFile modelHorizontal = createModel(getBlockModelString(Hblock.getId()) + "_horizontal", "tfc:block/wood/support/horizontal_vex").texture("top", textureTop).texture("texture", texture).texture("particle", texture);
+        ModelFile modelConnection = createModel(getBlockModelString(Hblock.getId()).replace("_horizontal", "") + "_connection", "tfc:block/wood/support/connection_vex").texture("top", textureTop).texture("texture", texture).texture("particle", texture);
+        ModelFile modelVertical = createModel(getBlockModelString(Vblock.getId()) + "_vertical", "tfc:block/wood/support/vertical_vex").texture("top", textureTop).texture("texture", texture).texture("particle", texture);
+
+        // generated but reference never used?
+        //ModelFile modelInventory = createModel(getBlockModelString(block.getId()) + "_inventory", aqueductNorthParent).texture("top", textureTop).texture("vertical", texture).texture("horizontal", texture).texture("particle", texture);
+
+        // horizontal
+        MultiPartBlockStateBuilder Hbuilder = getMultipartBuilder(Hblock.get());
+
+        Hbuilder.part().modelFile(modelHorizontal).addModel();
+        Hbuilder.part().modelFile(modelConnection).rotationY(270).addModel().condition(AqueductBlock.NORTH, true);
+        Hbuilder.part().modelFile(modelConnection).rotationY(90).addModel().condition(AqueductBlock.SOUTH, true);
+        Hbuilder.part().modelFile(modelConnection).addModel().condition(AqueductBlock.EAST, true);
+        Hbuilder.part().modelFile(modelConnection).rotationY(180).addModel().condition(AqueductBlock.WEST, true);
+
+        // vertical
+        MultiPartBlockStateBuilder Vbuilder = getMultipartBuilder(Vblock.get());
+
+        Vbuilder.part().modelFile(modelVertical).addModel();
+        Vbuilder.part().modelFile(modelConnection).rotationY(270).addModel().condition(AqueductBlock.NORTH, true);
+        Vbuilder.part().modelFile(modelConnection).rotationY(90).addModel().condition(AqueductBlock.SOUTH, true);
+        Vbuilder.part().modelFile(modelConnection).addModel().condition(AqueductBlock.EAST, true);
+        Vbuilder.part().modelFile(modelConnection).rotationY(180).addModel().condition(AqueductBlock.WEST, true);
+    }
+
+    private void twigBlock(DeferredHolder<Block, Block> block, CorePastelWood wood){
+
+        ResourceLocation textureTop = TextureUtil.getLogTopTexture(wood);
+        ResourceLocation texture = TextureUtil.getLogTexture(wood);
+
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/groundcover/twig").texture("top", textureTop).texture("side", texture).texture("particle", texture);
+        ModelFile model45 = createModel(getBlockModelString(block.getId()) + "_45", "tfc:block/groundcover/twig_45").texture("top", textureTop).texture("side", texture).texture("particle", texture);
+
+        VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
+
+        builder.partialState().modelForState()
+                .modelFile(model).rotationY(0).nextModel()
+                .modelFile(model).rotationY(90).nextModel()
+                .modelFile(model).rotationY(180).nextModel()
+                .modelFile(model).rotationY(270).nextModel()
+                .modelFile(model45).rotationY(0).nextModel()
+                .modelFile(model45).rotationY(90).nextModel()
+                .modelFile(model45).rotationY(180).nextModel()
+                .modelFile(model45).rotationY(270).addModel();
+    }
+
+    private void scribingTableBlock(DeferredHolder<Block, Block> block, CorePastelWood wood){
+
+        ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
+        ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
+
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/scribing_table").texture("sheet", textureSmooth).texture("planks", texturePlank).texture("particle", texturePlank);
+
+        VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(ScribingTableBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel()
+                .partialState().with(ScribingTableBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel()
+                .partialState().with(ScribingTableBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel()
+                .partialState().with(ScribingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
+    }
+
+    private void sewingTableBlock(DeferredHolder<Block, Block> block, CorePastelWood wood){
+
+        ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
+        ResourceLocation textureSmooth = TextureUtil.getStrippedLogTexture(wood);
+
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/sewing_table").texture("0", textureSmooth).texture("1", texturePlank).texture("particle", texturePlank);
+
+        VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(SewingTableBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel()
+                .partialState().with(SewingTableBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel()
+                .partialState().with(SewingTableBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel()
+                .partialState().with(SewingTableBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
+    }
+
+    private void shelfBlock(DeferredHolder<Block, Block> block, CorePastelWood wood){
+
+        ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
+
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/wood/shelf").texture("0", texturePlank).texture("particle", texturePlank);
+
+        VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(ShelfBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(0).addModel()
+                .partialState().with(ShelfBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(90).addModel()
+                .partialState().with(ShelfBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(180).addModel()
+                .partialState().with(ShelfBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(270).addModel();
+    }
+
+    private void loomBlock(DeferredHolder<Block, Block> block, CorePastelWood wood){
+
+        ResourceLocation texturePlank = TextureUtil.getPlanksTexture(wood);
+
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/loom").texture("texture", texturePlank).texture("particle", texturePlank);
+
+        VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(TFCLoomBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(180).addModel()
+                .partialState().with(TFCLoomBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(270).addModel()
+                .partialState().with(TFCLoomBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(0).addModel()
+                .partialState().with(TFCLoomBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
+    }
+
+    private void toolRackBlock(DeferredHolder<Block, Block> block, CorePastelWood wood){
+
+        ResourceLocation texturePlank = TextureUtil.getStrippedLogTexture(wood); // some of the plank textures don't look great, the stripped logs look a bit better.
+
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/tool_rack").texture("texture", texturePlank).texture("particle", texturePlank);
+
+        VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(ToolRackBlock.FACING, Direction.NORTH).modelForState().modelFile(model).rotationY(180).addModel()
+                .partialState().with(ToolRackBlock.FACING, Direction.EAST).modelForState().modelFile(model).rotationY(270).addModel()
+                .partialState().with(ToolRackBlock.FACING, Direction.SOUTH).modelForState().modelFile(model).rotationY(0).addModel()
+                .partialState().with(ToolRackBlock.FACING, Direction.WEST).modelForState().modelFile(model).rotationY(90).addModel();
+    }
+
+    private void sluiceBlock(DeferredHolder<Block, Block> block, CorePastelWood wood){
+
+        ResourceLocation texture = TextureUtil.getStrippedLogTexture(wood);
+
+        ModelFile modelUpper = createModel(getBlockModelString(block.getId()) + "_upper", "tfc:block/sluice_upper").texture("texture", texture).texture("particle", texture);
+        ModelFile modelLower = createModel(getBlockModelString(block.getId()) + "_lower", "tfc:block/sluice_lower").texture("texture", texture).texture("particle", texture);
+
+        VariantBlockStateBuilder builder = this.getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(SluiceBlock.FACING, Direction.NORTH).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(0).addModel()
+                .partialState().with(SluiceBlock.FACING, Direction.EAST).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(90).addModel()
+                .partialState().with(SluiceBlock.FACING, Direction.SOUTH).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(180).addModel()
+                .partialState().with(SluiceBlock.FACING, Direction.WEST).with(SluiceBlock.UPPER, true).modelForState().modelFile(modelUpper).rotationY(270).addModel()
+                .partialState().with(SluiceBlock.FACING, Direction.NORTH).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(0).addModel()
+                .partialState().with(SluiceBlock.FACING, Direction.EAST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(90).addModel()
+                .partialState().with(SluiceBlock.FACING, Direction.SOUTH).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(180).addModel()
+                .partialState().with(SluiceBlock.FACING, Direction.WEST).with(SluiceBlock.UPPER, false).modelForState().modelFile(modelLower).rotationY(270).addModel();
+    }
+
     private String getBlockModelString(ResourceLocation block){
         return block.getNamespace() + ":block/" + block.getPath();
     }
@@ -297,6 +464,13 @@ public class BuiltinBlockStates extends BlockStateProvider {
         return ResourceLocation.fromNamespaceAndPath(block.getNamespace(), "block/" + block.getPath());
     }
 
+    private ModelBuilder<BlockModelBuilder> createModel(String name, ResourceLocation parent){
+        return this.models().withExistingParent(name, parent);
+    }
+
+    private ModelBuilder<BlockModelBuilder> createModel(String name, String parent){
+        return this.models().withExistingParent(name, parent);
+    }
 
     private boolean generateMossyVariant(Rock.BlockType type, CoreRocks rock){
         if (type == Rock.BlockType.MOSSY_BRICKS){

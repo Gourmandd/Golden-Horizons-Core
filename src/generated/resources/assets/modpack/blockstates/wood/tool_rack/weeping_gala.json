@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/wood/tool_rack/weeping_gala",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "modpack:block/wood/tool_rack/weeping_gala",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "modpack:block/wood/tool_rack/weeping_gala"
+    },
+    "facing=west": {
+      "model": "modpack:block/wood/tool_rack/weeping_gala",
+      "y": 90
+    }
+  }
+}

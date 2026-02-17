@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/wood/support/inventory_vex",
+  "textures": {
+    "partical": "pastel:block/stripped_brown_log",
+    "top": "pastel:block/stripped_brown_log_top",
+    "vertical": "pastel:block/stripped_brown_log"
+  }
+}

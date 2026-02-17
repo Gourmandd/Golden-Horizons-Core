@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "modpack:block/wood/vertical_support/light_blue_vertical"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/wood/horizontal_support/light_blue_connection",
+        "y": 270
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/wood/horizontal_support/light_blue_connection",
+        "y": 90
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/wood/horizontal_support/light_blue_connection"
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "modpack:block/wood/horizontal_support/light_blue_connection",
+        "y": 180
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

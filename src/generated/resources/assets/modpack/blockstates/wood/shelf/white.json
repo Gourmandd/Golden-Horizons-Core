@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/wood/shelf/white",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/wood/shelf/white"
+    },
+    "facing=south": {
+      "model": "modpack:block/wood/shelf/white",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/wood/shelf/white",
+      "y": 270
+    }
+  }
+}

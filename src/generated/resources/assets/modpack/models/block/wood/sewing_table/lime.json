@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/sewing_table",
+  "textures": {
+    "0": "pastel:block/stripped_lime_log",
+    "1": "pastel:block/lime_planks",
+    "particle": "pastel:block/lime_planks"
+  }
+}

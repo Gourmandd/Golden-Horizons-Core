@@ -1,5 +1,6 @@
 package net.gourmand.core.util;
 
+import earth.terrarium.pastel.PastelCommon;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -7,6 +8,7 @@ import net.dries007.tfc.util.registry.RegistryRock;
 import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.category.CoreMetals;
 import net.gourmand.core.registry.category.CoreOres;
+import net.gourmand.core.registry.category.CorePastelWood;
 import net.gourmand.core.registry.category.CoreRocks;
 import net.minecraft.resources.ResourceLocation;
 
@@ -317,5 +319,25 @@ public class TextureUtil {
                 return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID,"block/metal/full/" + metal.getSerializedName());
             }
         }
+    }
+
+    public static ResourceLocation getPlanksTexture(CorePastelWood wood){
+        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, "block/" + wood.getSerializedName() + "_planks");
+    }
+
+    public static ResourceLocation getLogTexture(CorePastelWood wood){
+        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
+    }
+
+    public static ResourceLocation getLogTopTexture(CorePastelWood wood){
+        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
+    }
+
+    public static ResourceLocation getStrippedLogTexture(CorePastelWood wood){
+        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log").replace("noxwood_log", "noxcap_stem"));
+    }
+
+    public static ResourceLocation getStrippedLogTopTexture(CorePastelWood wood){
+        return ResourceLocation.fromNamespaceAndPath(PastelCommon.MOD_ID, ("block/stripped_" + wood.getSerializedName() + "_log_top").replace("noxwood_log", "noxcap_stem"));
     }
 }

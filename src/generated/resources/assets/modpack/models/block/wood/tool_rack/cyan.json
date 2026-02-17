@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/tool_rack",
+  "textures": {
+    "particle": "pastel:block/stripped_cyan_log",
+    "texture": "pastel:block/stripped_cyan_log"
+  }
+}

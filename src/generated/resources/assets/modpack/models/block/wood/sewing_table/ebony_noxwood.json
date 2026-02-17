@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/sewing_table",
+  "textures": {
+    "0": "pastel:block/stripped_ebony_noxcap_stem",
+    "1": "pastel:block/ebony_noxwood_planks",
+    "particle": "pastel:block/ebony_noxwood_planks"
+  }
+}

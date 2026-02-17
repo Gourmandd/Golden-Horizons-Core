@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/wood/shelf/ivory_noxwood",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/wood/shelf/ivory_noxwood"
+    },
+    "facing=south": {
+      "model": "modpack:block/wood/shelf/ivory_noxwood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/wood/shelf/ivory_noxwood",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/loom",
+  "textures": {
+    "particle": "pastel:block/slate_noxwood_planks",
+    "texture": "pastel:block/slate_noxwood_planks"
+  }
+}

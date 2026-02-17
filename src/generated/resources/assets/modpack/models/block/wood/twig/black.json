@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/groundcover/twig",
+  "textures": {
+    "particle": "pastel:block/black_log",
+    "side": "pastel:block/black_log",
+    "top": "pastel:block/black_log_top"
+  }
+}

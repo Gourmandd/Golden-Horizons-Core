@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "particle": "pastel:block/slate_noxwood_planks",
+    "planks": "pastel:block/slate_noxwood_planks",
+    "sheet": "pastel:block/stripped_slate_noxcap_stem"
+  }
+}

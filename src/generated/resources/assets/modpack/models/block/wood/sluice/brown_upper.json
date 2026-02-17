@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/sluice_upper",
+  "textures": {
+    "particle": "pastel:block/stripped_brown_log",
+    "texture": "pastel:block/stripped_brown_log"
+  }
+}

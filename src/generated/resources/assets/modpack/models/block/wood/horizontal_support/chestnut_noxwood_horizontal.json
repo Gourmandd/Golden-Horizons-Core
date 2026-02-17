@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/wood/support/horizontal_vex",
+  "textures": {
+    "particle": "pastel:block/stripped_chestnut_noxcap_stem",
+    "texture": "pastel:block/stripped_chestnut_noxcap_stem",
+    "top": "pastel:block/stripped_chestnut_noxcap_stem_top"
+  }
+}

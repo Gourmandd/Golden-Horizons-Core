@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/wood/scribing_table/black",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/wood/scribing_table/black"
+    },
+    "facing=south": {
+      "model": "modpack:block/wood/scribing_table/black",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/wood/scribing_table/black",
+      "y": 270
+    }
+  }
+}

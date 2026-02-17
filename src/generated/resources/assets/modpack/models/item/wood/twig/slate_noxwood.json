@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modpack:item/wood/twig/slate_noxwood"
+  }
+}

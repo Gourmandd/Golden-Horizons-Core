@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modpack:block/wood/sewing_table/purple",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modpack:block/wood/sewing_table/purple"
+    },
+    "facing=south": {
+      "model": "modpack:block/wood/sewing_table/purple",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modpack:block/wood/sewing_table/purple",
+      "y": 270
+    }
+  }
+}

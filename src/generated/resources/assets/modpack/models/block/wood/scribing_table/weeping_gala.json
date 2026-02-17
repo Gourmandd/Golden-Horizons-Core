@@ -1,0 +1,8 @@
+{
+  "parent": "tfc:block/scribing_table",
+  "textures": {
+    "particle": "pastel:block/weeping_gala_planks",
+    "planks": "pastel:block/weeping_gala_planks",
+    "sheet": "pastel:block/stripped_weeping_gala_log"
+  }
+}
