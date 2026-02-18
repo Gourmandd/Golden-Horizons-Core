@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "modpack:block/metal/full/hardened_steel",
-    "side": "modpack:block/metal/full/hardened_steel",
-    "top": "modpack:block/metal/full/hardened_steel"
+    "bottom": "createbigcannons:block/steel_block",
+    "side": "createbigcannons:block/steel_block",
+    "top": "createbigcannons:block/steel_block"
   }
 }

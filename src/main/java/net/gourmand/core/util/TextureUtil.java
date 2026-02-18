@@ -311,10 +311,18 @@ public class TextureUtil {
             case ELECTRUM -> {
                 return ResourceLocation.parse("createaddition:block/electrum_block/block");
             }
-            /* I don't think I can sanely make conditional cases to check if the mod/assets are loaded.
             case NETHERSTEEL -> {
                 return ResourceLocation.parse("createbigcannons:block/nethersteel_block");
-            }*/
+            }
+            case CAST_IRON_ALLOY -> {
+                return ResourceLocation.parse("createbigcannons:block/cast_iron_block");
+            }
+            case HARDENED_STEEL -> {
+                return ResourceLocation.parse("createbigcannons:block/steel_block");
+            }
+            case ALUMINIUM_BRONZE -> {
+                return ResourceLocation.parse("createbigcannons:block/bronze_block");
+            }
             default -> {
                 return ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID,"block/metal/full/" + metal.getSerializedName());
             }

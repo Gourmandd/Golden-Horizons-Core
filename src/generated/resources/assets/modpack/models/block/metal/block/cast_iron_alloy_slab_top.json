@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "modpack:block/metal/full/cast_iron_alloy",
-    "side": "modpack:block/metal/full/cast_iron_alloy",
-    "top": "modpack:block/metal/full/cast_iron_alloy"
+    "bottom": "createbigcannons:block/cast_iron_block",
+    "side": "createbigcannons:block/cast_iron_block",
+    "top": "createbigcannons:block/cast_iron_block"
   }
 }

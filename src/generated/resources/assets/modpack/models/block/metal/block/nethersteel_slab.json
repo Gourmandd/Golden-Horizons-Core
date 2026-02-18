@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "modpack:block/metal/full/nethersteel",
-    "side": "modpack:block/metal/full/nethersteel",
-    "top": "modpack:block/metal/full/nethersteel"
+    "bottom": "createbigcannons:block/nethersteel_block",
+    "side": "createbigcannons:block/nethersteel_block",
+    "top": "createbigcannons:block/nethersteel_block"
   }
 }

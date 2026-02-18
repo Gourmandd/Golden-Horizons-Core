@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "modpack:block/metal/full/aluminium_bronze",
-    "side": "modpack:block/metal/full/aluminium_bronze",
-    "top": "modpack:block/metal/full/aluminium_bronze"
+    "bottom": "createbigcannons:block/bronze_block",
+    "side": "createbigcannons:block/bronze_block",
+    "top": "createbigcannons:block/bronze_block"
   }
 }

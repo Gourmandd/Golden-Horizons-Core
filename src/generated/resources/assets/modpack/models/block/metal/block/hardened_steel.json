@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "modpack:block/metal/full/hardened_steel"
+    "all": "createbigcannons:block/steel_block"
   }
 }
