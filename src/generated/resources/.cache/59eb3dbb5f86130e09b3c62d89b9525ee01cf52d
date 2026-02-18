@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-09T20:58:15.111852691	Loot Tables
+// 1.21.1	2026-02-18T13:35:50.649059946	Loot Tables
 a8d263b027e085bc53593f1fe5877a0089c9d368 data/modpack/loot_table/blocks/crop/amaranth.json
 31047b9922b12c6d981fc07f6022da30f382aacb data/modpack/loot_table/blocks/crop/coffee.json
 fae2013bf934f04ea037a03788c27766ed190fec data/modpack/loot_table/blocks/crop/cotton.json
@@ -38,7 +38,7 @@ ede4f17327b9db826c0b77c7f899dcbd30cb1ce5 data/modpack/loot_table/blocks/ore/amet
 4d396a5e579277e36edd09b09faaecbf7ac51528 data/modpack/loot_table/blocks/ore/amethyst/picrite_basalt.json
 8dac23221c7cacc8d88d18b8a8adab87cce987f4 data/modpack/loot_table/blocks/ore/amethyst/serpentine.json
 e8c79c25cf760d1588f9ac5f3b8cd9b418eebf33 data/modpack/loot_table/blocks/ore/amethyst/travertine.json
-5da95588fdd3f9f9f1c83fbe1ff16871270d40b1 data/modpack/loot_table/blocks/ore/anthracite.json
+8c40b1c77213d97f9dd3aed3c19916839672dd84 data/modpack/loot_table/blocks/ore/anthracite.json
 e9e189eb81faa9c119a56ad255a6f905c4a6d640 data/modpack/loot_table/blocks/ore/azurite/andesite.json
 b1904d8bb8fdc2427e0d303ca21868611b9c18d1 data/modpack/loot_table/blocks/ore/azurite/argillite.json
 b0d68c7a6e543c68f0407e3fea9416743cb05b9c data/modpack/loot_table/blocks/ore/azurite/basalt.json

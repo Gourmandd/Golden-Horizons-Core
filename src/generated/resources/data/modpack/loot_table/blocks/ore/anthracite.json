@@ -10,8 +10,22 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "modpack:ore/anthracite"
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "tfc:is_isolated"
+                }
+              ],
+              "name": "modpack:ore/anthracite"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "pastel:pure_coal"
+            }
+          ]
         }
       ],
       "rolls": 1.0

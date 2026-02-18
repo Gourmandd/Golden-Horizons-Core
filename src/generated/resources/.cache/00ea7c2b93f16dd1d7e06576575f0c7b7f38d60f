@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-17T11:38:03.311698397	Item Models: modpack
+// 1.21.1	2026-02-18T13:40:41.03858855	Item Models: modpack
 da853f0345ed4092ee97340d668b33ef6f1f0e46 assets/modpack/models/item/brick/argillite.json
 8c20c35478a622589b39a16674f1ada335eb1fdd assets/modpack/models/item/brick/blackslag.json
 6c146ec788d45ca6e66b1315564fb6bc228fddad assets/modpack/models/item/brick/blueschist.json
@@ -204,6 +204,7 @@ c4c199e117f0b0937042caa973624bbce7ac3e49 assets/modpack/models/item/ore/amethyst
 32485b73d1ffef55e43e8ceb67a60f569eb29760 assets/modpack/models/item/ore/amethyst/picrite_basalt.json
 2d380aa01ade0301a953e77aff16a119e688ac97 assets/modpack/models/item/ore/amethyst/serpentine.json
 6706108ee911b4243448ee46c13eeb1c6d7b059a assets/modpack/models/item/ore/amethyst/travertine.json
+76c83e3dbf9055c7026a5900e341e52238e64662 assets/modpack/models/item/ore/anthracite.json
 8b695c0fa0d73f8a02dda00b10fb3c8101948f39 assets/modpack/models/item/ore/azurite/andesite.json
 8c4bd949559a12db1289d774b377458301d3c767 assets/modpack/models/item/ore/azurite/argillite.json
 26e1e459128ac9acd9af069dd5b98c615fb69476 assets/modpack/models/item/ore/azurite/basalt.json
@@ -235,6 +236,7 @@ a1996087c3edfde973d36e9beea96d799ba36b36 assets/modpack/models/item/ore/azurite/
 ce176ad7a88c6e491c2d61830bed7850d098f860 assets/modpack/models/item/ore/azurite/slate.json
 65a1de984886cde5a467731199da68d1a712cab0 assets/modpack/models/item/ore/azurite/travertine.json
 705dc9c17256f2967891d531cb14e27457543aaa assets/modpack/models/item/ore/azurite/tuff.json
+0d2abeda1c22e0b90ca7e5a2c84d7d6223f35b1f assets/modpack/models/item/ore/bauxite.json
 7b47b9ca9929d3a95e8166c998e940789d3615c4 assets/modpack/models/item/ore/borax/argillite.json
 dc1f500206daefc4d44e1dad7e8b859cc1f65367 assets/modpack/models/item/ore/borax/blackslag.json
 3f9b04f5e9431916a4ee08cf0582b34414b54f77 assets/modpack/models/item/ore/borax/blueschist.json
@@ -366,6 +368,7 @@ bbc65c9aa901c8987f98e7abc690f7af8cb884ae assets/modpack/models/item/ore/normal_c
 112e4bfd863ff7c5dc3f848a1ac8037848593ed0 assets/modpack/models/item/ore/normal_cassiterite/picrite_basalt.json
 1b236c667399d5fb3af5733350f89cb33c3cd5af assets/modpack/models/item/ore/normal_cassiterite/serpentine.json
 200273f5ecdaac0f13f839d7d424975b7e615f5c assets/modpack/models/item/ore/normal_cassiterite/travertine.json
+3b67b1136a81f4baa9777f1ac0688ca427c8b43b assets/modpack/models/item/ore/normal_galena.json
 326cbf4b5cf1e6f0a8a1c4c12aec7e35bedb311a assets/modpack/models/item/ore/normal_galena/andesite.json
 2232682a1ef9dde296d5f7fce2e9f86a2e61a6ca assets/modpack/models/item/ore/normal_galena/argillite.json
 cd9797d5f4bd5115acaf6f1ddeb1409594e0b7af assets/modpack/models/item/ore/normal_galena/basalt.json
@@ -558,6 +561,7 @@ b07ee8e97750f264fdfc113e0711c91fc97f5fb1 assets/modpack/models/item/ore/poor_cas
 0296e3bca357b63395900d58a9f5db7348db8c5b assets/modpack/models/item/ore/poor_cassiterite/picrite_basalt.json
 fd4e25e93149951d89aa53a06110452e3160d3d5 assets/modpack/models/item/ore/poor_cassiterite/serpentine.json
 3a6ad3f914c5df1d62950a585ea29112de81d0de assets/modpack/models/item/ore/poor_cassiterite/travertine.json
+4fb34163d65a1e4b11d9d2e1b25fdbe15292942e assets/modpack/models/item/ore/poor_galena.json
 e50d4c6dcf609e13f77d8e40a44677ac4e0d9a9f assets/modpack/models/item/ore/poor_galena/andesite.json
 db77e36529e45242b1e241bdd098f84851b5e117 assets/modpack/models/item/ore/poor_galena/argillite.json
 18f2cf687623199561a886fe0488323dd244ee61 assets/modpack/models/item/ore/poor_galena/basalt.json
@@ -719,6 +723,7 @@ eafbecf049a2d5c42c0dd577f4eba66e2384d0ec assets/modpack/models/item/ore/rich_bis
 4eecba5fa5b4637d7358b5ff4fb84d02cff3bc51 assets/modpack/models/item/ore/rich_cassiterite/picrite_basalt.json
 cb8bab34fe774e9c4d98942dfc2ee3a8415b14bd assets/modpack/models/item/ore/rich_cassiterite/serpentine.json
 ffe1925210f97e2fb18001aa50c919b3a725cac4 assets/modpack/models/item/ore/rich_cassiterite/travertine.json
+7fb016000781c89a7fe500e7170e0d94b193a191 assets/modpack/models/item/ore/rich_galena.json
 f0396e13f936a41990e46ccb03d6803be8cbf6d1 assets/modpack/models/item/ore/rich_galena/andesite.json
 53368cebe3b8743673cae4c20739230ed810f827 assets/modpack/models/item/ore/rich_galena/argillite.json
 de5a2890ec010ebe23886e080f953db7895bae31 assets/modpack/models/item/ore/rich_galena/basalt.json
@@ -911,6 +916,7 @@ c45d62f31a9cfdb1747b5eb3f122d71334fef876 assets/modpack/models/item/ore/shimmers
 d8c53443dba8d9bfe42263159accf2f9d1012b50 assets/modpack/models/item/ore/shimmerstone/slate.json
 cdd98bf0109b7587c8eadd86a5c5b026c57f1392 assets/modpack/models/item/ore/shimmerstone/travertine.json
 67c861b38daa5600552f309f669615d7f667d19d assets/modpack/models/item/ore/shimmerstone/tuff.json
+71bf752dd4e9837d161e75bbb3cbd184cc3b2f46 assets/modpack/models/item/ore/small_galena.json
 48c5a5bbe2dc9fc851e16c39c6f63e0c2e2836ff assets/modpack/models/item/ore/stratine/andesite.json
 dac2f70727b1c5753a40aea6134ac45a5b2cc996 assets/modpack/models/item/ore/stratine/argillite.json
 01c48008fb1f571d95f8f37853dab256f4d1e6dd assets/modpack/models/item/ore/stratine/basalt.json

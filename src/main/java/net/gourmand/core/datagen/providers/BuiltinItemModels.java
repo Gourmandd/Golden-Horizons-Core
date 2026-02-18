@@ -19,6 +19,7 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import java.util.Locale;
 import java.util.stream.Stream;
 
 public class BuiltinItemModels extends ItemModelProvider {
@@ -30,6 +31,12 @@ public class BuiltinItemModels extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
+        Stream.of(CoreOres.values()).forEach(ore -> {
+            if (!ore.hasBlock()){
+                simpleItem(CoreBlocks.BASIC_ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/" + ore.getSerializedName()));
+            }
+        });
+
         Stream.of(Rock.values()).forEach(rock -> {
             Stream.of(CoreOres.values()).forEach(ore -> {
                 if (!ore.isGraded() && ore.hasBlock()){
@@ -39,8 +46,14 @@ public class BuiltinItemModels extends ItemModelProvider {
                 Stream.of(CoreOres.Grade.values()).forEach(grade -> {
                     if (ore.isGraded()){
                         simpleBlock(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade));
+
+                        simpleItem(CoreItems.GRADED_ORES.get(ore).get(grade).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/" + grade.toString().toLowerCase(Locale.ROOT) + "_" + ore.getSerializedName()));
                     }
                 });
+
+                if (ore.isGraded()){
+                    simpleItem(CoreBlocks.SMALL_ORES.get(ore).get().asItem(), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "item/ore/small_" + ore.getSerializedName()));
+                }
             });
 
         });

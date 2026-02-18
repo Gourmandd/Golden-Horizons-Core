@@ -42,6 +42,13 @@ public class BuiltinBlockStates extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         // ores.
+
+        Stream.of(CoreOres.values()).forEach(ore -> {
+            if (!ore.hasBlock()){
+                cubeAll(CoreBlocks.BASIC_ORES.get(ore), ResourceLocation.fromNamespaceAndPath(AncientGroundCore.MODID, "block/ore/" + ore.getSerializedName() ));
+            }
+        });
+
         Stream.of(Rock.values()).forEach(rock -> {
             Stream.of(CoreOres.values()).forEach(ore -> {
                 if (!ore.isGraded() && ore.hasBlock()){
@@ -54,7 +61,6 @@ public class BuiltinBlockStates extends BlockStateProvider {
                     }
                 });
             });
-
         });
 
         Stream.of(CoreRocks.values()).forEach(rock -> {

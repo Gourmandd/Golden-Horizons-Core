@@ -1,6 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
 import earth.terrarium.pastel.registries.PastelBlocks;
+import earth.terrarium.pastel.registries.PastelItems;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.rock.Ore;
@@ -143,7 +144,11 @@ public class BuiltinBlockLootTables extends BlockLootSubProvider {
 
     private void generateOre(){
         CoreBlocks.BASIC_ORES.values().forEach( holder -> {
-            this.dropSelf(holder.get());
+            if (holder == CoreBlocks.BASIC_ORES.get(CoreOres.ANTHRACITE)){
+                addOreTable(holder.get(), PastelItems.PURE_COAL.get());
+            } else {
+                this.dropSelf(holder.get());
+            }
         });
 
         CoreBlocks.SMALL_ORES.values().forEach( holder -> {
