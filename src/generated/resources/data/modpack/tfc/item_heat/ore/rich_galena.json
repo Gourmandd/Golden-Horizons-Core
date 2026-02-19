@@ -1,0 +1,8 @@
+{
+  "forging_temperature": 138.0,
+  "heat_capacity": 2.857143,
+  "ingredient": {
+    "item": "modpack:ore/rich_galena"
+  },
+  "welding_temperature": 184.0
+}

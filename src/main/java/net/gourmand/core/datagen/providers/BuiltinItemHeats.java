@@ -9,6 +9,7 @@ import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.CategoryUtil;
 import net.gourmand.core.registry.category.CoreClay;
 import net.gourmand.core.registry.category.CoreMetals;
+import net.gourmand.core.registry.category.CoreOres;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -48,9 +49,18 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BOWL).get(), 0.4f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_POT).get(), 0.8f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_SPINDLE_HEAD).get(), 0.8f);
+            add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_PAN).get(), 0.8f);
             add(CoreItems.CERAMICS.get(type).get(CoreClay.ItemType.UNFIRED_BLOWPIPE).get(), 0.6f);
         });
 
+        Stream.of(CoreOres.values()).forEach(ore -> {
+            if (ore.isGraded()){
+                Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                    add(CoreItems.GRADED_ORES.get(ore).get(grade).get(), 2.857143f, 138.0f, 184.0f);
+                });
+                add(CoreBlocks.SMALL_ORES.get(ore).get(), 2.857143f, 138.0f, 184.0f);
+            }
+        });
     }
 
     private void add(ItemLike item, float heatCapacity)
@@ -58,9 +68,19 @@ public class BuiltinItemHeats extends DataManagerProvider<HeatDefinition> implem
         add(Ingredient.of(item), heatCapacity);
     }
 
+    private void add(ItemLike item, float heatCapacity, float forgingTemperature, float weldingTemperature)
+    {
+        add(Ingredient.of(item), heatCapacity, forgingTemperature,  weldingTemperature);
+    }
+
     private void add(Ingredient item, float heatCapacity)
     {
         add(nameOf(item), new HeatDefinition(item, heatCapacity, 0f, 0f));
+    }
+
+    private void add(Ingredient item, float heatCapacity, float forgingTemperature, float weldingTemperature)
+    {
+        add(nameOf(item), new HeatDefinition(item, heatCapacity, forgingTemperature, weldingTemperature));
     }
 
 

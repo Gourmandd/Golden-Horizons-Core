@@ -1,9 +1,10 @@
-// 1.21.1	2026-02-12T09:09:18.722581806	Data Manager (item_heat)
+// 1.21.1	2026-02-19T18:22:49.625751517	Data Manager (item_heat)
 5e15164e9ed2130fc090282cf5f72e89ca5cfcbc data/modpack/tfc/item_heat/ceramic/earthenware/unfired_blowpipe.json
 694ec251572deee1bf12e4df7d8b00a14353d9f2 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_bowl.json
 40fdf255e0432562252a9b9a9e3209764558ad40 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_brick.json
 73127627d09fcf41176421d2ff655877ccd2b4b7 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_flower_pot.json
 c6bf46a67bcc3e0811981ad0efd80b13fd6304d5 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_jug.json
+7040ba0ed3e640d5659def10ccfb65e06af1dc46 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_pan.json
 c899024044876783c357fba703e08bf4aa2d619a data/modpack/tfc/item_heat/ceramic/earthenware/unfired_pot.json
 88cf637efbcedab4f60827d8f63a9f05774f3785 data/modpack/tfc/item_heat/ceramic/earthenware/unfired_spindle_head.json
 472610e78b4458b394e1a434e0084f4b64a12d05 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_blowpipe.json
@@ -11,6 +12,7 @@ f324301335103ccaa31e96b777fb26d92af1724f data/modpack/tfc/item_heat/ceramic/kaol
 555658b7bedf51a64743af747d1c4ba5cb8a7750 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_brick.json
 d738d89227d7a33b79b25bd51849bab9787e66c0 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_flower_pot.json
 35cd53ff03c296362334f565844cd50cb8e73096 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_jug.json
+890bfbd23422bba7307dc792a23281b2ef907d72 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_pan.json
 4c4d8396a6f6557a44e7b3d6bba069aea11c1978 data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_pot.json
 7e7e3bc1b8d1e7d0b606a9a60d69612ace151ddf data/modpack/tfc/item_heat/ceramic/kaolinite/unfired_spindle_head.json
 5618764e549a3a80b3a426c4ad41fd164e39e4f8 data/modpack/tfc/item_heat/ceramic/porcelain/unfired_blowpipe.json
@@ -18,6 +20,7 @@ d738d89227d7a33b79b25bd51849bab9787e66c0 data/modpack/tfc/item_heat/ceramic/kaol
 ea68179cecd53175bf95bf44e94c07013d7d53b2 data/modpack/tfc/item_heat/ceramic/porcelain/unfired_brick.json
 2550394bc0d7a436896f56d11fee59d945889a6f data/modpack/tfc/item_heat/ceramic/porcelain/unfired_flower_pot.json
 f0ab0533760bbf70fd24905e21a3df1aa85dda62 data/modpack/tfc/item_heat/ceramic/porcelain/unfired_jug.json
+1f32235527bfb31dee9a510943fffcababbc2596 data/modpack/tfc/item_heat/ceramic/porcelain/unfired_pan.json
 e60576874a5fd8507f57882933217f601412d1e3 data/modpack/tfc/item_heat/ceramic/porcelain/unfired_pot.json
 930ce1a3f74104a3f43666f33ac7234378c84461 data/modpack/tfc/item_heat/ceramic/porcelain/unfired_spindle_head.json
 497c035e98965df40637c8995a35ac2aad1fcb3f data/modpack/tfc/item_heat/ceramic/yellowware/unfired_blowpipe.json
@@ -25,6 +28,7 @@ c4c380d11a67f56f4e3494a75ec701f079b45e8e data/modpack/tfc/item_heat/ceramic/yell
 cf76efd2dda680314d03fe87d2d171b4bb4c47c4 data/modpack/tfc/item_heat/ceramic/yellowware/unfired_brick.json
 a346d3738fa0e83ce32d60e4ab002bd6f9eb96e1 data/modpack/tfc/item_heat/ceramic/yellowware/unfired_flower_pot.json
 07433fa6bd5da4ed55ebcf1e3b8e61f093e4ee58 data/modpack/tfc/item_heat/ceramic/yellowware/unfired_jug.json
+169d31b8c821b62c8cf35480152b3fbe8333fbcd data/modpack/tfc/item_heat/ceramic/yellowware/unfired_pan.json
 24721eceb4f779878632fbe7bee32e92ae29bab0 data/modpack/tfc/item_heat/ceramic/yellowware/unfired_pot.json
 36bb73fd15df769ffbd603479fc05345d4b51091 data/modpack/tfc/item_heat/ceramic/yellowware/unfired_spindle_head.json
 bac91baf1972a1e18ab64ad3cd24c2fbf5b0ec6b data/modpack/tfc/item_heat/ceramic/yixing/unfired_blowpipe.json
@@ -32,6 +36,7 @@ bac91baf1972a1e18ab64ad3cd24c2fbf5b0ec6b data/modpack/tfc/item_heat/ceramic/yixi
 8b4d7fd5f31a8aae0e8caf80e23dac0ab85ea163 data/modpack/tfc/item_heat/ceramic/yixing/unfired_brick.json
 a4760189c0f2c9626e3f9a5a977f878564ab7704 data/modpack/tfc/item_heat/ceramic/yixing/unfired_flower_pot.json
 d867edbff16857ac237f324b4ddacbdac5ceec99 data/modpack/tfc/item_heat/ceramic/yixing/unfired_jug.json
+bcfb4d1a8cefa15a1b215212cb22dca856e84177 data/modpack/tfc/item_heat/ceramic/yixing/unfired_pan.json
 254c060581665ee30e5739cbc197b5f6f77779ca data/modpack/tfc/item_heat/ceramic/yixing/unfired_pot.json
 a631471a192d47afa03a6643deaf7018d5098bfe data/modpack/tfc/item_heat/ceramic/yixing/unfired_spindle_head.json
 e80ca4ca6a184bb8637c6dbad8ab804514e812df data/modpack/tfc/item_heat/metal/block/aluminium.json
@@ -90,3 +95,7 @@ b77ae87a8b98476e40c93dc2de9cff5074591952 data/modpack/tfc/item_heat/metal/sheet/
 342ea83994ecde412c94cda346e1ed9bd1a38491 data/modpack/tfc/item_heat/metal/sheet/hardened_steel.json
 b649f4b07d50e51b4beb165e403d28fd443caf33 data/modpack/tfc/item_heat/metal/sheet/lead.json
 3ce1f902f759bd510695bd7155813bbfec25d604 data/modpack/tfc/item_heat/metal/sheet/nethersteel.json
+00f6b4d37e104497c1d547b120cbfdcecceb92e6 data/modpack/tfc/item_heat/ore/normal_galena.json
+ef70377b02569e1df69718083faff991d24e6bfd data/modpack/tfc/item_heat/ore/poor_galena.json
+c92eb252be759cba3febcd5bb98f190a83b899a0 data/modpack/tfc/item_heat/ore/rich_galena.json
+226338d56ed1c9554df15f7c599ef9d94a66842e data/modpack/tfc/item_heat/ore/small_galena.json
