@@ -43,6 +43,7 @@ public final class DataEntryPoint
         add(event, new BuiltinItemTags(event, lookup));
         add(event, new BuiltinSupports(output, lookup));
         add(event, new BuiltinItemHeats(output, lookup));
+        add(event, new CoreLanguageProvider(output));
         add(event, new BuiltinBlockStates(output, event.getExistingFileHelper()));
         add(event, new BuiltinItemModels(output, event.getExistingFileHelper()));
 
