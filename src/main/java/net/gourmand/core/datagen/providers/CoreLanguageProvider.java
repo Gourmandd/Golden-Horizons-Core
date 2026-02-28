@@ -1,5 +1,6 @@
 package net.gourmand.core.datagen.providers;
 
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.util.Metal;
@@ -9,9 +10,11 @@ import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 import java.util.Locale;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class CoreLanguageProvider extends LanguageProvider {
@@ -23,6 +26,24 @@ public class CoreLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
 
+        // misc lang
+        add("item_group.nature.modpack", "Modpack Nature Items");
+        add("item_group.metal.modpack", "Modpack Metal Items");
+        add("item_group.ceramics.modpack", "Modpack Ceramic Items");
+        add("item_group.rocks.modpack", "Modpack Rock Items");
+        add("item_group.ores.modpack", "Modpack Ores");
+        add("item_group.tools.modpack", "Modpack Tools");
+
+        addItem(CoreItems.GLASS_MOLD, "Glass Block Mold");
+        addItem(CoreItems.GLASS_PANE_MOLD, "Glass Pane Mold");
+
+        addItem(CoreItems.SNOW_SHOVEL, "Snow Shovel");
+        addItem(CoreItems.SNOW_SHOVEL_HEAD, "Snow Shovel Head");
+
+        addItem(CoreItems.WROUGHT_IRON_BUCKET, "Wrought Iron Bucket");
+        add(CoreItems.WROUGHT_IRON_BUCKET.get().getDescriptionId() + ".filled", "%s Wrought Iron Bucket");
+
+        // bulk lang
         Stream.of(CoreCrops.values()).forEach(crop -> {
             addItem(CoreItems.CROP_SEEDS.get(crop), getName(crop.name()) + " Seeds");
             addBlock(CoreBlocks.WILD_CROPS.get(crop), "Wild " + getName(crop.name()));
@@ -118,6 +139,54 @@ public class CoreLanguageProvider extends LanguageProvider {
         add("metal." + AncientGroundCore.MODID + ".clear", "Clear Glass");
         add("fluid_type." + AncientGroundCore.MODID + ".clear", "Molten Clear Glass");
 
+        Stream.of(CoreOres.values()).forEach(ore -> {
+
+            if (ore.hasBlock()){
+                Stream.of(CoreRocks.values()).forEach(rock -> {
+                    if (ore.isGraded()){
+                        Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock.name()), getName(ore.name()));
+                        });
+                    } else {
+                        createOreKey(CoreBlocks.CUSTOM_ROCK_ORES.get(rock).get(ore), getName(rock.name()), getName(ore.name()));
+                    }
+                });
+                Stream.of(Rock.values()).forEach(rock -> {
+                    if (ore.isGraded()){
+                        Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                            createOreKey(CoreBlocks.GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock.name()), getName(ore.name()));
+                        });
+                    } else {
+                        createOreKey(CoreBlocks.ORES.get(rock).get(ore), getName(rock.name()), getName(ore.name()));
+                    }
+                });
+
+                if (ore.isGraded()){
+                    addBlock(CoreBlocks.SMALL_ORES.get(ore),"Small " + getName(ore.name()));
+                    Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                        addItem(CoreItems.GRADED_ORES.get(ore).get(grade), getName(grade.name()) + " " + getName(ore.name()));
+                    });
+                }
+            } else {
+                //createOreKey(CoreBlocks.BASIC_ORES.get(ore), getName(ore.name()));
+            }
+        });
+
+        Stream.of(Ore.values()).forEach(ore -> {
+
+            if (ore.hasBlock()){
+                Stream.of(CoreRocks.values()).forEach(rock -> {
+                    if (ore.isGraded()){
+                        Stream.of(CoreOres.Grade.values()).forEach(grade -> {
+                            createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock.name()), getName(ore.name()));
+                        });
+                    } else {
+                        createOreKey(CoreBlocks.CUSTOM_ROCK_TFC_ORES.get(rock).get(ore), getName(rock.name()), getName(ore.name()));
+                    }
+                });
+            }
+        });
+
 //        // Adds a translation with the given key and the given value.
 //        add("translation.key.1", "Translation 1");
 //
@@ -144,6 +213,14 @@ public class CoreLanguageProvider extends LanguageProvider {
 //        // Adds a mob effect translation.
 //        add(MyMobEffects.EXAMPLE_MOB_EFFECT.get(), "Example Effect");
 //        addEffect(MyMobEffects.EXAMPLE_MOB_EFFECT, "Example Effect");
+    }
+    private void createOreKey(Supplier<Block> block, String rock, String ore){
+        addBlock(block, rock + " " + ore);
+
+        if (ore.equals("Pyrite")){
+            ore = "Native Gold?";
+        }
+        add(block.get().getDescriptionId() + ".prospected", ore);
     }
 
     private boolean isRockTypePrefixed(Rock.BlockType type){
