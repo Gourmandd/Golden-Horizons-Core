@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-18T13:35:50.649059946	Loot Tables
+// 1.21.1	2026-03-01T09:36:23.12110156	Loot Tables
 a8d263b027e085bc53593f1fe5877a0089c9d368 data/modpack/loot_table/blocks/crop/amaranth.json
 31047b9922b12c6d981fc07f6022da30f382aacb data/modpack/loot_table/blocks/crop/coffee.json
 fae2013bf934f04ea037a03788c27766ed190fec data/modpack/loot_table/blocks/crop/cotton.json
@@ -818,8 +818,6 @@ aa11b284258559bcb381959421bc6419b44d4f49 data/modpack/loot_table/blocks/plant/fi
 4ce860c74a5c0b3de3db1c7a2ed70de33c112706 data/modpack/loot_table/blocks/plant/potted/walnut_sapling.json
 a209a774f3bf974ffc1247e10093ae71e47125fa data/modpack/loot_table/blocks/plant/potted/wolfberry_sapling.json
 ed9b08779d6708e4ae9f86ad0b56a90c824a6f48 data/modpack/loot_table/blocks/plant/sawblade_holly_bush.json
-8a74b64ba874fe36092757c9803ff2405ad953d6 data/modpack/loot_table/blocks/plant/test_bush.json
-66bbf9c7fbbac02d449660d376ef0884b011a5ff data/modpack/loot_table/blocks/plant/test_bush_cane.json
 027d351cbcaa858e175d7b245595b6fa9add8d07 data/modpack/loot_table/blocks/plant/walnut_branch.json
 b0d6bfb128fd790d9cd59df9c3c6d7d1b11655ad data/modpack/loot_table/blocks/plant/walnut_growing_branch.json
 b8accb4c612eb98627ac0aec6d22d8b0c2e2a8cf data/modpack/loot_table/blocks/plant/walnut_leaves.json

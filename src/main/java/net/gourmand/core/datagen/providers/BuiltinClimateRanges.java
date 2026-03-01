@@ -10,7 +10,6 @@ import net.dries007.tfc.util.climate.ClimateRange;
 import net.dries007.tfc.util.data.DataManager;
 import static net.gourmand.core.registry.category.CoreFruitTrees.*;
 import static net.gourmand.core.registry.category.CoreClimateRanges.*;
-import static net.gourmand.core.registry.category.CoreSpreadingBushes.*;
 import static net.gourmand.core.registry.category.CoreStationaryBushes.*;
 import static net.gourmand.core.registry.category.CoreCrops.*;
 
@@ -26,7 +25,7 @@ public class BuiltinClimateRanges extends DataManagerProvider<ClimateRange>
     {
         add(FRUIT_TREES, WALNUT, b -> b.hydration(10, 60).temperature(-14.8f, 16.6f));
         add(FRUIT_TREES, WOLFBERRY, b -> b.hydration(35, 80).temperature(8.8f, 36.5f));
-        add(SPREADING_BUSHES, TEST, b -> b.hydration(0, 100).temperature(9.8f, 41.2f));
+        //add(SPREADING_BUSHES, TEST, b -> b.hydration(0, 100).temperature(9.8f, 41.2f));
         add(STATIONARY_BUSHES, ALOE, b -> b.hydration(17, 100).temperature(-11.8f, 6.2f));
         add(STATIONARY_BUSHES, SAWBLADE_HOLLY, b -> b.hydration(17, 100).temperature(-11.8f, 6.2f));
         add(CROPS, COFFEE, b -> b.hydration(14, 75).temperature(11f, 32f));

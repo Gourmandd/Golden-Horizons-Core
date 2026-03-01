@@ -3,7 +3,6 @@ package net.gourmand.core.registry.category;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.plant.fruit.SpreadingBushBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.SpreadingCaneBlock;
-import net.dries007.tfc.common.items.TFCItems;
 import net.gourmand.core.registry.CoreBlockEntities;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.items.BushBlockItem;
@@ -18,11 +17,10 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Locale;
 
-import static net.dries007.tfc.common.blocks.plant.fruit.Lifecycle.*;
-
 public enum CoreSpreadingBushes implements StringRepresentable {
 
-    TEST(TFCItems.ALFALFA.holder(), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, 3);
+    //TEST(TFCItems.ALFALFA.holder(), new Lifecycle[] {DORMANT, DORMANT, HEALTHY, HEALTHY, HEALTHY, HEALTHY, FLOWERING, FLOWERING, FRUITING, DORMANT, DORMANT, DORMANT}, 3)
+    ;
 
     private final String serializedName;
     private final DeferredHolder<Item, Item> product;
