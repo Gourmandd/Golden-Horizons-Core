@@ -19,6 +19,12 @@ group = mod_group_id
 
 repositories {
     maven {
+        url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
+        content {
+            includeGroup "com.klikli_dev"
+        }
+    }
+    maven {
         url "https://cursemaven.com"
         content {
             includeGroup "curse.maven"
@@ -179,7 +185,6 @@ dependencies {
     implementation "curse.maven:databank-1181408:7007287"
     implementation "dev.architectury:architectury-neoforge:13.0.8"
     implementation "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
-    implementation "com.klikli_dev:modonomicon-1.21.1-neoforge:1.117.2"
     implementation "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
     implementation "dev.emi:emi-neoforge:${emi_version}"
 
@@ -191,6 +196,7 @@ dependencies {
     implementation "curse.maven:caupona-656147:7112048"
     implementation "curse.maven:create-328085:7178775"
     implementation "curse.maven:architects-palette-433862:6861008"
+    implementation ("com.klikli_dev:modonomicon-${minecraft_version}-neoforge:${modonomicon_version}"){transitive=false}
 
 
 

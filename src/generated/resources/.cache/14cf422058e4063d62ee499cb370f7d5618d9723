@@ -1,0 +1,25 @@
+// 1.21.1	2026-03-01T09:20:09.778711678	Books: modpack
+99e1eb332df3374f0f290cbeb722be9e39ed5df4 data/modpack/modonomicon/books/guide/book.json
+a0a78088606f29928a552f02f7762d7fb1845f21 data/modpack/modonomicon/books/guide/categories/ores.json
+d632d03b3f24101fba4ec075d055e0becc17e632 data/modpack/modonomicon/books/guide/entries/ores/amethyst.json
+f28bf98dd56669e4bc2d506ae202632366a7af10 data/modpack/modonomicon/books/guide/entries/ores/bismuthinite.json
+028d05c9d147b100e8f054ea7aa25266547b079b data/modpack/modonomicon/books/guide/entries/ores/cassiterite.json
+4f0a4676a1a44edf2693c4cfa9a57274d3f9bf1e data/modpack/modonomicon/books/guide/entries/ores/diamond.json
+296ed2411092012b5c4e7c00abd0dc5595411724 data/modpack/modonomicon/books/guide/entries/ores/emerald.json
+42ba03fbe724779beca4a6f2e530e4b2d15dfa75 data/modpack/modonomicon/books/guide/entries/ores/galena.json
+1255911e63ffe176fc80f6a2767aff956000cf04 data/modpack/modonomicon/books/guide/entries/ores/garnierite.json
+54048119a8e3a6f3228c912d2b7d338fe77cd976 data/modpack/modonomicon/books/guide/entries/ores/hematite.json
+8849180770064e78fd95e3d590fb81de324c6091 data/modpack/modonomicon/books/guide/entries/ores/lapis_lazuli.json
+1a78905f1ad17a5d284c804ad55c80e62a03eaab data/modpack/modonomicon/books/guide/entries/ores/limonite.json
+5be6e6a88dfcec4898675acf78b2531385b6722b data/modpack/modonomicon/books/guide/entries/ores/magnetite.json
+902defa93602e4ff9aba6b8b3cb5c91d1a57c3ab data/modpack/modonomicon/books/guide/entries/ores/malachite.json
+372027a93d7666c1bb150b6bf48a21c98284b60e data/modpack/modonomicon/books/guide/entries/ores/native_copper.json
+c49d17d0b4b64ca44870fe721280217826847efa data/modpack/modonomicon/books/guide/entries/ores/native_gold.json
+b0595bc675bb9fceacd014a2c81c120036fcf5ef data/modpack/modonomicon/books/guide/entries/ores/native_silver.json
+cbe8ace57c5c67c93f05a79e91a29790fb9789fc data/modpack/modonomicon/books/guide/entries/ores/opal.json
+9a0589daf6b255360f6e50691c72197412d6a99b data/modpack/modonomicon/books/guide/entries/ores/pyrite.json
+778aa892a3dbbbb07a5f26a52513949c0be1845c data/modpack/modonomicon/books/guide/entries/ores/ruby.json
+1e5e157d8dc69e212bc5ca4e54d745ae42a27acb data/modpack/modonomicon/books/guide/entries/ores/sapphire.json
+db4c1ac8e339c0ad3d667bbfa05ec5ab4033f554 data/modpack/modonomicon/books/guide/entries/ores/sphalerite.json
+7e035290c9e54ef683eac031fc5ae56fe45d76ee data/modpack/modonomicon/books/guide/entries/ores/tetrahedrite.json
+5a25d45c969a95ff69b3cf6f3585967dc5b31194 data/modpack/modonomicon/books/guide/entries/ores/topaz.json

@@ -1,5 +1,7 @@
 package net.gourmand.core.datagen.providers;
 
+import com.klikli_dev.modonomicon.api.datagen.AbstractModonomiconLanguageProvider;
+import com.klikli_dev.modonomicon.api.datagen.ModonomiconLanguageProvider;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -8,19 +10,18 @@ import net.gourmand.core.AncientGroundCore;
 import net.gourmand.core.registry.CoreBlocks;
 import net.gourmand.core.registry.CoreItems;
 import net.gourmand.core.registry.category.*;
+import net.gourmand.core.util.TextUtil;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.data.LanguageProvider;
 
-import java.util.Locale;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class CoreLanguageProvider extends LanguageProvider {
+public class CoreLanguageProvider extends AbstractModonomiconLanguageProvider {
 
-    public CoreLanguageProvider(PackOutput output) {
-        super(output, AncientGroundCore.MODID, "en_us");
+    public CoreLanguageProvider(PackOutput packOutput, ModonomiconLanguageProvider cachedProvider) {
+        super(packOutput, AncientGroundCore.MODID, "en_us", cachedProvider);
     }
 
     @Override
@@ -228,19 +229,6 @@ public class CoreLanguageProvider extends LanguageProvider {
     }
 
     private String getName(String string){
-        //TODO: this could be made more sane?
-        final String[] new_string = {""};
-        final int[] count = {0};
-
-        Stream.of(string.toLowerCase(Locale.ROOT).split("_")).forEach(str -> {
-            if (count[0] == 0){
-                new_string[0] = str.substring(0, 1).toUpperCase() + str.substring(1);
-            } else {
-                new_string[0] = new_string[0] + " " + str.substring(0, 1).toUpperCase() + str.substring(1);
-            }
-            count[0] = count[0] + 1;
-        });
-
-        return new_string[0];
+        return TextUtil.getName(string);
     }
 }

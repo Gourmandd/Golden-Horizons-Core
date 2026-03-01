@@ -8,7 +8,10 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
+import com.klikli_dev.modonomicon.api.datagen.LanguageProviderCache;
+import com.klikli_dev.modonomicon.api.datagen.NeoBookProvider;
 import net.gourmand.core.AncientGroundCore;
+import net.gourmand.core.datagen.book.guide.GuideBook;
 import net.gourmand.core.datagen.providers.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -43,11 +46,16 @@ public final class DataEntryPoint
         add(event, new BuiltinItemTags(event, lookup));
         add(event, new BuiltinSupports(output, lookup));
         add(event, new BuiltinItemHeats(output, lookup));
-        add(event, new CoreLanguageProvider(output));
         add(event, new BuiltinBlockStates(output, event.getExistingFileHelper()));
         add(event, new BuiltinItemModels(output, event.getExistingFileHelper()));
 
         addLoot(lookup, output, event, BuiltinBlockLootTables::new, LootContextParamSets.BLOCK);
+
+        // book and lang.
+        var enUsCache = new LanguageProviderCache("en_us");
+
+        add(event, NeoBookProvider.of(event, new GuideBook(AncientGroundCore.MODID, enUsCache)));
+        add(event, new CoreLanguageProvider(output, enUsCache));
     }
 
     private static <T extends DataProvider> T add(GatherDataEvent event, T provider)

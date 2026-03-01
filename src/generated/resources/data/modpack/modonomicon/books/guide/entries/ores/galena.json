@@ -1,0 +1,28 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "ores",
+  "description": "book.modpack.guide.ores.galena.description",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "modpack:ore/rich_galena"
+  },
+  "name": "book.modpack.guide.ores.galena.name",
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.modpack.guide.ores.galena.page1.text",
+      "title": "book.modpack.guide.ores.galena.page1.title",
+      "use_markdown_in_title": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "sort_number": 8,
+  "x": 4,
+  "y": -2
+}
